@@ -114,7 +114,6 @@ onUnmounted(() => {
             <NuxtLink to="/kamery" class="mt-1 inline-block text-accent-blue underline underline-offset-4 decoration-accent-blue/25 hover:decoration-accent-blue text-sm">Kamery na stoku →</NuxtLink>
           </div>
         </div>
-        <p class="font-mono text-[10px] text-ink-soft/70 mt-4">* dane przykładowe — panel podłączany do rzeczywistego źródła (stacja pogodowa / CMS)</p>
       </div>
     </div>
   </section>

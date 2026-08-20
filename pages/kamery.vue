@@ -5,17 +5,17 @@ useHead({
 
 const cameras = [
   {
-    title: 'Chatka Karpatki',
+    title: 'Górna stacja wyciągu',
     indexLabel: 'Kamera 1 z 3',
     streamUrl: 'https://stream1.wyciag-karpacz.pl/video.m3u8',
   },
   {
-    title: 'Kasa',
+    title: 'Dolna stacja wyciągu',
     indexLabel: 'Kamera 2 z 3',
     streamUrl: 'https://stream1.wyciag-karpacz.pl/2/video.m3u8',
   },
   {
-    title: 'Górna stacja wyciągu',
+    title: 'Taśma i bar (w zimie), Sokoliki i Krzyżna góra (lato)',
     indexLabel: 'Kamera 3 z 3',
     streamUrl: 'https://stream2.wyciag-karpacz.pl/3/video.m3u8',
   },
