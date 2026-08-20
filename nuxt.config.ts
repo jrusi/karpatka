@@ -13,7 +13,11 @@ export default defineNuxtConfig({
   // and NUXT_GOOGLE_PLACE_ID override these at runtime.
   runtimeConfig: {
     googlePlacesApiKey: '',
-    googlePlaceId: 'ChIJgXd7FILoDkcRl-n-f8aoc1c',
+    // No hardcoded default — always set via NUXT_GOOGLE_PLACE_ID. Netlify's
+    // build-time secrets scanner flags any literal value that matches a
+    // configured env var, even non-sensitive ones like a Place ID, if it
+    // finds that value checked into the repo or build output.
+    googlePlaceId: '',
     // Shared secret required to call POST /api/opening-hours/refresh.
     refreshSecret: '',
   },
