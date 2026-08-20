@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS custom properties derived from the Tailwind palette (tailwind.config.ts),
+   kept for the raw SVG fill/stroke attributes that can't take utility classes. */
+:root {
+  --frost: theme('colors.frost');
+  --paper: theme('colors.paper');
+  --powder: theme('colors.powder');
+  --line-blue: theme('colors.line-blue');
+  --deep-blue: theme('colors.deep-blue');
+  --deep-blue-2: theme('colors.deep-blue-2');
+  --accent-blue: theme('colors.accent-blue');
+  --red-deep: theme('colors.red-deep');
+  --purple: theme('colors.purple');
+  --red: theme('colors.red');
+  --ink: theme('colors.ink');
+  --ink-soft: theme('colors.ink-soft');
+  --ice: theme('colors.ice');
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-frost text-ink font-sans antialiased;
+}
+
+.sky-grad {
+  background: linear-gradient(160deg, #EAF3FA 0%, #DCEAF6 45%, #CFE3F2 100%);
+}
+
+.deep-grad {
+  background: linear-gradient(180deg, var(--deep-blue) 0%, var(--deep-blue-2) 100%);
+}
+
+.sketch-line {
+  fill: none;
+  stroke: var(--line-blue);
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: .6;
+}
+
+.sketch-draw {
+  stroke-dasharray: 2400;
+  stroke-dashoffset: 2400;
+  animation: draw 2.6s ease forwards .2s;
+}
+
+@keyframes draw {
+  to { stroke-dashoffset: 0; }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+.marker-wrap {
+  z-index: 1;
+}
+
+.marker-wrap:hover,
+.marker-wrap:focus-within,
+.marker-wrap.active {
+  z-index: 30;
+}
+
+.marker {
+  transition: transform .2s ease;
+  transform: translate(-50%, -50%);
+}
+
+.marker:hover,
+.marker.active {
+  transform: translate(-50%, -50%) scale(1.18);
+}
+
+.tooltip {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .15s ease, transform .15s ease;
+  transform: translateY(4px);
+}
+
+.marker-wrap:hover .tooltip,
+.marker-wrap:focus-within .tooltip,
+.marker-wrap.active .tooltip {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+
+.board {
+  background: linear-gradient(180deg, #FFFFFF, #F1F6FB);
+  border: 1px solid rgba(47, 128, 196, .18);
+  box-shadow: 0 20px 40px -20px rgba(47, 79, 115, .25), inset 0 0 0 1px rgba(255, 255, 255, .6);
+}
+
+.board-digit {
+  color: var(--accent-blue);
+}
+
+header.solid {
+  background: rgba(246, 249, 252, .92);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 1px 0 rgba(47, 79, 115, .08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sketch-draw {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 3px;
+}

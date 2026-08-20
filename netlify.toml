@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+  # Nitro's "netlify" preset (auto-selected via the NETLIFY env var in
+  # nuxt.config.ts) outputs static assets to dist/ and the SSR function to
+  # .netlify/functions-internal/ — NOT .output/public (that's only the
+  # default node-server preset's output path, used for local/self-hosted
+  # builds where NETLIFY isn't set).
+  publish = "dist"
+
+[functions]
+  directory = "netlify/functions"

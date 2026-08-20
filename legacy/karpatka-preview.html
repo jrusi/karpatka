@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karpatka — Wyciągi Narciarskie Karpacz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root{
+    --frost:#F6F9FC;
+    --paper:#EAF1F8;
+    --powder:#DCEAF6;
+    --line-blue:#7FA7CB;
+    --deep-blue:#2F4F73;
+    --deep-blue-2:#203A56;
+    --accent-blue:#2F80C4;
+    --red-deep:#B93830;
+    --purple:#8B5FBF;
+    --red:#E0473E;
+    --ink:#1F2E3D;
+    --ink-soft:#57728A;
+    --ice:#8FC7EE;
+  }
+  *{scroll-behavior:smooth;}
+  body{background:var(--frost); color:var(--ink); font-family:'Work Sans',sans-serif;}
+  .font-display{font-family:'Fraunces',serif;}
+  .font-mono{font-family:'JetBrains Mono',monospace;}
+  .sky-grad{background:linear-gradient(160deg,#EAF3FA 0%, #DCEAF6 45%, #CFE3F2 100%);}
+  .deep-grad{background:linear-gradient(180deg,var(--deep-blue) 0%, var(--deep-blue-2) 100%);}
+  .sketch-line{fill:none; stroke:var(--line-blue); stroke-width:1.4; stroke-linecap:round; stroke-linejoin:round; opacity:.6;}
+  .sketch-draw{stroke-dasharray:2400; stroke-dashoffset:2400; animation:draw 2.6s ease forwards .2s;}
+  @keyframes draw{to{stroke-dashoffset:0;}}
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1; transform:none;}
+  .marker{transition:transform .2s ease;}
+  .marker:hover, .marker.active{transform:scale(1.18);}
+  .tooltip{opacity:0; pointer-events:none; transition:opacity .15s ease, transform .15s ease; transform:translateY(4px);}
+  .marker-wrap:hover .tooltip, .marker-wrap:focus-within .tooltip, .marker-wrap.active .tooltip{opacity:1; transform:none; pointer-events:auto;}
+  .board{background:linear-gradient(180deg,#FFFFFF,#F1F6FB); border:1px solid rgba(47,128,196,.18); box-shadow:0 20px 40px -20px rgba(47,79,115,.25), inset 0 0 0 1px rgba(255,255,255,.6);}
+  .board-digit{color:var(--accent-blue);}
+  header.solid{background:rgba(246,249,252,.92); backdrop-filter:blur(8px); box-shadow:0 1px 0 rgba(47,79,115,.08);}
+  @media (prefers-reduced-motion: reduce){
+    .sketch-draw{animation:none; stroke-dashoffset:0;}
+    .reveal{opacity:1; transform:none; transition:none;}
+  }
+  a:focus-visible, button:focus-visible, [tabindex]:focus-visible{outline:2px solid var(--accent-blue); outline-offset:3px;}
+</style>
+</head>
+<body class="antialiased">
+
+<!-- ===== NAV ===== -->
+<header id="site-header" class="fixed top-0 inset-x-0 z-50 transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between h-16 md:h-20">
+    <a href="#top" class="flex items-center gap-3">
+      <img src="data:image/png;base64,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" alt="Karpatka — Wyciągi Narciarskie" class="h-9 w-auto">
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 font-mono text-[13px] uppercase tracking-wider text-[color:var(--ink-soft)]">
+      <a href="#mapa" class="hover:text-[color:var(--deep-blue)] transition-colors">Mapa stoku</a>
+      <a href="#oferta" class="hover:text-[color:var(--deep-blue)] transition-colors">Oferta</a>
+      <a href="#szkola" class="hover:text-[color:var(--deep-blue)] transition-colors">Szkoła</a>
+      <a href="#cennik" class="hover:text-[color:var(--deep-blue)] transition-colors">Cennik</a>
+      <a href="#bar" class="hover:text-[color:var(--deep-blue)] transition-colors">Bar</a>
+      <a href="#kontakt" class="hover:text-[color:var(--deep-blue)] transition-colors">Kontakt</a>
+    </nav>
+    <a href="tel:+48512799025" class="hidden lg:inline-flex items-center gap-2 border border-[color:var(--deep-blue)]/25 hover:border-[color:var(--accent-blue)] hover:text-[color:var(--accent-blue)] text-[color:var(--deep-blue)] rounded-full px-5 py-2 font-mono text-[13px] transition-colors">
+      +48 512 799 025
+    </a>
+    <button id="menu-btn" aria-label="Otwórz menu" class="lg:hidden text-[color:var(--deep-blue)]">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+  <div id="mobile-menu" class="hidden lg:hidden bg-[color:var(--frost)] border-t border-[color:var(--deep-blue)]/10 px-5 pb-6 pt-4 flex flex-col gap-4 font-mono text-sm uppercase tracking-wider text-[color:var(--ink-soft)]">
+    <a href="#mapa">Mapa stoku</a>
+    <a href="#oferta">Oferta</a>
+    <a href="#szkola">Szkoła</a>
+    <a href="#cennik">Cennik</a>
+    <a href="#bar">Bar</a>
+    <a href="#kontakt">Kontakt</a>
+    <a href="tel:+48512799025" class="text-[color:var(--accent-blue)]">+48 512 799 025</a>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section id="top" class="sky-grad relative overflow-hidden pt-32 pb-20 md:pt-44 md:pb-28">
+  <svg class="absolute inset-0 w-full h-full" viewBox="0 0 1400 700" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="hillFar" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#F1F7FC"/>
+        <stop offset="100%" stop-color="#DCEAF6"/>
+      </linearGradient>
+      <linearGradient id="hillNear" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#DCEAF6"/>
+        <stop offset="100%" stop-color="#B9D6EC"/>
+      </linearGradient>
+      <symbol id="pine" viewBox="0 0 40 60">
+        <rect x="18" y="50" width="4" height="9" fill="var(--line-blue)"/>
+        <path d="M20 2 L29 20 L24 20 L32 34 L26 34 L36 50 L4 50 L14 34 L8 34 L16 20 L11 20 Z" fill="var(--line-blue)"/>
+        <path d="M20 2 L23.5 10 L16.5 10 Z" fill="#fff" opacity=".65"/>
+        <path d="M20 15 L26.5 27 L13.5 27 Z" fill="#fff" opacity=".3"/>
+      </symbol>
+    </defs>
+
+    <path d="M-50,560 C180,455 340,525 560,435 C820,330 1040,475 1300,400 L1460,430 L1460,700 L-50,700 Z" fill="url(#hillFar)"/>
+    <g opacity=".4">
+      <use href="#pine" x="40" y="465" width="24" height="36"/>
+      <use href="#pine" x="150" y="490" width="18" height="27"/>
+      <use href="#pine" x="330" y="475" width="20" height="30"/>
+      <use href="#pine" x="500" y="450" width="16" height="24"/>
+      <use href="#pine" x="700" y="415" width="20" height="30"/>
+      <use href="#pine" x="900" y="440" width="18" height="27"/>
+      <use href="#pine" x="1080" y="410" width="22" height="33"/>
+      <use href="#pine" x="1250" y="420" width="18" height="27"/>
+      <use href="#pine" x="1370" y="440" width="20" height="30"/>
+    </g>
+
+    <path class="sketch-line sketch-draw" d="M-50 520 L180 380 L340 460 L520 300 L650 420 L820 260 L980 440 L1150 340 L1300 460 L1460 380"/>
+    <path class="sketch-line sketch-draw" style="animation-delay:.5s" d="M-50 600 L220 480 L440 560 L680 420 L900 540 L1120 440 L1460 560"/>
+
+    <path d="M-50,650 C220,555 420,630 680,555 C920,490 1140,615 1460,555 L1460,700 L-50,700 Z" fill="url(#hillNear)"/>
+    <g opacity=".7">
+      <use href="#pine" x="-10" y="555" width="70" height="105"/>
+      <use href="#pine" x="55" y="595" width="52" height="78"/>
+      <use href="#pine" x="115" y="615" width="38" height="57"/>
+      <use href="#pine" x="1300" y="560" width="60" height="90"/>
+      <use href="#pine" x="1355" y="600" width="48" height="72"/>
+      <use href="#pine" x="1400" y="625" width="36" height="54"/>
+    </g>
+  </svg>
+
+  <div class="relative max-w-7xl mx-auto px-5 md:px-8">
+    <p class="font-mono text-[13px] uppercase tracking-[0.2em] text-[color:var(--accent-blue)] mb-5">Karpacz · Karkonosze</p>
+    <h1 class="font-display text-[color:var(--deep-blue)] text-4xl sm:text-5xl md:text-6xl leading-[1.05] max-w-3xl">
+      Stok, na którym stawia się<br class="hidden md:block"> <span class="italic font-medium text-[color:var(--accent-blue)]">pierwsze zakosy.</span>
+    </h1>
+    <p class="mt-6 text-[color:var(--ink-soft)] max-w-xl text-base md:text-lg leading-relaxed">
+      Dwa wyciągi orczykowe, taśma dla najmłodszych i górka saneczkowa — tuż pod Śnieżką, z bezpłatnym parkingiem przy samym stoku.
+    </p>
+    <div class="mt-9 flex flex-wrap gap-4">
+      <a href="#cennik" class="bg-[color:var(--red)] hover:bg-[color:var(--red-deep)] text-white font-semibold px-7 py-3.5 rounded-full transition-colors">Zobacz cennik</a>
+      <a href="tel:+48512799025" class="border border-[color:var(--deep-blue)]/25 hover:border-[color:var(--accent-blue)] text-[color:var(--deep-blue)] px-7 py-3.5 rounded-full transition-colors font-mono text-sm flex items-center">Zadzwoń: 512 799 025</a>
+    </div>
+
+    <!-- SIGNATURE: conditions board -->
+    <div class="board mt-14 rounded-2xl px-6 py-5 md:px-8 md:py-6 max-w-3xl">
+      <div class="flex items-center justify-between mb-4">
+        <span class="font-mono text-[11px] uppercase tracking-[0.2em] text-[color:var(--ink-soft)]">Tablica warunków · aktualizacja na żywo</span>
+        <span class="flex items-center gap-2 font-mono text-[11px] text-[color:var(--accent-blue)]">
+          <span class="w-1.5 h-1.5 rounded-full bg-[color:var(--accent-blue)] animate-pulse"></span>ONLINE
+        </span>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 font-mono">
+        <div>
+          <div class="board-digit text-2xl md:text-3xl font-medium">40<span class="text-base">cm</span></div>
+          <div class="text-[color:var(--ink-soft)] text-[11px] uppercase tracking-wider mt-1">Pokrywa śnieżna</div>
+        </div>
+        <div>
+          <div class="board-digit text-2xl md:text-3xl font-medium">−3°</div>
+          <div class="text-[color:var(--ink-soft)] text-[11px] uppercase tracking-wider mt-1">Temperatura</div>
+        </div>
+        <div>
+          <div class="board-digit text-2xl md:text-3xl font-medium">9–21</div>
+          <div class="text-[color:var(--ink-soft)] text-[11px] uppercase tracking-wider mt-1">Godziny otwarcia</div>
+        </div>
+        <div class="flex items-center">
+          <a href="#kamery" class="text-[color:var(--accent-blue)] underline underline-offset-4 decoration-[color:var(--accent-blue)]/25 hover:decoration-[color:var(--accent-blue)] text-sm">Kamery na stoku →</a>
+        </div>
+      </div>
+      <p class="font-mono text-[10px] text-[color:var(--ink-soft)]/70 mt-4">* dane przykładowe — panel podłączany do rzeczywistego źródła (stacja pogodowa / CMS)</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SZKOŁA CALLOUT ===== -->
+<section class="relative z-10 -mt-1">
+  <div class="max-w-5xl mx-auto px-5 md:px-8">
+    <a href="#szkola" class="reveal group flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-[color:var(--deep-blue)] hover:bg-[color:var(--deep-blue-2)] transition-colors rounded-2xl px-6 py-5 md:px-8 md:py-6 shadow-[0_20px_40px_-20px_rgba(47,79,115,.4)]">
+      <span class="flex items-center gap-4">
+        <span class="shrink-0 w-11 h-11 rounded-full bg-[color:var(--red)] flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>
+        </span>
+        <span>
+          <span class="block font-display text-white text-lg md:text-xl">Pierwszy raz na nartach albo desce?</span>
+          <span class="block text-white/60 text-sm mt-0.5">Zacznij od Szkoły nauki jazdy — instruktorzy i sprzęt czekają na miejscu.</span>
+        </span>
+      </span>
+      <span class="font-mono text-xs uppercase tracking-wider text-[color:var(--red)] group-hover:text-[color:var(--red-deep)] flex items-center gap-2 shrink-0">
+        Poznaj szkołę <span class="transition-transform group-hover:translate-x-1">→</span>
+      </span>
+    </a>
+  </div>
+</section>
+
+<!-- ===== KAMERY ===== -->
+<section id="kamery" class="py-24 md:py-32 bg-[color:var(--paper)]">
+  <div class="max-w-5xl mx-auto px-5 md:px-8">
+    <div class="reveal text-center mb-12">
+      <p class="font-mono text-xs uppercase tracking-[0.2em] text-[color:var(--accent-blue)] mb-3">Kamery on-line (na żywo)</p>
+      <h2 class="font-display text-3xl md:text-5xl text-[color:var(--deep-blue)] mb-4">Zerknij na stok, zanim spakujesz auto.</h2>
+      <p class="text-[color:var(--ink-soft)] max-w-lg mx-auto">Trzy kamery na żywo: widok z Chatki Karpatki, z kasy oraz na górną stację wyciągu.</p>
+    </div>
+
+    <div class="reveal">
+      <a href="#" class="group block rounded-3xl overflow-hidden bg-[color:var(--deep-blue)] shadow-[0_30px_60px_-30px_rgba(47,79,115,.5)]">
+        <div class="relative aspect-video bg-gradient-to-br from-[#3A5D82] via-[color:var(--deep-blue)] to-[color:var(--deep-blue-2)] flex items-center justify-center overflow-hidden">
+          <svg class="absolute inset-0 w-full h-full opacity-30" viewBox="0 0 900 400" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+            <path class="sketch-line" stroke="white" d="M-20 340 L140 260 L260 310 L400 210 L520 290 L660 190 L800 300 L920 250"/>
+            <g fill="white" opacity=".5">
+              <path d="M100 400 L118 350 L136 400 Z"/>
+              <path d="M220 400 L240 340 L260 400 Z"/>
+              <path d="M700 400 L718 350 L736 400 Z"/>
+            </g>
+          </svg>
+          <span class="relative w-16 h-16 rounded-full bg-white/15 group-hover:bg-white/25 backdrop-blur flex items-center justify-center transition-colors">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+          </span>
+          <span class="absolute top-4 left-4 flex items-center gap-2 bg-black/30 backdrop-blur px-3 py-1.5 rounded-full font-mono text-[11px] text-white">
+            <span class="w-1.5 h-1.5 rounded-full bg-[color:var(--red)] animate-pulse"></span>NA ŻYWO
+          </span>
+          <span class="absolute top-4 right-4 bg-black/30 backdrop-blur px-3 py-1.5 rounded-full font-mono text-[11px] text-white">Widok: Chatka Karpatki</span>
+        </div>
+        <div class="flex items-center justify-between px-6 py-4 font-mono text-xs text-white/50">
+          <span>Kamera 1 z 3</span>
+          <span class="text-[color:var(--red)] group-hover:text-[color:var(--red-deep)] flex items-center gap-2">Zobacz pozostałe kamery <span class="transition-transform group-hover:translate-x-1">→</span></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== OFERTA ===== -->
+<section id="oferta" class="py-24 md:py-32 bg-[color:var(--paper)] relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 relative">
+    <p class="font-mono text-xs uppercase tracking-[0.2em] text-[color:var(--accent-blue)] mb-3 reveal">Co znajdziesz na miejscu</p>
+    <h2 class="font-display text-[color:var(--deep-blue)] text-3xl md:text-5xl mb-14 max-w-2xl reveal">Wszystko, czego trzeba do jednego udanego dnia na śniegu.</h2>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[color:var(--deep-blue)]/10 rounded-2xl overflow-hidden reveal">
+      <div class="bg-white p-8">
+        <span class="font-mono text-xs text-[color:var(--accent-blue)]">01</span>
+        <h3 class="font-display text-[color:var(--deep-blue)] text-xl mt-3 mb-2">Dwa wyciągi orczykowe</h3>
+        <p class="text-[color:var(--ink-soft)] text-sm leading-relaxed">Wyciąg 1 i Wyciąg 2 — dla jeżdżących pewniej, z krótkim czasem oczekiwania.</p>
+      </div>
+      <div class="bg-white p-8">
+        <span class="font-mono text-xs text-[color:var(--accent-blue)]">02</span>
+        <h3 class="font-display text-[color:var(--deep-blue)] text-xl mt-3 mb-2">Taśma dla początkujących</h3>
+        <p class="text-[color:var(--ink-soft)] text-sm leading-relaxed">Łagodne wejście dla dzieci i osób stawiających pierwsze kroki na nartach.</p>
+      </div>
+      <div class="bg-white p-8">
+        <span class="font-mono text-xs text-[color:var(--accent-blue)]">03</span>
+        <h3 class="font-display text-[color:var(--deep-blue)] text-xl mt-3 mb-2">Górka saneczkowa</h3>
+        <p class="text-[color:var(--ink-soft)] text-sm leading-relaxed">Sanki w cenie karnetu — dobra opcja, gdy narty czekają na kolejny dzień.</p>
+      </div>
+      <div class="bg-white p-8">
+        <span class="font-mono text-xs text-[color:var(--accent-blue)]">04</span>
+        <h3 class="font-display text-[color:var(--deep-blue)] text-xl mt-3 mb-2">Szkoła i wypożyczalnia</h3>
+        <p class="text-[color:var(--ink-soft)] text-sm leading-relaxed mb-3">Sprzęt na miejscu i instruktorzy narciarstwa oraz snowboardu.</p>
+        <a href="#szkola" class="font-mono text-xs text-[color:var(--accent-blue)] underline underline-offset-4 decoration-[color:var(--accent-blue)]/25 hover:decoration-[color:var(--accent-blue)]">Zobacz szczegóły →</a>
+      </div>
+      <div class="bg-white p-8">
+        <span class="font-mono text-xs text-[color:var(--accent-blue)]">05</span>
+        <h3 class="font-display text-[color:var(--deep-blue)] text-xl mt-3 mb-2">Bezpłatny parking</h3>
+        <p class="text-[color:var(--ink-soft)] text-sm leading-relaxed">Bezpośrednio przy stoku — bez doliczania do ceny karnetu.</p>
+      </div>
+      <div class="bg-white p-8">
+        <span class="font-mono text-xs text-[color:var(--accent-blue)]">06</span>
+        <h3 class="font-display text-[color:var(--deep-blue)] text-xl mt-3 mb-2">Kamery na żywo</h3>
+        <p class="text-[color:var(--ink-soft)] text-sm leading-relaxed">Podgląd na stok, kasę i górną stację — warunki sprawdzisz zanim wyjedziesz.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SZKOŁA I WYPOŻYCZALNIA ===== -->
+<section id="szkola" class="py-24 md:py-32 deep-grad relative overflow-hidden">
+  <svg class="absolute inset-0 w-full h-full opacity-[.08]" viewBox="0 0 1400 700" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <path class="sketch-line" stroke="white" d="M-50 520 L180 380 L340 460 L520 300 L650 420 L820 260 L980 440 L1150 340 L1300 460 L1460 380"/>
+  </svg>
+  <div class="relative max-w-7xl mx-auto px-5 md:px-8 grid md:grid-cols-2 gap-14 items-center">
+    <div class="reveal order-2 md:order-1 aspect-[4/3] rounded-3xl bg-gradient-to-br from-white/10 via-white/5 to-transparent border border-white/15 flex items-center justify-center">
+      <span class="font-display italic text-white/40 text-lg px-8 text-center">miejsce na zdjęcie instruktora / zajęć</span>
+    </div>
+    <div class="reveal order-1 md:order-2">
+      <p class="font-mono text-xs uppercase tracking-[0.2em] text-[color:var(--red)] mb-3">Dla początkujących i nie tylko</p>
+      <h2 class="font-display text-3xl md:text-5xl mb-6 text-white">Szkoła narciarska<br>i wypożyczalnia</h2>
+      <p class="text-white/65 leading-relaxed mb-7 max-w-md">Nie masz sprzętu? Dopiero zaczynasz przygodę z nartami lub snowboardem? Nasi instruktorzy poprowadzą Cię krok po kroku, a wypożyczalnia zaopatrzy w sprzęt na miejscu — bez wcześniejszych przygotowań.</p>
+
+      <div class="grid grid-cols-3 gap-4 mb-8 font-mono">
+        <div class="border-t border-white/15 pt-3">
+          <div class="text-white text-lg">Dzieci</div>
+          <div class="text-white/40 text-[11px] uppercase tracking-wider mt-1">i dorośli</div>
+        </div>
+        <div class="border-t border-white/15 pt-3">
+          <div class="text-white text-lg">Narty</div>
+          <div class="text-white/40 text-[11px] uppercase tracking-wider mt-1">i snowboard</div>
+        </div>
+        <div class="border-t border-white/15 pt-3">
+          <div class="text-white text-lg">Solo</div>
+          <div class="text-white/40 text-[11px] uppercase tracking-wider mt-1">i w grupie</div>
+        </div>
+      </div>
+
+      <ul class="space-y-4 mb-9">
+        <li class="flex items-start gap-3">
+          <span class="mt-1 w-2 h-2 rounded-full bg-[color:var(--red)] shrink-0"></span>
+          <span class="text-white/85 text-sm"><strong class="font-medium text-white">Instruktorzy narciarstwa i snowboardu</strong> — zajęcia indywidualne i grupowe.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1 w-2 h-2 rounded-full bg-[color:var(--red)] shrink-0"></span>
+          <span class="text-white/85 text-sm"><strong class="font-medium text-white">Nauka od podstaw na taśmie</strong> — łagodne, bezpieczne wejście w sport.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1 w-2 h-2 rounded-full bg-[color:var(--red)] shrink-0"></span>
+          <span class="text-white/85 text-sm"><strong class="font-medium text-white">Pełny sprzęt do wypożyczenia</strong> — narty, deska, kije i kaski.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1 w-2 h-2 rounded-full bg-[color:var(--red)] shrink-0"></span>
+          <span class="text-white/85 text-sm"><strong class="font-medium text-white">Wszystko na miejscu</strong> — zapisy, sprzęt i pierwsza lekcja tego samego dnia.</span>
+        </li>
+      </ul>
+
+      <div class="grid sm:grid-cols-2 gap-4 mb-9">
+        <div class="rounded-2xl border border-white/15 bg-white/5 overflow-hidden">
+          <p class="font-mono text-[11px] uppercase tracking-wider text-white/40 px-5 pt-5 mb-3">Wypożyczalnia</p>
+          <div class="grid grid-cols-3 font-mono text-[11px] uppercase tracking-wider text-white/40 px-5 pb-2">
+            <span></span>
+            <span class="text-right">Dzień*</span>
+            <span class="text-right leading-tight">Jazdy nocne<br><span class="normal-case tracking-normal text-white/30">17:00–21:00</span></span>
+          </div>
+          <div class="divide-y divide-white/10">
+            <div class="grid grid-cols-3 items-center px-5 py-3 font-mono text-sm text-white/85">
+              <span>Narty carving</span>
+              <span class="text-right text-[color:var(--ice)] font-medium">40 zł</span>
+              <span class="text-right text-[color:var(--ice)] font-medium">30 zł</span>
+            </div>
+            <div class="grid grid-cols-3 items-center px-5 py-3 font-mono text-sm text-white/85">
+              <span>Snowboard</span>
+              <span class="text-right text-[color:var(--ice)] font-medium">40 zł</span>
+              <span class="text-right text-[color:var(--ice)] font-medium">30 zł</span>
+            </div>
+          </div>
+          <p class="text-white/35 text-[11px] px-5 py-3 leading-relaxed">Komplet: narty/deska, buty, kije. * w godzinach otwarcia wypożyczalni.</p>
+        </div>
+        <div class="rounded-2xl border border-white/15 bg-white/5 p-5">
+          <p class="font-mono text-[11px] uppercase tracking-wider text-white/40 mb-3">Nauka jazdy (narty / snowboard) · 55 min</p>
+          <div class="space-y-2.5 font-mono text-sm">
+            <div class="flex justify-between items-baseline text-white/85"><span>1 osoba</span><span class="text-[color:var(--ice)] font-medium">130 zł/h</span></div>
+            <div class="flex justify-between items-baseline text-white/85"><span>2 osoby</span><span class="text-[color:var(--ice)] font-medium">210 zł/h</span></div>
+            <div class="flex justify-between items-baseline text-white/85"><span>3 osoby</span><span class="text-[color:var(--ice)] font-medium">260 zł/h</span></div>
+            <div class="flex justify-between items-baseline text-white/85"><span>4 osoby</span><span class="text-[color:var(--ice)] font-medium">320 zł/h</span></div>
+          </div>
+          <p class="text-white/35 text-[11px] mt-3 leading-relaxed">Każda kolejna osoba: +60 zł.</p>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-4">
+        <a href="tel:+48512799025" class="bg-[color:var(--red)] hover:bg-[color:var(--red-deep)] text-white font-semibold px-7 py-3.5 rounded-full transition-colors">Zapisz się na zajęcia</a>
+        <a href="tel:+48512799025" class="border border-white/25 hover:border-white text-white px-7 py-3.5 rounded-full transition-colors font-mono text-sm flex items-center">512 799 025</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CENNIK ===== -->
+<section id="cennik" class="py-24 md:py-32">
+  <div class="max-w-5xl mx-auto px-5 md:px-8">
+    <div class="reveal mb-12">
+      <p class="font-mono text-xs uppercase tracking-[0.2em] text-[color:var(--accent-blue)] mb-3">Sezon 2025/2026</p>
+      <h2 class="font-display text-3xl md:text-5xl text-[color:var(--deep-blue)]">Cennik</h2>
+    </div>
+
+    <div class="reveal board rounded-2xl overflow-hidden">
+      <div class="grid grid-cols-3 font-mono text-xs md:text-sm uppercase tracking-wider text-[color:var(--ink-soft)] px-6 md:px-8 py-4 border-b border-[color:var(--deep-blue)]/10">
+        <span>Karnet</span><span class="text-right">Normalny</span><span class="text-right">Ulgowy</span>
+      </div>
+      <div class="divide-y divide-[color:var(--deep-blue)]/8">
+        <div class="grid grid-cols-3 px-6 md:px-8 py-4 font-mono text-sm text-[color:var(--ink)]"><span>1 godz.</span><span class="text-right board-digit">55 zł</span><span class="text-right board-digit">50 zł</span></div>
+        <div class="grid grid-cols-3 px-6 md:px-8 py-4 font-mono text-sm text-[color:var(--ink)]"><span>2 godz.</span><span class="text-right board-digit">70 zł</span><span class="text-right board-digit">65 zł</span></div>
+        <div class="grid grid-cols-3 px-6 md:px-8 py-4 font-mono text-sm text-[color:var(--ink)]"><span>3 godz.</span><span class="text-right board-digit">80 zł</span><span class="text-right board-digit">75 zł</span></div>
+        <div class="grid grid-cols-3 px-6 md:px-8 py-4 font-mono text-sm text-[color:var(--ink)]"><span>4 godz.</span><span class="text-right board-digit">90 zł</span><span class="text-right board-digit">85 zł</span></div>
+        <div class="grid grid-cols-3 px-6 md:px-8 py-4 font-mono text-sm text-[color:var(--ink)]"><span>Dzienny (9:00–16:30)</span><span class="text-right board-digit">100 zł</span><span class="text-right board-digit">95 zł</span></div>
+        <div class="grid grid-cols-3 px-6 md:px-8 py-4 font-mono text-sm text-[color:var(--ink)]"><span>Wieczorny (16:30–21:00)</span><span class="text-right board-digit">70 zł</span><span class="text-right board-digit">65 zł</span></div>
+        <div class="grid grid-cols-3 px-6 md:px-8 py-4 font-mono text-sm text-[color:var(--ink)]"><span>Górka saneczkowa 1h</span><span class="text-right board-digit">25 zł</span><span class="text-right board-digit">25 zł</span></div>
+        <div class="grid grid-cols-3 px-6 md:px-8 py-4 font-mono text-sm text-[color:var(--ink)]"><span>Górka saneczkowa 2h</span><span class="text-right board-digit">40 zł</span><span class="text-right board-digit">40 zł</span></div>
+      </div>
+      <div class="px-6 md:px-8 py-4 font-mono text-[11px] text-[color:var(--ink-soft)] border-t border-[color:var(--deep-blue)]/10">Kaucja zwrotna za kartę: 10 zł (płatna tylko gotówką)</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BAR ===== -->
+<section id="bar" class="py-24 md:py-32 bg-[color:var(--powder)]">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 grid md:grid-cols-2 gap-14 items-center">
+    <div class="reveal">
+      <p class="font-mono text-xs uppercase tracking-[0.2em] text-[color:var(--purple)] mb-3">Ogrzej się</p>
+      <h2 class="font-display text-3xl md:text-5xl mb-6 text-[color:var(--deep-blue)]">Bar Karpatka</h2>
+      <p class="text-[color:var(--ink-soft)] leading-relaxed mb-6 max-w-md">Punkt tuż przy wyciągu, czynny w godzinach pracy stoku — gorąca herbata, czekolada i przekąski, żeby się rozgrzać między zjazdami.</p>
+      <a href="#kontakt" class="inline-flex items-center gap-2 font-mono text-sm text-[color:var(--purple)] border-b border-[color:var(--purple)]/40 hover:border-[color:var(--purple)] pb-1">Godziny pracy →</a>
+    </div>
+    <div class="reveal aspect-[4/3] rounded-3xl bg-gradient-to-br from-[color:var(--powder)] via-[#C9DDEF] to-[color:var(--accent-blue)]/30 border border-white flex items-center justify-center">
+      <span class="font-display italic text-[color:var(--deep-blue)]/50 text-lg px-8 text-center">miejsce na zdjęcie baru</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MAPA STOKU ===== -->
+<section id="mapa" class="py-24 md:py-32">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="reveal grid md:grid-cols-2 gap-4 items-end mb-12">
+      <div>
+        <p class="font-mono text-xs uppercase tracking-[0.2em] text-[color:var(--accent-blue)] mb-3">Rozkład stoku</p>
+        <h2 class="font-display text-3xl md:text-5xl leading-tight text-[color:var(--deep-blue)]">Zanim wyjedziesz z domu,<br>zobacz gdzie co jest.</h2>
+      </div>
+      <p class="text-[color:var(--ink-soft)] leading-relaxed">Najedź kursorem lub dotknij punktu na mapie, żeby sprawdzić wyciągi, taśmę, górkę saneczkową, kasę, parkingi i bar — wszystko w zasięgu kilkudziesięciu metrów.</p>
+    </div>
+
+    <div class="reveal relative bg-[color:var(--paper)] rounded-3xl p-4 md:p-10 overflow-visible">
+      <svg viewBox="0 0 900 560" class="w-full h-auto">
+        <defs>
+          <linearGradient id="mapHill" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#F1F7FC"/>
+            <stop offset="100%" stop-color="#DCEAF6"/>
+          </linearGradient>
+          <symbol id="pine-map" viewBox="0 0 40 60">
+            <rect x="18" y="50" width="4" height="9" fill="var(--line-blue)"/>
+            <path d="M20 2 L29 20 L24 20 L32 34 L26 34 L36 50 L4 50 L14 34 L8 34 L16 20 L11 20 Z" fill="var(--line-blue)"/>
+            <path d="M20 2 L23.5 10 L16.5 10 Z" fill="#fff" opacity=".65"/>
+            <path d="M20 15 L26.5 27 L13.5 27 Z" fill="#fff" opacity=".3"/>
+          </symbol>
+        </defs>
+
+        <path d="M-10,430 C160,360 260,410 380,340 C500,270 600,330 910,300 L910,570 L-10,570 Z" fill="url(#mapHill)" opacity=".7"/>
+
+        <g opacity=".45">
+          <use href="#pine-map" x="-5" y="330" width="34" height="51"/>
+          <use href="#pine-map" x="20" y="365" width="26" height="39"/>
+          <use href="#pine-map" x="800" y="310" width="30" height="45"/>
+          <use href="#pine-map" x="840" y="345" width="24" height="36"/>
+          <use href="#pine-map" x="620" y="270" width="20" height="30"/>
+          <use href="#pine-map" x="200" y="300" width="22" height="33"/>
+        </g>
+
+        <path class="sketch-line" stroke="var(--accent-blue)" opacity=".55" d="M40 500 C160 420 220 340 300 260 C360 200 420 140 470 80"/>
+        <path class="sketch-line" stroke="var(--accent-blue)" opacity=".55" d="M120 520 C230 440 300 380 380 300 C440 240 500 170 560 100"/>
+
+        <g opacity=".55">
+          <use href="#pine-map" x="690" y="95" width="26" height="39"/>
+          <use href="#pine-map" x="745" y="130" width="20" height="30"/>
+          <use href="#pine-map" x="105" y="95" width="24" height="36"/>
+          <use href="#pine-map" x="55" y="150" width="18" height="27"/>
+          <use href="#pine-map" x="640" y="170" width="18" height="27"/>
+          <use href="#pine-map" x="270" y="150" width="18" height="27"/>
+        </g>
+
+        <rect x="30" y="470" width="70" height="46" rx="4" fill="none" stroke="var(--deep-blue)" stroke-width="1.2" opacity=".3"/>
+        <rect x="120" y="480" width="70" height="40" rx="4" fill="none" stroke="var(--deep-blue)" stroke-width="1.2" opacity=".3"/>
+      </svg>
+
+      <!-- markers positioned absolutely over the svg (percentages) -->
+      <div class="absolute inset-0">
+        <!-- Kasa -->
+        <div class="marker-wrap absolute" style="left:15%; top:83%;">
+          <button class="marker w-4 h-4 rounded-full bg-[color:var(--red)] ring-4 ring-[color:var(--red)]/25 focus:outline-none" aria-label="Kasa"></button>
+          <div class="tooltip absolute left-1/2 -translate-x-1/2 bottom-7 w-40 bg-[color:var(--deep-blue)] text-white text-xs rounded-lg px-3 py-2 font-mono">Kasa — start tutaj, karnety i kaucja za kartę.</div>
+        </div>
+        <!-- Parking x2 -->
+        <div class="marker-wrap absolute" style="left:6%; top:88%;">
+          <button class="marker w-3.5 h-3.5 rounded-full bg-[color:var(--accent-blue)] ring-4 ring-[color:var(--accent-blue)]/20 focus:outline-none" aria-label="Parking"></button>
+          <div class="tooltip absolute left-1/2 -translate-x-1/2 bottom-6 w-36 bg-[color:var(--deep-blue)] text-white text-xs rounded-lg px-3 py-2 font-mono">Parking — bezpłatny, przy samym stoku.</div>
+        </div>
+        <div class="marker-wrap absolute" style="left:23%; top:87%;">
+          <button class="marker w-3.5 h-3.5 rounded-full bg-[color:var(--accent-blue)] ring-4 ring-[color:var(--accent-blue)]/20 focus:outline-none" aria-label="Parking"></button>
+          <div class="tooltip absolute left-1/2 -translate-x-1/2 bottom-6 w-36 bg-[color:var(--deep-blue)] text-white text-xs rounded-lg px-3 py-2 font-mono">Drugi parking — kilka kroków od kasy.</div>
+        </div>
+        <!-- Wyciąg 1 -->
+        <div class="marker-wrap absolute" style="left:35%; top:56%;">
+          <button class="marker w-4 h-4 rounded-full bg-[color:var(--accent-blue)] ring-4 ring-[color:var(--accent-blue)]/25 focus:outline-none" aria-label="Wyciąg 1"></button>
+          <div class="tooltip absolute left-1/2 -translate-x-1/2 bottom-7 w-44 bg-[color:var(--deep-blue)] text-white text-xs rounded-lg px-3 py-2 font-mono">Wyciąg 1 — orczyk, dłuższa trasa.</div>
+        </div>
+        <!-- Wyciąg 2 -->
+        <div class="marker-wrap absolute" style="left:47%; top:44%;">
+          <button class="marker w-4 h-4 rounded-full bg-[color:var(--accent-blue)] ring-4 ring-[color:var(--accent-blue)]/25 focus:outline-none" aria-label="Wyciąg 2"></button>
+          <div class="tooltip absolute left-1/2 -translate-x-1/2 bottom-7 w-44 bg-[color:var(--deep-blue)] text-white text-xs rounded-lg px-3 py-2 font-mono">Wyciąg 2 — orczyk obok baru.</div>
+        </div>
+        <!-- Taśma -->
+        <div class="marker-wrap absolute" style="left:59%; top:33%;">
+          <button class="marker w-4 h-4 rounded-full bg-[color:var(--red)] ring-4 ring-[color:var(--red)]/25 focus:outline-none" aria-label="Taśma"></button>
+          <div class="tooltip absolute left-1/2 -translate-x-1/2 bottom-7 w-48 bg-[color:var(--deep-blue)] text-white text-xs rounded-lg px-3 py-2 font-mono">Taśma — dla początkujących i dzieci.</div>
+        </div>
+        <!-- Górka saneczkowa -->
+        <div class="marker-wrap absolute" style="left:74%; top:38%;">
+          <button class="marker w-4 h-4 rounded-full bg-[color:var(--red)] ring-4 ring-[color:var(--red)]/25 focus:outline-none" aria-label="Górka saneczkowa"></button>
+          <div class="tooltip absolute left-1/2 -translate-x-1/2 bottom-7 w-48 bg-[color:var(--deep-blue)] text-white text-xs rounded-lg px-3 py-2 font-mono">Górka saneczkowa — sanki wliczone w cenę karnetu.</div>
+        </div>
+        <!-- Bar -->
+        <div class="marker-wrap absolute" style="left:55%; top:60%;">
+          <button class="marker w-4 h-4 rounded-full bg-[color:var(--purple)] ring-4 ring-[color:var(--purple)]/25 focus:outline-none" aria-label="Bar"></button>
+          <div class="tooltip absolute left-1/2 -translate-x-1/2 bottom-7 w-44 bg-[color:var(--deep-blue)] text-white text-xs rounded-lg px-3 py-2 font-mono">Bar Karpatka — czynny w godzinach pracy stoku.</div>
+        </div>
+      </div>
+    </div>
+    <p class="font-mono text-[11px] text-[color:var(--ink-soft)]/70 mt-4">Szkicowa mapa poglądowa — do zastąpienia grafiką w finalnej identyfikacji.</p>
+  </div>
+</section>
+
+<!-- ===== FOOTER / KONTAKT ===== -->
+<footer id="kontakt" class="deep-grad text-white/70 pt-20 pb-10">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 grid md:grid-cols-3 gap-12 mb-16">
+    <div>
+      <span class="inline-block bg-white rounded-lg p-2 mb-4">
+        <img src="data:image/png;base64,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" alt="Karpatka — Wyciągi Narciarskie" class="h-12 w-auto">
+      </span>
+      <p class="text-sm leading-relaxed max-w-xs">Wyciągi narciarskie w Karpaczu — Karkonosze. Miejsce na pierwsze zjazdy dzieci i dorosłych.</p>
+    </div>
+    <div class="font-mono text-sm space-y-2">
+      <p class="text-white/40 uppercase text-xs tracking-wider mb-3">Kontakt</p>
+      <p><a href="tel:+48512799025" class="hover:text-white">+48 512 799 025</a></p>
+      <p>Karpacz, Karkonosze</p>
+      <p><a href="#" class="hover:text-white underline underline-offset-4 decoration-white/20">Wskazówki dojazdu →</a></p>
+    </div>
+    <div class="font-mono text-sm space-y-2">
+      <p class="text-white/40 uppercase text-xs tracking-wider mb-3">Sezon 2025/2026</p>
+      <p>Codziennie 9:00 – 21:00</p>
+      <p>Wieczorne zjazdy do 21:00</p>
+      <p>Warunki zależne od pogody</p>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-5 md:px-8 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-3 font-mono text-xs text-white/35">
+    <span>© Karpatka — Wyciągi Narciarskie Karpacz</span>
+    <span>Prototyp strony · Nuxt + Tailwind CSS</span>
+  </div>
+</footer>
+
+<script>
+  const header = document.getElementById('site-header');
+  const onScroll = () => header.classList.toggle('solid', window.scrollY > 40);
+  document.addEventListener('scroll', onScroll); onScroll();
+
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: .15 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  document.querySelectorAll('.marker-wrap').forEach(wrap => {
+    wrap.querySelector('button').addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isActive = wrap.classList.contains('active');
+      document.querySelectorAll('.marker-wrap.active').forEach(w => w.classList.remove('active'));
+      if (!isActive) wrap.classList.add('active');
+    });
+  });
+  document.addEventListener('click', () => document.querySelectorAll('.marker-wrap.active').forEach(w => w.classList.remove('active')));
+</script>
+</body>
+</html>
