@@ -57,7 +57,7 @@ onUnmounted(() => {
             <span class="w-1.5 h-1.5 rounded-full bg-accent-blue animate-pulse"></span>ONLINE
           </span>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 font-mono">
+        <div class="grid grid-cols-2 md:grid-cols-[1fr_1fr_1fr_auto] gap-6 font-mono">
           <div>
             <div class="board-digit text-2xl md:text-3xl font-medium">0<span class="text-base">cm</span></div>
             <div class="text-ink-soft text-[11px] uppercase tracking-wider mt-1">Pokrywa śnieżna</div>
@@ -70,7 +70,7 @@ onUnmounted(() => {
             <div class="board-digit text-2xl md:text-3xl font-medium">{{ hoursLabel }}</div>
             <div class="text-ink-soft text-[11px] uppercase tracking-wider mt-1">Godziny otwarcia</div>
           </div>
-          <div>
+          <div class="md:ml-8">
             <img src="/icon-camera.png" alt="" class="block w-7 h-7 md:w-8 md:h-8" aria-hidden="true">
             <NuxtLink to="/kamery" class="mt-1 inline-block text-accent-blue underline underline-offset-4 decoration-accent-blue/25 hover:decoration-accent-blue text-sm">Kamery na stoku →</NuxtLink>
           </div>
