@@ -9,3 +9,59 @@
 
 [functions]
   directory = "netlify/functions"
+
+# Redirects from the old wyciag-karpacz.pl URL structure to the new site.
+# Add one [[redirects]] block per old URL below.
+[[redirects]]
+  from = "/kamera-2-na-zywo/"
+  to = "/kamery"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/aktualnosci/"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/cennik/"
+  to = "/#cennik"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/galeria/"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/kontakt/"
+  to = "/#kontakt"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/szkola-wypozyczalnia/"
+  to = "/#szkola"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/karczma-karpatka/"
+  to = "/#bar"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/o-stoki-narciarskie/"
+  to = "/#mapa"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/category/czynne-wyciagi-karpacz/"
+  to = "/#kontakt"
+  status = 301
+  force = true
