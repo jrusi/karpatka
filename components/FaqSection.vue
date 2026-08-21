@@ -1,12 +1,20 @@
 <script setup lang="ts">
+const hourly = pricingRows.find(row => row.label === '1 godz.')!
+const daily = pricingRows.find(row => row.label.startsWith('Dzienny'))!
+const evening = pricingRows.find(row => row.label.startsWith('Wieczorny'))!
+const sled1h = pricingRows.find(row => row.label === 'Górka saneczkowa 1h')!
+const sled2h = pricingRows.find(row => row.label === 'Górka saneczkowa 2h')!
+const rental = rentalRows[0]
+const lessonSolo = lessonRows.find(row => row.people === '1 osoba')!
+
 const faqs = [
   {
     q: 'Ile kosztuje wypożyczenie nart lub snowboardu w Karpaczu?',
-    a: 'Komplet sprzętu (narty lub snowboard, buty i kije) w wypożyczalni Karpatka kosztuje 40 zł za dzień oraz 30 zł na jazdy nocne (17:00–21:00).',
+    a: `Komplet sprzętu (narty lub snowboard, buty i kije) w wypożyczalni Karpatka kosztuje ${rental.day} za dzień oraz ${rental.night} na jazdy nocne (17:00–21:00).`,
   },
   {
     q: 'Ile kosztuje karnet na wyciąg w Karpatce?',
-    a: 'Ceny zaczynają się od 55 zł za godzinę (50 zł ulgowy). Karnet dzienny (9:00–16:30) kosztuje 100 zł (95 zł ulgowy), a wieczorny (16:30–21:00) — 70 zł (65 zł ulgowy). Pełny cennik karnetów znajdziesz w sekcji Cennik.',
+    a: `Ceny zaczynają się od ${hourly.normal} za godzinę (${hourly.reduced} ulgowy). Karnet dzienny (9:00–16:30) kosztuje ${daily.normal} (${daily.reduced} ulgowy), a wieczorny (16:30–21:00) — ${evening.normal} (${evening.reduced} ulgowy). Pełny cennik karnetów znajdziesz w sekcji Cennik.`,
   },
   {
     q: 'Czy trzeba mieć własny sprzęt narciarski?',
@@ -14,11 +22,11 @@ const faqs = [
   },
   {
     q: 'Czy w Karpatce można nauczyć się jeździć na nartach od podstaw?',
-    a: 'Tak. Dla początkujących jest łagodna taśma wyciągowa oraz instruktorzy narciarstwa i snowboardu prowadzący zajęcia indywidualne i grupowe (55 minut, od 130 zł/h za 1 osobę, +60 zł za każdą kolejną osobę).',
+    a: `Tak. Dla początkujących jest łagodna taśma wyciągowa oraz instruktorzy narciarstwa i snowboardu prowadzący zajęcia indywidualne i grupowe (55 minut, od ${lessonSolo.price} za 1 osobę, +60 zł za każdą kolejną osobę).`,
   },
   {
     q: 'Czy jest coś dla najmłodszych dzieci, które jeszcze nie jeżdżą na nartach?',
-    a: 'Tak — górka saneczkowa (1h za 25 zł, 2h za 40 zł) oraz taśma dla najmłodszych ułatwiająca pierwsze podejścia do nauki jazdy.',
+    a: `Tak — górka saneczkowa (1h za ${sled1h.normal}, 2h za ${sled2h.normal}) oraz taśma dla najmłodszych ułatwiająca pierwsze podejścia do nauki jazdy.`,
   },
   {
     q: 'Gdzie dokładnie znajduje się wyciąg Karpatka?',

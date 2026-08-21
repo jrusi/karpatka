@@ -12,18 +12,6 @@ const features = [
   { title: 'Wszystko na miejscu', desc: 'zapisy, sprzęt i pierwsza lekcja tego samego dnia.' },
 ]
 
-const rentalRows = [
-  { name: 'Narty carving', day: '40 zł', night: '30 zł' },
-  { name: 'Snowboard', day: '40 zł', night: '30 zł' },
-]
-
-const lessonRows = [
-  { people: '1 osoba', price: '130 zł/h' },
-  { people: '2 osoby', price: '210 zł/h' },
-  { people: '3 osoby', price: '260 zł/h' },
-  { people: '4 osoby', price: '320 zł/h' },
-]
-
 useHead({
   script: [
     {
