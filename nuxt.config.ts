@@ -61,6 +61,10 @@ export default defineNuxtConfig({
       htmlAttrs: { lang: 'pl' },
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
+        {
+          name: 'description',
+          content: 'Wyciągi narciarskie w Karpaczu — dwa wyciągi orczykowe, taśma dla najmłodszych i górka saneczkowa, tuż pod Śnieżką. Nauka jazdy na nartach, cennik, aktualne warunki na stoku i bezpłatny parking.',
+        },
       ],
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
@@ -68,6 +72,13 @@ export default defineNuxtConfig({
         {
           rel: 'stylesheet',
           href: 'https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap',
+          media: 'print',
+          onload: "this.media='all'",
+        },
+      ],
+      noscript: [
+        {
+          innerHTML: '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">',
         },
       ],
     },

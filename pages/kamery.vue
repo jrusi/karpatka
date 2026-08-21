@@ -1,6 +1,12 @@
 <script setup lang="ts">
 useHead({
   title: 'Kamery na żywo — Karpatka',
+  meta: [
+    {
+      name: 'description',
+      content: 'Podgląd na żywo z kamer na stoku wyciągu narciarskiego Karpatka w Karpaczu — sprawdź aktualne warunki na trasie przed wyjazdem.',
+    },
+  ],
 })
 
 const cameras = [
