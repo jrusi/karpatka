@@ -63,10 +63,10 @@ const navLinks = [
         >{{ link.label }}</NuxtLink>
       </nav>
       <a
-        href="tel:+48512799025"
+        :href="contactTelHref"
         class="hidden lg:inline-flex items-center gap-2 border border-deep-blue/25 hover:border-accent-blue hover:text-accent-blue text-deep-blue rounded-full px-5 py-2 font-mono text-[13px] transition-colors"
       >
-        +48 512 799 025
+        {{ contactTel }}
       </a>
       <button ref="menuButtonRef" aria-label="Otwórz menu" class="lg:hidden text-deep-blue" @click="isMenuOpen = !isMenuOpen">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
@@ -78,7 +78,7 @@ const navLinks = [
       class="lg:hidden bg-frost border-t border-deep-blue/10 px-5 pb-6 pt-4 flex flex-col gap-4 font-mono text-sm uppercase tracking-wider text-ink-soft"
     >
       <NuxtLink v-for="link in navLinks" :key="link.href" :to="link.href" @click="closeMenu">{{ link.label }}</NuxtLink>
-      <a href="tel:+48512799025" class="text-accent-blue" @click="closeMenu">+48 512 799 025</a>
+      <a :href="contactTelHref" class="text-accent-blue" @click="closeMenu">{{ contactTel }}</a>
     </div>
   </header>
 </template>

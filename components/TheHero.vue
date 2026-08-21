@@ -46,7 +46,7 @@ onUnmounted(() => {
       </p>
       <div class="mt-9 flex flex-wrap gap-4">
         <a href="#cennik" class="bg-red hover:bg-red-deep text-white font-semibold px-7 py-3.5 rounded-full transition-colors">Zobacz cennik</a>
-        <a href="tel:+48512799025" class="bg-white/90 backdrop-blur-sm border border-deep-blue/25 hover:border-accent-blue text-deep-blue px-7 py-3.5 rounded-full transition-colors font-mono text-sm flex items-center shadow-sm">Zadzwoń: 512 799 025</a>
+        <a :href="contactTelHref" class="bg-white/90 backdrop-blur-sm border border-deep-blue/25 hover:border-accent-blue text-deep-blue px-7 py-3.5 rounded-full transition-colors font-mono text-sm flex items-center shadow-sm">Zadzwoń: {{ contactTelShort }}</a>
       </div>
 
       <!-- SIGNATURE: conditions board -->

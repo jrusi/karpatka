@@ -110,8 +110,8 @@ useHead({
         </div>
 
         <div class="flex flex-wrap gap-4">
-          <a href="tel:+48512799025" class="bg-red hover:bg-red-deep text-white font-semibold px-7 py-3.5 rounded-full transition-colors">Zapisz się na zajęcia</a>
-          <a href="tel:+48512799025" class="border border-white/25 hover:border-white text-white px-7 py-3.5 rounded-full transition-colors font-mono text-sm flex items-center">512 799 025</a>
+          <a :href="contactTelHref" class="bg-red hover:bg-red-deep text-white font-semibold px-7 py-3.5 rounded-full transition-colors">Zapisz się na zajęcia</a>
+          <a :href="contactTelHref" class="border border-white/25 hover:border-white text-white px-7 py-3.5 rounded-full transition-colors font-mono text-sm flex items-center">{{ contactTelShort }}</a>
         </div>
       </div>
     </div>
