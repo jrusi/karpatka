@@ -29,6 +29,21 @@ useHead({
         })),
       }),
     },
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: 'Nauka jazdy na nartach i snowboardzie — Karpatka Karpacz',
+        description: 'Lekcje narciarstwa i snowboardu (55 min) dla dzieci i dorosłych, indywidualne i grupowe, z instruktorem na miejscu.',
+        offers: lessonRows.map(row => ({
+          '@type': 'Offer',
+          name: `Lekcja 55 min: ${row.people}`,
+          price: row.price.replace(/[^\d]/g, ''),
+          priceCurrency: 'PLN',
+        })),
+      }),
+    },
   ],
 })
 </script>
@@ -65,6 +80,7 @@ useHead({
           </li>
         </ul>
 
+        <p class="font-mono text-xs uppercase tracking-[0.2em] text-ice mb-3">{{ season }}</p>
         <div class="grid sm:grid-cols-2 gap-4 mb-9">
           <div id="wypozyczalnia" class="rounded-2xl border border-white/15 bg-white/5 overflow-hidden">
             <h3 class="font-mono text-[11px] uppercase tracking-wider text-white/40 px-5 pt-5 mb-3">Cennik wypożyczalni nart i snowboardu</h3>

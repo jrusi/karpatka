@@ -1,3 +1,5 @@
+export const season = 'Sezon 2025/2026'
+
 export const pricingRows = [
   { label: '1 godz.', normal: '55 zł', reduced: '50 zł' },
   { label: '2 godz.', normal: '70 zł', reduced: '65 zł' },

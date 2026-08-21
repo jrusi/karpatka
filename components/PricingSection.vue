@@ -1,12 +1,49 @@
 <script setup lang="ts">
 const rows = pricingRows
+const liftRows = pricingRows.filter(row => !row.label.startsWith('Górka'))
+const sledRows = pricingRows.filter(row => row.label.startsWith('Górka'))
+
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: 'Karnet na wyciąg narciarski — Karpatka Karpacz',
+        description: 'Karnety na wyciągi orczykowe Karpatka w Karpaczu — od godzinnych po dzienne i wieczorne.',
+        offers: liftRows.map(row => ({
+          '@type': 'Offer',
+          name: `Karnet: ${row.label}`,
+          price: row.normal.replace(/[^\d]/g, ''),
+          priceCurrency: 'PLN',
+        })),
+      }),
+    },
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: 'Górka saneczkowa — Karpatka Karpacz',
+        description: 'Naśnieżana górka saneczkowa w Karpatce, sanki w cenie karnetu.',
+        offers: sledRows.map(row => ({
+          '@type': 'Offer',
+          name: `Karnet: ${row.label}`,
+          price: row.normal.replace(/[^\d]/g, ''),
+          priceCurrency: 'PLN',
+        })),
+      }),
+    },
+  ],
+})
 </script>
 
 <template>
   <section id="cennik" class="py-24 md:py-32">
     <div class="max-w-5xl mx-auto px-5 md:px-8">
       <div v-reveal class="reveal mb-12">
-        <p class="font-mono text-xs uppercase tracking-[0.2em] text-accent-blue mb-3">Sezon 2025/2026</p>
+        <p class="font-mono text-xs uppercase tracking-[0.2em] text-accent-blue mb-3">{{ season }}</p>
         <h2 class="font-display text-3xl md:text-5xl text-deep-blue">Cennik karnetów</h2>
       </div>
 

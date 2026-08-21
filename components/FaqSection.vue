@@ -13,7 +13,7 @@ const faqs = [
     a: `Komplet sprzętu (narty lub snowboard, buty i kije) w wypożyczalni Karpatka kosztuje ${rental.day} za dzień oraz ${rental.night} na jazdy nocne (17:00–21:00).`,
   },
   {
-    q: 'Ile kosztuje karnet na wyciąg w Karpatce?',
+    q: 'Ile kosztuje karnet na wyciąg w Karpaczu?',
     a: `Ceny zaczynają się od ${hourly.normal} za godzinę (${hourly.reduced} ulgowy). Karnet dzienny (9:00–16:30) kosztuje ${daily.normal} (${daily.reduced} ulgowy), a wieczorny (16:30–21:00) — ${evening.normal} (${evening.reduced} ulgowy). Pełny cennik karnetów znajdziesz w sekcji Cennik.`,
   },
   {
@@ -21,12 +21,24 @@ const faqs = [
     a: 'Nie. Wypożyczalnia działa na miejscu i zapewnia pełny sprzęt — narty, snowboard, buty i kije — bez wcześniejszych przygotowań.',
   },
   {
-    q: 'Czy w Karpatce można nauczyć się jeździć na nartach od podstaw?',
+    q: 'Czy w Karpaczu można nauczyć się jeździć na nartach od podstaw?',
     a: `Tak. Dla początkujących jest łagodna taśma wyciągowa oraz instruktorzy narciarstwa i snowboardu prowadzący zajęcia indywidualne i grupowe (55 minut, od ${lessonSolo.price} za 1 osobę, +60 zł za każdą kolejną osobę).`,
   },
   {
     q: 'Czy jest coś dla najmłodszych dzieci, które jeszcze nie jeżdżą na nartach?',
     a: `Tak — górka saneczkowa (1h za ${sled1h.normal}, 2h za ${sled2h.normal}) oraz taśma dla najmłodszych ułatwiająca pierwsze podejścia do nauki jazdy.`,
+  },
+  {
+    q: 'Czy sanki są w cenie karnetu na górkę saneczkową?',
+    a: 'Tak — sanki są wliczone w cenę karnetu na górkę saneczkową, nie trzeba przynosić własnych.',
+  },
+  {
+    q: 'Czy górka saneczkowa jest naśnieżana?',
+    a: 'Tak, jest naśnieżana sztucznie, dzięki czemu można z niej korzystać nawet przy niewielkiej ilości naturalnego śniegu.',
+  },
+  {
+    q: 'Gdzie można kupić karnet na górkę saneczkową?',
+    a: 'Karnet na górkę saneczkową kupisz w kasie stoku Karpatka, na miejscu.',
   },
   {
     q: 'Gdzie dokładnie znajduje się wyciąg Karpatka?',
