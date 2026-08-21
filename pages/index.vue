@@ -8,5 +8,6 @@
     <PricingSection />
     <BarSection />
     <SlopeMapSection />
+    <FaqSection />
   </div>
 </template>

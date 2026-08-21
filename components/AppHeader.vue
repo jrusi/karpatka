@@ -39,6 +39,7 @@ const navLinks = [
   { href: '/#szkola', label: 'Szkoła' },
   { href: '/#bar', label: 'Bar' },
   { href: '/#mapa', label: 'Mapa stoku' },
+  { href: '/#faq', label: 'FAQ' },
   { href: '/#kontakt', label: 'Kontakt' },
 ]
 </script>

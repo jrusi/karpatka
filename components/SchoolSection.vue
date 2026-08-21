@@ -23,6 +23,26 @@ const lessonRows = [
   { people: '3 osoby', price: '260 zł/h' },
   { people: '4 osoby', price: '320 zł/h' },
 ]
+
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: 'Wypożyczenie nart lub snowboardu — Karpatka Karpacz',
+        description: 'Komplet sprzętu (narty lub snowboard, buty, kije) do wypożyczenia na stoku Karpatka w Karpaczu.',
+        offers: rentalRows.map(row => ({
+          '@type': 'Offer',
+          name: `Wypożyczenie: ${row.name} (dzień)`,
+          price: row.day.replace(/[^\d]/g, ''),
+          priceCurrency: 'PLN',
+        })),
+      }),
+    },
+  ],
+})
 </script>
 
 <template>
@@ -58,8 +78,8 @@ const lessonRows = [
         </ul>
 
         <div class="grid sm:grid-cols-2 gap-4 mb-9">
-          <div class="rounded-2xl border border-white/15 bg-white/5 overflow-hidden">
-            <p class="font-mono text-[11px] uppercase tracking-wider text-white/40 px-5 pt-5 mb-3">Wypożyczalnia</p>
+          <div id="wypozyczalnia" class="rounded-2xl border border-white/15 bg-white/5 overflow-hidden">
+            <h3 class="font-mono text-[11px] uppercase tracking-wider text-white/40 px-5 pt-5 mb-3">Cennik wypożyczalni nart i snowboardu</h3>
             <div class="grid grid-cols-3 font-mono text-[11px] uppercase tracking-wider text-white/40 px-5 pb-2">
               <span></span>
               <span class="text-right">Dzień*</span>

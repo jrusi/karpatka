@@ -57,13 +57,13 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'Karpatka — Wyciągi Narciarskie Karpacz',
+      title: 'Karpatka Karpacz — Wyciągi Narciarskie, Szkoła Nart, Wypożyczalnia | Cennik',
       htmlAttrs: { lang: 'pl' },
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
         {
           name: 'description',
-          content: 'Wyciągi narciarskie w Karpaczu — dwa wyciągi orczykowe, taśma dla najmłodszych i górka saneczkowa, tuż pod Śnieżką. Nauka jazdy na nartach, cennik, aktualne warunki na stoku i bezpłatny parking.',
+          content: 'Wyciągi narciarskie w Karpaczu — cennik karnetów, szkoła nauki jazdy i wypożyczalnia nart oraz snowboardu (cennik od 40 zł/dzień). Taśma dla najmłodszych, górka saneczkowa, tuż pod Śnieżką, bezpłatny parking.',
         },
       ],
       link: [
