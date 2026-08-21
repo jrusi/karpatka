@@ -3,7 +3,7 @@
     <div class="max-w-5xl mx-auto px-5 md:px-8">
       <div v-reveal class="reveal text-center mb-12">
         <p class="font-mono text-xs uppercase tracking-[0.2em] text-accent-blue mb-3">Kamery on-line (na żywo)</p>
-        <h2 class="font-display text-3xl md:text-5xl text-deep-blue mb-4">Zerknij na stok, zanim spakujesz auto.</h2>
+        <h2 class="font-display text-3xl md:text-5xl text-deep-blue mb-4">Sprwdź warunki na stoku - na żywo (live).</h2>
         <p class="text-ink-soft max-w-lg mx-auto">Trzy kamery na żywo: widok z Chatki Karpatki, z kasy oraz na górną stację wyciągu.</p>
       </div>
 
