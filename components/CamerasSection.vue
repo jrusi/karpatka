@@ -14,7 +14,7 @@
             stream-url="https://stream2.wyciag-karpacz.pl/3/video.m3u8"
           />
           <div class="flex items-center justify-between px-6 py-4 font-mono text-xs text-white/50">
-            <span>Widok: Górna stacja wyciągu</span>
+            <span>Widok: Taśma i bar (w zimie), Sokoliki i Krzyżna góra (lato)</span>
             <NuxtLink to="/kamery" class="group text-ice hover:text-white flex items-center gap-2 transition-colors">
               Zobacz pozostałe kamery <span class="transition-transform group-hover:translate-x-1">→</span>
             </NuxtLink>

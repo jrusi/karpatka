@@ -29,7 +29,6 @@ const isClosedTemporarily = computed(() => hoursData.value?.status === 'closed_t
     </div>
     <div class="max-w-7xl mx-auto px-5 md:px-8 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-3 font-mono text-xs text-white/35">
       <span>© Karpatka — Wyciągi Narciarskie Karpacz</span>
-      <span>Prototyp strony · Nuxt + Tailwind CSS</span>
     </div>
   </footer>
 </template>
