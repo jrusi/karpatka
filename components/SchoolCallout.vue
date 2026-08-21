@@ -1,5 +1,5 @@
 <template>
-  <section class="relative z-10 -mt-1">
+  <section class="relative z-10 -mt-1 bg-paper">
     <div class="max-w-5xl mx-auto px-5 md:px-8">
       <a
         v-reveal

@@ -26,6 +26,7 @@ onUnmounted(() => {
     <div class="absolute inset-0">
       <img src="/hero-bg.jpg" alt="" class="w-full h-full object-cover" aria-hidden="true">
       <div class="absolute inset-0 bg-gradient-to-b from-white/85 via-white/60 to-white/35"></div>
+      <div class="absolute inset-x-0 bottom-0 h-40 md:h-56 bg-gradient-to-b from-transparent to-paper"></div>
     </div>
 
     <div class="relative max-w-7xl mx-auto px-5 md:px-8">
