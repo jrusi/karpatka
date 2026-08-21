@@ -18,7 +18,7 @@ const isClosedTemporarily = computed(() => hoursData.value?.status === 'closed_t
         <p class="text-white/40 uppercase text-xs tracking-wider mb-3">Kontakt</p>
         <p><a href="tel:+48512799025" class="hover:text-white">+48 512 799 025</a></p>
         <p>ul.Myśliwska 3, 58-540 Karpacz</p>
-        <p><a href="https://maps.app.goo.gl/mieb4T5tyZQD8sCL8" target="_blank" class="hover:text-white underline underline-offset-4 decoration-white/20">Wskazówki dojazdu →</a></p>
+        <p><a href="https://www.google.com/maps/search/?api=1&query=Karpatka+wyci%C4%85g+narciarski%2C+ul.+My%C5%9Bliwska+3%2C+58-540+Karpacz" target="_blank" class="hover:text-white underline underline-offset-4 decoration-white/20">Wskazówki dojazdu →</a></p>
       </div>
       <div class="font-mono text-sm space-y-1">
         <p class="text-white/40 uppercase text-xs tracking-wider mb-3">Godziny otwarcia</p>
