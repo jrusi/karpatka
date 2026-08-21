@@ -57,7 +57,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'Karpatka Karpacz — Wyciągi Narciarskie, Szkoła Nart, Wypożyczalnia | Cennik',
+      title: 'Karpatka Karpacz — Wyciągi Narciarskie, Szkoła, Wypożyczalnia narty snowboard | Cennik',
       htmlAttrs: { lang: 'pl' },
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
