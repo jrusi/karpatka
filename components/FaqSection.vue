@@ -29,6 +29,10 @@ const faqs = [
     a: `Tak — górka saneczkowa (1h za ${sled1h.normal}, 2h za ${sled2h.normal}) oraz taśma dla najmłodszych ułatwiająca pierwsze podejścia do nauki jazdy.`,
   },
   {
+    q: 'Gdzie można pojeździć na sankach w Karpaczu?',
+    a: 'Na stoku Karpatka jest przygotowana górka saneczkowa — zapewniamy sprzęt (sanki), bezpieczne otoczenie, sztuczne naśnieżanie i oświetlenie.',
+  },
+  {
     q: 'Czy sanki są w cenie karnetu na górkę saneczkową?',
     a: 'Tak — sanki są wliczone w cenę karnetu na górkę saneczkową, nie trzeba przynosić własnych.',
   },

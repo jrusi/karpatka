@@ -12,7 +12,7 @@ const isClosedTemporarily = computed(() => hoursData.value?.status === 'closed_t
         <span class="inline-block bg-white rounded-lg p-2 mb-4">
           <img src="/logo.png" alt="Karpatka — Wyciągi Narciarskie" class="h-12 w-auto">
         </span>
-        <p class="text-sm leading-relaxed max-w-xs">Wyciągi narciarskie w Karpaczu — Karkonosze. Miejsce na pierwsze zjazdy dzieci i dorosłych.</p>
+        <p class="text-sm leading-relaxed max-w-xs">Wyciągi narciarskie w Karpaczu — Karkonosze. Miejsce na narty, snowboard i sanki dla dzieci i dorosłych.</p>
       </div>
       <div class="font-mono text-sm space-y-2">
         <p class="text-white/40 uppercase text-xs tracking-wider mb-3">Kontakt</p>
