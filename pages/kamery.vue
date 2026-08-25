@@ -1,11 +1,18 @@
 <script setup lang="ts">
+const { public: { siteUrl } } = useRuntimeConfig()
+
+const pageTitle = 'Kamery na żywo — Karpatka'
+const pageDescription = 'Podgląd na żywo z kamer na stoku wyciągu narciarskiego Karpatka w Karpaczu — sprawdź aktualne warunki na trasie przed wyjazdem.'
+
 useHead({
-  title: 'Kamery na żywo — Karpatka',
+  title: pageTitle,
   meta: [
-    {
-      name: 'description',
-      content: 'Podgląd na żywo z kamer na stoku wyciągu narciarskiego Karpatka w Karpaczu — sprawdź aktualne warunki na trasie przed wyjazdem.',
-    },
+    { name: 'description', content: pageDescription },
+    { property: 'og:url', content: `${siteUrl}/kamery` },
+    { property: 'og:title', content: pageTitle },
+    { property: 'og:description', content: pageDescription },
+    { name: 'twitter:title', content: pageTitle },
+    { name: 'twitter:description', content: pageDescription },
   ],
 })
 
