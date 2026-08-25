@@ -82,7 +82,7 @@ export default defineNuxtConfig({
           property: 'og:description',
           content: 'Wyciągi narciarskie w Karpaczu — cennik karnetów, szkoła nauki jazdy i wypożyczalnia nart oraz snowboardu (cennik od 40 zł/dzień). Taśma dla najmłodszych, górka saneczkowa, tuż pod Śnieżką, bezpłatny parking.',
         },
-        { property: 'og:image', content: `${siteUrl}/og-image.jpg` },
+        { property: 'og:image', content: `${siteUrl}/og-image-v2.jpg` },
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
         { property: 'og:image:alt', content: 'Stok narciarski Karpatka w Karpaczu' },
@@ -92,7 +92,7 @@ export default defineNuxtConfig({
           name: 'twitter:description',
           content: 'Wyciągi narciarskie w Karpaczu — cennik karnetów, szkoła nauki jazdy i wypożyczalnia nart oraz snowboardu (cennik od 40 zł/dzień). Taśma dla najmłodszych, górka saneczkowa, tuż pod Śnieżką, bezpłatny parking.',
         },
-        { name: 'twitter:image', content: `${siteUrl}/og-image.jpg` },
+        { name: 'twitter:image', content: `${siteUrl}/og-image-v2.jpg` },
       ],
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
