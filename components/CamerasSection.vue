@@ -1,5 +1,5 @@
 <template>
-  <section id="kamery" class="py-24 md:py-32 bg-paper">
+  <section id="kamery" class="pt-24 pb-6 md:pt-32 md:pb-8 bg-paper">
     <div class="max-w-5xl mx-auto px-5 md:px-8">
       <div v-reveal class="reveal text-center mb-12">
         <p class="font-mono text-xs uppercase tracking-[0.2em] text-accent-blue mb-3">Kamery on-line (na żywo)</p>
