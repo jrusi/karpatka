@@ -84,8 +84,33 @@ function clearActive() {
   activeId.value = null
 }
 
-onMounted(() => document.addEventListener('click', clearActive))
-onUnmounted(() => document.removeEventListener('click', clearActive))
+const isFullscreen = ref(false)
+
+function openFullscreen() {
+  isFullscreen.value = true
+}
+
+function closeFullscreen() {
+  isFullscreen.value = false
+}
+
+function handleKeydown(event: KeyboardEvent) {
+  if (event.key === 'Escape' && isFullscreen.value) closeFullscreen()
+}
+
+watch(isFullscreen, (open) => {
+  document.body.style.overflow = open ? 'hidden' : ''
+})
+
+onMounted(() => {
+  document.addEventListener('click', clearActive)
+  document.addEventListener('keydown', handleKeydown)
+})
+onUnmounted(() => {
+  document.removeEventListener('click', clearActive)
+  document.removeEventListener('keydown', handleKeydown)
+  document.body.style.overflow = ''
+})
 </script>
 
 <template>
@@ -100,7 +125,7 @@ onUnmounted(() => document.removeEventListener('click', clearActive))
       </div>
 
       <div v-reveal class="reveal relative bg-paper rounded-3xl p-4 md:p-10 overflow-visible">
-        <div class="relative aspect-[800/533] rounded-2xl overflow-hidden">
+        <div class="relative aspect-[800/533] rounded-2xl overflow-hidden cursor-pointer md:cursor-default" @click="openFullscreen">
           <img
             src="/mapa-stoku.jpg"
             alt="Mapa stoku Karpatka — wyciągi, taśma, górka saneczkowa, kasa, parkingi i bar"
@@ -108,6 +133,11 @@ onUnmounted(() => document.removeEventListener('click', clearActive))
             width="800"
             height="533"
           >
+
+          <span class="md:hidden absolute top-3 left-3 pointer-events-none flex items-center gap-1.5 bg-deep-blue/80 text-white text-[11px] font-mono px-3 py-1.5 rounded-full">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+            Powiększ
+          </span>
 
           <!-- markers positioned absolutely over the map image (percentages) -->
           <div class="absolute inset-0">
@@ -133,5 +163,26 @@ onUnmounted(() => document.removeEventListener('click', clearActive))
         </div>
       </div>
     </div>
+
+    <Teleport to="body">
+      <div
+        v-if="isFullscreen"
+        class="fixed inset-0 z-[100] bg-deep-blue/95 backdrop-blur-sm flex items-center justify-center p-4"
+        @click="closeFullscreen"
+      >
+        <button
+          class="absolute top-4 right-4 md:top-6 md:right-6 text-white/80 hover:text-white w-11 h-11 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+          aria-label="Zamknij powiększoną mapę"
+          @click.stop="closeFullscreen"
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+        <img
+          src="/mapa-stoku.jpg"
+          alt="Mapa stoku Karpatka — wyciągi, taśma, górka saneczkowa, kasa, parkingi i bar"
+          class="max-w-full max-h-full object-contain rounded-xl"
+        >
+      </div>
+    </Teleport>
   </section>
 </template>

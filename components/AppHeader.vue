@@ -19,6 +19,15 @@ function closeMenu() {
   isMenuOpen.value = false
 }
 
+const route = useRoute()
+
+function handleLogoClick() {
+  closeMenu()
+  if (route.path === '/') {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+}
+
 const menuButtonRef = ref<HTMLElement | null>(null)
 const menuPanelRef = ref<HTMLElement | null>(null)
 
@@ -51,7 +60,7 @@ const navLinks = [
     :class="{ solid: isSolid }"
   >
     <div class="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between h-16 md:h-20">
-      <NuxtLink to="/" class="flex items-center gap-3" @click="closeMenu">
+      <NuxtLink to="/" class="flex items-center gap-3" @click="handleLogoClick">
         <img src="/logo.png" alt="Karpatka — Wyciągi Narciarskie" class="h-11 md:h-16 w-auto">
       </NuxtLink>
       <nav class="hidden lg:flex items-center gap-8 font-mono text-[13px] uppercase tracking-wider text-ink-soft">
