@@ -119,7 +119,7 @@ onUnmounted(() => {
       <div v-reveal class="reveal grid md:grid-cols-2 gap-4 items-end mb-12">
         <div>
           <p class="font-mono text-xs uppercase tracking-[0.2em] text-accent-blue mb-3">Mapa stoku</p>
-          <h2 class="font-display text-3xl md:text-5xl leading-tight text-deep-blue">Zobacz gdzie co jest.</h2>
+          <h2 class="font-display text-3xl md:text-5xl leading-tight text-deep-blue">Zobacz co gdzie jest.</h2>
         </div>
         <p class="text-ink-soft leading-relaxed">Kliknij lub dotknij punktu na mapie, żeby sprawdzić wyciągi, taśmę, górkę saneczkową, kasę, parkingi i bar — wszystko w zasięgu kilkudziesięciu metrów.</p>
       </div>
