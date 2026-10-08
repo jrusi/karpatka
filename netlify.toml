@@ -10,6 +10,21 @@
 [functions]
   directory = "netlify/functions"
 
+# Legacy PHP endpoints still served by the old server (178.62.196.229).
+# Proxied (status 200) so https://wyciag-karpacz.pl/<file>.php keeps working
+# for external tools after DNS moves to Netlify.
+[[redirects]]
+  from = "/current_temp_show.php"
+  to = "https://old.wyciag-karpacz.pl/current_temp_show.php"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/current_temp_show_dancio.php"
+  to = "https://old.wyciag-karpacz.pl/current_temp_show_dancio.php"
+  status = 200
+  force = true
+
 # Redirects from the old wyciag-karpacz.pl URL structure to the new site.
 # Add one [[redirects]] block per old URL below.
 [[redirects]]
