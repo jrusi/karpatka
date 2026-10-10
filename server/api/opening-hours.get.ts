@@ -6,7 +6,19 @@ function formatTime(time: string): string {
 }
 
 export default defineEventHandler(async () => {
-  const stored = await getStoredOpeningHours()
+  // Storage read can fail transiently (e.g. Netlify Blobs on a cold start) and
+  // is empty until the first scheduled refresh — in both cases fetch from
+  // Google on demand instead of falling back to the generic footer text.
+  let stored = await getStoredOpeningHours().catch((err) => {
+    console.error('[opening-hours] storage read failed:', err)
+    return null
+  })
+  if (!stored) {
+    stored = await fetchAndStoreOpeningHours().catch((err) => {
+      console.error('[opening-hours] on-demand fetch failed:', err)
+      return null
+    })
+  }
 
   if (!stored) {
     return { status: 'unknown', label: null, weekdayText: [] }
