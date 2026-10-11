@@ -35,7 +35,7 @@ function storage() {
 /**
  * Calls the Google Places API (Place Details) and caches the result.
  * Mirrors the WordPress "Google Business Hours" plugin's daily cron fetch —
- * called once a day by server/tasks/fetch-opening-hours.ts.
+ * called once a day by netlify/functions/daily-hours-refresh.ts.
  */
 export async function fetchAndStoreOpeningHours(): Promise<StoredBusinessHours | null> {
   const config = useRuntimeConfig()

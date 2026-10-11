@@ -32,21 +32,8 @@ export default defineNuxtConfig({
 
   nitro: {
     preset: isNetlify ? 'netlify' : undefined,
-    experimental: {
-      tasks: true,
-    },
-    // Nitro's timer-based scheduler needs a long-running process, so it only
-    // works for self-hosted/node-server deploys. On Netlify (serverless
-    // functions, no persistent process) the daily fetch is instead triggered
-    // by netlify/functions/daily-hours-refresh.mts, a native Netlify
-    // Scheduled Function that calls POST /api/opening-hours/refresh.
-    scheduledTasks: isNetlify
-      ? undefined
-      : {
-          // 00:05 daily — a few minutes past midnight, same cadence as the
-          // WordPress plugin's daily cron, offset slightly off the exact hour.
-          '5 0 * * *': ['fetch-opening-hours'],
-        },
+    // Google Places hours are fetched only by the Netlify Scheduled Function
+    // netlify/functions/daily-hours-refresh.ts (POST /api/opening-hours/refresh).
     // Persistent KV store — the Nuxt equivalent of the WordPress plugin's
     // get_option()/update_option() cache. Local disk in dev/self-host isn't
     // durable on Netlify's ephemeral functions, so Netlify Blobs is used
