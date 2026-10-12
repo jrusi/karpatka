@@ -3,9 +3,8 @@
 const isNetlify = !!process.env.NETLIFY
 
 // Absolute origin needed for Open Graph/Twitter tags (og:image and og:url
-// must be full URLs, not relative paths). Update once a custom domain
-// (e.g. wyciag-karpacz.pl) is live and pointed at this deployment.
-const siteUrl = 'https://karpatka.netlify.app'
+// must be full URLs, not relative paths).
+const siteUrl = 'https://www.wyciag-karpacz.pl'
 
 export default defineNuxtConfig({
   compatibilityDate: '2024-09-01',

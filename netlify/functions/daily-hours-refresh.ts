@@ -8,7 +8,7 @@ import { schedule } from '@netlify/functions'
 // Deliberately NOT using Netlify's auto-injected `URL` env var — it isn't
 // reliably populated for scheduled/background functions (no inbound request
 // to derive it from). Set SITE_URL explicitly instead (Site settings →
-// Environment variables), e.g. https://karpatka.netlify.app or your domain.
+// Environment variables), e.g. https://www.wyciag-karpacz.pl.
 export const handler = schedule('5 0 * * *', async () => {
   const siteUrl = process.env.SITE_URL
   const secret = process.env.NUXT_REFRESH_SECRET
