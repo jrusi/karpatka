@@ -4,6 +4,7 @@ const isMenuOpen = ref(false)
 
 function onScroll() {
   isSolid.value = window.scrollY > 40
+  updateActiveSection()
 }
 
 onMounted(() => {
@@ -39,6 +40,36 @@ function handleOutsideClick(event: MouseEvent) {
   closeMenu()
 }
 
+// Scroll-spy for the home page: the active section is the last one whose top
+// has passed the upper third of the viewport (or the last one at page bottom).
+const activeSection = ref<string | null>(null)
+
+function updateActiveSection() {
+  if (route.path !== '/') {
+    activeSection.value = null
+    return
+  }
+  const ids = navLinks.filter((l) => l.href.startsWith('/#')).map((l) => l.href.slice(2))
+  const sections = ids
+    .map((id) => document.getElementById(id))
+    .filter((el): el is HTMLElement => !!el)
+    .sort((a, b) => a.offsetTop - b.offsetTop)
+  const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2
+  let current: string | null = null
+  for (const el of sections) {
+    if (el.getBoundingClientRect().top <= window.innerHeight / 3) current = el.id
+  }
+  if (atBottom && sections.length) current = sections[sections.length - 1].id
+  activeSection.value = current
+}
+
+watch(() => route.fullPath, () => nextTick(updateActiveSection))
+
+function isActive(href: string) {
+  if (href.startsWith('/#')) return activeSection.value === href.slice(2)
+  return route.path === href
+}
+
 onMounted(() => document.addEventListener('click', handleOutsideClick))
 onUnmounted(() => document.removeEventListener('click', handleOutsideClick))
 
@@ -68,7 +99,9 @@ const navLinks = [
           v-for="link in navLinks"
           :key="link.href"
           :to="link.href"
-          class="hover:text-deep-blue transition-colors"
+          class="hover:text-deep-blue transition-colors border-b-2 pb-0.5"
+          :class="isActive(link.href) ? 'text-deep-blue border-accent-blue' : 'border-transparent'"
+          :aria-current="isActive(link.href) ? 'location' : undefined"
         >{{ link.label }}</NuxtLink>
       </nav>
       <a
@@ -86,7 +119,15 @@ const navLinks = [
       ref="menuPanelRef"
       class="lg:hidden bg-frost border-t border-deep-blue/10 px-5 pb-6 pt-4 flex flex-col gap-4 font-mono text-sm uppercase tracking-wider text-ink-soft"
     >
-      <NuxtLink v-for="link in navLinks" :key="link.href" :to="link.href" @click="closeMenu">{{ link.label }}</NuxtLink>
+      <NuxtLink
+        v-for="link in navLinks"
+        :key="link.href"
+        :to="link.href"
+        class="border-l-2 pl-3 -ml-3.5"
+        :class="isActive(link.href) ? 'text-deep-blue border-accent-blue' : 'border-transparent'"
+        :aria-current="isActive(link.href) ? 'location' : undefined"
+        @click="closeMenu"
+      >{{ link.label }}</NuxtLink>
       <a :href="contactTelHref" class="text-accent-blue" @click="closeMenu">{{ contactTel }}</a>
     </div>
   </header>
