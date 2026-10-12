@@ -1,3 +1,5 @@
+import { getStore } from '@netlify/blobs'
+
 interface GooglePeriod {
   open: { day: number; time: string }
   close?: { day: number; time: string }
@@ -28,8 +30,30 @@ const STORAGE_KEY = 'google'
 // if the refresh endpoint is hit repeatedly (the Netlify cron runs at 00:05).
 const MIN_FETCH_INTERVAL_MS = 20 * 60 * 60 * 1000
 
-function storage() {
-  return useStorage('data')
+// On Netlify, Blobs credentials are a short-lived token injected per
+// invocation. Nitro's netlify-blobs driver creates its client once and reuses
+// it for the life of a warm function instance, so after a few hours every
+// request failed with "Token expired". Create a fresh Blobs store per call
+// instead; outside Netlify, fall back to Nitro's local fs storage.
+const BLOBS_STORE = 'karpatka-data'
+
+function onNetlify() {
+  return !!((globalThis as { netlifyBlobsContext?: unknown }).netlifyBlobsContext || process.env.NETLIFY_BLOBS_CONTEXT)
+}
+
+async function readStored(): Promise<StoredBusinessHours | null> {
+  if (onNetlify()) {
+    return (await getStore(BLOBS_STORE).get(STORAGE_KEY, { type: 'json' })) ?? null
+  }
+  return (await useStorage('data').getItem<StoredBusinessHours>(STORAGE_KEY)) ?? null
+}
+
+async function writeStored(value: StoredBusinessHours) {
+  if (onNetlify()) {
+    await getStore(BLOBS_STORE).setJSON(STORAGE_KEY, value)
+    return
+  }
+  await useStorage('data').setItem(STORAGE_KEY, value)
 }
 
 /**
@@ -76,10 +100,10 @@ export async function fetchAndStoreOpeningHours(): Promise<StoredBusinessHours |
     fetchedAt: new Date().toISOString(),
   }
 
-  await storage().setItem(STORAGE_KEY, stored)
+  await writeStored(stored)
   return stored
 }
 
 export async function getStoredOpeningHours(): Promise<StoredBusinessHours | null> {
-  return (await storage().getItem<StoredBusinessHours>(STORAGE_KEY)) ?? null
+  return readStored()
 }

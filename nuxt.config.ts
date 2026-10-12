@@ -34,13 +34,11 @@ export default defineNuxtConfig({
     // Google Places hours are fetched only by the Netlify Scheduled Function
     // netlify/functions/daily-hours-refresh.ts (POST /api/opening-hours/refresh).
     // Persistent KV store — the Nuxt equivalent of the WordPress plugin's
-    // get_option()/update_option() cache. Local disk in dev/self-host isn't
-    // durable on Netlify's ephemeral functions, so Netlify Blobs is used
-    // there instead (credentials are injected automatically by Netlify).
+    // get_option()/update_option() cache. Used for local dev/self-host only;
+    // on Netlify, server/utils/googleBusinessHours.ts talks to Netlify Blobs
+    // directly (Nitro's netlify-blobs driver caches an expiring token).
     storage: {
-      data: isNetlify
-        ? { driver: 'netlify-blobs', name: 'karpatka-data' }
-        : { driver: 'fs', base: './.data/kv' },
+      data: { driver: 'fs', base: './.data/kv' },
     },
   },
 
