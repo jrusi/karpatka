@@ -77,6 +77,12 @@
   force = true
 
 [[redirects]]
+  from = "/szkola-nauki-jazdy-narty-snowboard/"
+  to = "/#szkola"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/karczma-karpatka/"
   to = "/#bar"
   status = 301
