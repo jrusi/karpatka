@@ -1,3 +1,5 @@
+import { defaultLocale, locales } from './i18n/locales'
+
 // Netlify sets this during both build and runtime. Used to switch storage/
 // scheduling between the Netlify-native services and plain local dev/self-host.
 const isNetlify = !!process.env.NETLIFY
@@ -16,15 +18,10 @@ export default defineNuxtConfig({
   // Texts live in i18n/locales/<code>.json.
   i18n: {
     baseUrl: siteUrl,
-    defaultLocale: 'pl',
+    defaultLocale,
     strategy: 'prefix_except_default',
     detectBrowserLanguage: false,
-    locales: [
-      { code: 'pl', language: 'pl-PL', name: 'Polski', file: 'pl.json' },
-      { code: 'de', language: 'de-DE', name: 'Deutsch', file: 'de.json' },
-      { code: 'en', language: 'en-GB', name: 'English', file: 'en.json' },
-      { code: 'cs', language: 'cs-CZ', name: 'Čeština', file: 'cs.json' },
-    ],
+    locales,
   },
 
   // Server-only secrets — never exposed to the client bundle. Real values

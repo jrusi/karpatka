@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.wyciag-karpacz.pl/sitemap.xml
