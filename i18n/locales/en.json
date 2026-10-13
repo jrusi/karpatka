@@ -22,7 +22,7 @@
     "language": "Language"
   },
   "hero": {
-    "eyebrow": "Karpacz · Giant Mountains · Ski lift",
+    "eyebrow": "Karpacz · Karkonosze Mountains · Ski lift",
     "titleMain": "Ski lifts in Karpacz",
     "titleAccent": "learn to ski with us.",
     "lead": "Two T-bar lifts, a conveyor lift for the little ones and a sledding hill — right below Śnieżka, with free parking next to the slope.",
@@ -229,7 +229,7 @@
       },
       "location": {
         "q": "Where exactly is the Karpatka ski lift?",
-        "a": "The Karpatka ski lifts are at ul. Myśliwska 3 in Karpacz (58-540), in the Giant Mountains, right below Śnieżka, with free parking right next to the slope."
+        "a": "The Karpatka ski lifts are at ul. Myśliwska 3 in Karpacz (58-540), in the Karkonosze Mountains, right below Śnieżka, with free parking right next to the slope."
       },
       "openingHours": {
         "q": "What are the current opening hours of the slope and the rental shop?",
@@ -238,7 +238,7 @@
     }
   },
   "footer": {
-    "about": "Ski lifts in Karpacz — Giant Mountains. A place for skiing, snowboarding and sledding for children and adults.",
+    "about": "Ski lifts in Karpacz — Karkonosze Mountains. A place for skiing, snowboarding and sledding for children and adults.",
     "contact": "Contact",
     "directions": "Directions →",
     "openingHours": "Opening hours",
