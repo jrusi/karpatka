@@ -1,6 +1,13 @@
 <script setup lang="ts">
-const { t } = useI18n()
+const { t, locale, locales } = useI18n()
 const localePath = useLocalePath()
+const switchLocalePath = useSwitchLocalePath()
+
+// Shown as PL / EN / DE / CZ — Czech's language code is "cs", but "CZ" is
+// what Czech visitors look for.
+function localeLabel(code: string) {
+  return code === 'cs' ? 'CZ' : code.toUpperCase()
+}
 
 const isSolid = ref(false)
 const isMenuOpen = ref(false)
@@ -118,12 +125,26 @@ const navLinks: NavLink[] = [
           :aria-current="isActive(link) ? 'location' : undefined"
         >{{ t(`nav.${link.key}`) }}</NuxtLink>
       </nav>
-      <a
-        :href="contactTelHref"
-        class="hidden lg:inline-flex items-center gap-2 border border-deep-blue/25 hover:border-accent-blue hover:text-accent-blue text-deep-blue rounded-full px-5 py-2 font-mono text-[13px] transition-colors"
-      >
-        {{ contactTel }}
-      </a>
+      <div class="hidden lg:flex items-center gap-5">
+        <nav :aria-label="t('nav.language')" class="flex items-center gap-1 font-mono text-[13px]">
+          <NuxtLink
+            v-for="l in locales"
+            :key="l.code"
+            :to="switchLocalePath(l.code)"
+            :lang="l.language"
+            :title="l.name"
+            class="px-1.5 py-0.5 rounded transition-colors"
+            :class="l.code === locale ? 'text-deep-blue font-semibold' : 'text-ink-soft hover:text-deep-blue'"
+            :aria-current="l.code === locale ? 'true' : undefined"
+          >{{ localeLabel(l.code) }}</NuxtLink>
+        </nav>
+        <a
+          :href="contactTelHref"
+          class="inline-flex items-center gap-2 border border-deep-blue/25 hover:border-accent-blue hover:text-accent-blue text-deep-blue rounded-full px-5 py-2 font-mono text-[13px] transition-colors"
+        >
+          {{ contactTel }}
+        </a>
+      </div>
       <button ref="menuButtonRef" :aria-label="t('nav.openMenu')" class="lg:hidden text-deep-blue" @click="isMenuOpen = !isMenuOpen">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
@@ -143,6 +164,19 @@ const navLinks: NavLink[] = [
         @click="closeMenu"
       >{{ t(`nav.${link.key}`) }}</NuxtLink>
       <a :href="contactTelHref" class="text-accent-blue" @click="closeMenu">{{ contactTel }}</a>
+      <nav :aria-label="t('nav.language')" class="flex items-center gap-2 pt-2 border-t border-deep-blue/10">
+        <NuxtLink
+          v-for="l in locales"
+          :key="l.code"
+          :to="switchLocalePath(l.code)"
+          :lang="l.language"
+          :title="l.name"
+          class="px-2 py-1 rounded"
+          :class="l.code === locale ? 'bg-deep-blue text-white' : 'text-ink-soft'"
+          :aria-current="l.code === locale ? 'true' : undefined"
+          @click="closeMenu"
+        >{{ localeLabel(l.code) }}</NuxtLink>
+      </nav>
     </div>
   </header>
 </template>

@@ -1,0 +1,247 @@
+{
+  "common": {
+    "price": "{n} PLN",
+    "pricePerHour": "{n} PLN/h",
+    "logoAlt": "Karpatka — Ski Lifts"
+  },
+  "seo": {
+    "title": "Karpatka Karpacz — Ski Lifts, Ski School, Ski & Snowboard Rental {'|'} Prices",
+    "description": "Ski lifts in Karpacz, Poland — lift pass prices, ski and snowboard school, ski and snowboard rental (from 40 PLN/day). Beginner conveyor lift, sledding hill, right below Śnieżka, free parking.",
+    "siteName": "Karpatka — Ski Lifts",
+    "imageAlt": "Karpatka ski slope in Karpacz"
+  },
+  "nav": {
+    "cameras": "Live cameras",
+    "pricing": "Prices",
+    "school": "School",
+    "bar": "Bar",
+    "map": "Slope map",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "language": "Language"
+  },
+  "hero": {
+    "eyebrow": "Karpacz · Giant Mountains · Ski lift",
+    "titleMain": "Ski lifts in Karpacz",
+    "titleAccent": "learn to ski with us.",
+    "lead": "Two T-bar lifts, a conveyor lift for the little ones and a sledding hill — right below Śnieżka, with free parking next to the slope.",
+    "seePricing": "See prices",
+    "call": "Call: {tel}",
+    "boardTitle": "Conditions board · live updates",
+    "online": "ONLINE",
+    "snow": "Snow depth",
+    "temperature": "Temperature",
+    "openingHours": "Opening hours",
+    "slopeCameras": "Slope cameras →"
+  },
+  "hours": {
+    "closed": "Closed",
+    "allDay": "open 24 hours",
+    "closedTemporarily": "Temporarily closed",
+    "weatherDependent": "Depends on weather conditions"
+  },
+  "schoolCallout": {
+    "title": "First time on skis or a snowboard?",
+    "text": "Start with our ski school — instructors and equipment are waiting on site.",
+    "cta": "Meet the school"
+  },
+  "cameras": {
+    "eyebrow": "Live webcams",
+    "sectionTitle": "Check slope conditions live.",
+    "sectionLead": "Three live cameras: views from Chatka Karpatka, from the ticket office and of the top lift station.",
+    "view": "View: {title}",
+    "seeOthers": "See the other cameras",
+    "live": "LIVE",
+    "index": "Camera {n} of {total}",
+    "cam1": "Top lift station",
+    "cam2": "Bottom lift station",
+    "cam3": "Conveyor lift and bar (winter), Sokoliki and Krzyżna Góra (summer)",
+    "pageTitle": "Live cameras — Karpatka",
+    "pageDescription": "Live view from the cameras on the Karpatka ski slope in Karpacz — check current conditions before you set off.",
+    "pageHeading": "Take a look at the slope before you pack the car.",
+    "pageLead": "Three live cameras: views from Chatka Karpatka, from the ticket office and of the top lift station — all in one place.",
+    "pageNote": "* live view; depends on the stability of the cameras' connection on the slope",
+    "backHome": "← Back to the home page"
+  },
+  "offer": {
+    "eyebrow": "What you'll find here",
+    "title": "Everything you need in one place.",
+    "lifts": {
+      "title": "Two T-bar lifts",
+      "desc": "Lift 1 and Lift 2 — for more confident skiers, with short waiting times."
+    },
+    "beltLift": {
+      "title": "Conveyor lift for beginners",
+      "desc": "A gentle start for children and anyone taking their first steps on skis."
+    },
+    "sledding": {
+      "title": "Sledding hill",
+      "desc": "Sleds included in the ticket — a good option when the skis are waiting for another day."
+    },
+    "school": {
+      "title": "School and rental",
+      "desc": "Equipment on site and ski and snowboard instructors.",
+      "link": "See details →"
+    },
+    "parking": {
+      "title": "Free parking",
+      "desc": "Right next to the slope — not added to the price of your pass."
+    },
+    "cameras": {
+      "title": "Live cameras",
+      "desc": "Views of the slope, the ticket office and the top station — check conditions before you leave.",
+      "link": "See the cameras"
+    }
+  },
+  "school": {
+    "eyebrow": "For beginners and beyond",
+    "titleLine1": "Ski school",
+    "titleLine2": "and rental",
+    "lead": "No equipment? Just starting out with skiing or snowboarding? Our instructors will guide you step by step, and the rental shop will equip you on site — no preparation needed.",
+    "imageAlt": "Karpatka instructor on the slope with a child during a lesson",
+    "highlights": {
+      "kids": { "title": "Kids", "subtitle": "and adults" },
+      "gear": { "title": "Skis", "subtitle": "and snowboard" },
+      "group": { "title": "Solo", "subtitle": "or in a group" }
+    },
+    "features": {
+      "instructors": { "title": "Ski and snowboard instructors", "desc": "private and group lessons." },
+      "basics": { "title": "Learning from scratch on the conveyor lift", "desc": "a gentle, safe start to the sport." },
+      "rental": { "title": "Full equipment for rent", "desc": "skis, snowboards, poles and helmets." },
+      "onSite": { "title": "Everything on site", "desc": "sign-up, equipment and your first lesson on the same day." }
+    },
+    "rentalTitle": "Ski and snowboard rental prices",
+    "rentalDay": "Day*",
+    "rentalNight": "Night skiing",
+    "rentalNote": "Set: skis/snowboard, boots, poles. * during rental shop opening hours.",
+    "rentalItems": {
+      "carving": "Carving skis",
+      "snowboard": "Snowboard"
+    },
+    "lessonsTitle": "Lessons (ski / snowboard) · 55 min",
+    "lessonPeople": {
+      "1": "1 person",
+      "2": "2 people",
+      "3": "3 people",
+      "4": "4 people"
+    },
+    "lessonExtra": "Each additional person: +{price}.",
+    "signUp": "Book a lesson",
+    "ld": {
+      "rentalName": "Ski or snowboard rental — Karpatka Karpacz",
+      "rentalDescription": "A full set of equipment (skis or snowboard, boots, poles) for rent at the Karpatka slope in Karpacz.",
+      "rentalOffer": "Rental: {item} (day)",
+      "lessonName": "Ski and snowboard lessons — Karpatka Karpacz",
+      "lessonDescription": "Ski and snowboard lessons (55 min) for children and adults, private and group, with an instructor on site.",
+      "lessonOffer": "55-min lesson: {people}"
+    }
+  },
+  "pricing": {
+    "season": "Season {years}",
+    "title": "Lift pass prices",
+    "colPass": "Pass",
+    "colNormal": "Regular",
+    "colReduced": "Reduced",
+    "deposit": "Refundable card deposit: {price} (cash only)",
+    "rows": {
+      "hour1": "1 hour",
+      "hour2": "2 hours",
+      "hour3": "3 hours",
+      "hour4": "4 hours",
+      "daily": "Day (9:00–16:30)",
+      "evening": "Evening (16:30–21:00)",
+      "sled1h": "Sledding hill 1h",
+      "sled2h": "Sledding hill 2h"
+    },
+    "ld": {
+      "liftName": "Ski lift pass — Karpatka Karpacz",
+      "liftDescription": "Passes for the Karpatka T-bar lifts in Karpacz — from hourly to day and evening passes.",
+      "sledName": "Sledding hill — Karpatka Karpacz",
+      "sledDescription": "Snow-groomed sledding hill at Karpatka, sleds included in the ticket.",
+      "offer": "Pass: {label}"
+    }
+  },
+  "bar": {
+    "eyebrow": "Warm up",
+    "title": "Karpatka Bar",
+    "text": "Right by the lift and open during slope hours — hot tea, hot chocolate and snacks to warm you up between runs.",
+    "hoursLink": "Opening hours →",
+    "imageAlt": "Karczma Karpatka in the evening, with a bonfire and seating on the slope"
+  },
+  "map": {
+    "eyebrow": "Slope map",
+    "title": "See what's where.",
+    "lead": "Click or tap a point on the map to see the lifts, conveyor lift, sledding hill, ticket office, car parks and bar — all within a few dozen metres.",
+    "imageAlt": "Karpatka slope map — lifts, conveyor lift, sledding hill, ticket office, car parks and bar",
+    "zoom": "Enlarge",
+    "closeZoom": "Close enlarged map",
+    "markers": {
+      "kasa": { "label": "Ticket office", "tooltip": "Ticket office — start here: passes and card deposit." },
+      "parking-1": { "label": "Parking", "tooltip": "Parking — free, right next to the slope." },
+      "parking-2": { "label": "Parking", "tooltip": "Second car park — a few steps from the ticket office." },
+      "wyciag-1": { "label": "Lift 1", "tooltip": "Lift 1 — T-bar, longer run." },
+      "wyciag-2": { "label": "Lift 2", "tooltip": "Lift 2 — T-bar next to the bar." },
+      "tasma": { "label": "Conveyor lift", "tooltip": "Conveyor lift — for beginners and children." },
+      "gorka": { "label": "Sledding hill", "tooltip": "Sledding hill — sleds included in the ticket." },
+      "bar": { "label": "Bar", "tooltip": "Karpatka Bar — open during slope hours." }
+    }
+  },
+  "faq": {
+    "eyebrow": "Good to know",
+    "title": "Frequently asked questions",
+    "items": {
+      "rentalPrice": {
+        "q": "How much does it cost to rent skis or a snowboard in Karpacz?",
+        "a": "A full set of equipment (skis or snowboard, boots and poles) at the Karpatka rental shop costs {day} per day and {night} for night skiing (17:00–21:00)."
+      },
+      "passPrice": {
+        "q": "How much is a ski lift pass in Karpacz?",
+        "a": "Prices start at {hourNormal} per hour ({hourReduced} reduced). A day pass (9:00–16:30) costs {dailyNormal} ({dailyReduced} reduced), and an evening pass (16:30–21:00) — {eveningNormal} ({eveningReduced} reduced). See the full price list in the Prices section."
+      },
+      "ownGear": {
+        "q": "Do I need my own ski equipment?",
+        "a": "No. The rental shop is on site and provides full equipment — skis, snowboards, boots and poles — no preparation needed."
+      },
+      "learnBasics": {
+        "q": "Can I learn to ski from scratch in Karpacz?",
+        "a": "Yes. Beginners have a gentle conveyor lift and ski and snowboard instructors offering private and group lessons (55 minutes, from {lessonSolo} for 1 person, +{extra} for each additional person)."
+      },
+      "smallKids": {
+        "q": "Is there anything for young children who don't ski yet?",
+        "a": "Yes — the sledding hill (1h for {sled1h}, 2h for {sled2h}) and a conveyor lift for the little ones that makes the first attempts at skiing easier."
+      },
+      "sleddingWhere": {
+        "q": "Where can I go sledding in Karpacz?",
+        "a": "The Karpatka slope has a prepared sledding hill — we provide the equipment (sleds), a safe environment, artificial snow and lighting."
+      },
+      "sledsIncluded": {
+        "q": "Are sleds included in the sledding hill ticket?",
+        "a": "Yes — sleds are included in the sledding hill ticket, so there's no need to bring your own."
+      },
+      "sleddingSnow": {
+        "q": "Is the sledding hill covered with artificial snow?",
+        "a": "Yes, it is covered with artificial snow, so it can be used even when there is little natural snow."
+      },
+      "sleddingTicket": {
+        "q": "Where can I buy a sledding hill ticket?",
+        "a": "You can buy a sledding hill ticket on site at the Karpatka ticket office."
+      },
+      "location": {
+        "q": "Where exactly is the Karpatka ski lift?",
+        "a": "The Karpatka ski lifts are at ul. Myśliwska 3 in Karpacz (58-540), in the Giant Mountains, right below Śnieżka, with free parking right next to the slope."
+      },
+      "openingHours": {
+        "q": "What are the current opening hours of the slope and the rental shop?",
+        "a": "Opening hours depend on snow and weather conditions, so we update them regularly — check the conditions board at the top of the page and the footer."
+      }
+    }
+  },
+  "footer": {
+    "about": "Ski lifts in Karpacz — Giant Mountains. A place for skiing, snowboarding and sledding for children and adults.",
+    "contact": "Contact",
+    "directions": "Directions →",
+    "openingHours": "Opening hours",
+    "copyright": "© Karpatka — Ski Lifts Karpacz"
+  }
+}
