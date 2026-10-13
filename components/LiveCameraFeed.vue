@@ -10,31 +10,65 @@ const props = withDefaults(
 
 const { t } = useI18n()
 
+const rootRef = ref<HTMLElement | null>(null)
 const videoRef = ref<HTMLVideoElement | null>(null)
 let hls: import('hls.js').default | null = null
+let started = false
+let observer: IntersectionObserver | null = null
 
-onMounted(async () => {
-  if (!props.streamUrl || !videoRef.value) return
+// Start the stream (and load hls.js, ~180 KB) only once the camera scrolls
+// into view, and stop downloading video while it's off screen — otherwise
+// the home page streams video and blocks the main thread on every visit.
+async function start() {
+  const video = videoRef.value
+  if (!props.streamUrl || !video) return
+  started = true
 
   const { default: Hls } = await import('hls.js')
 
   if (Hls.isSupported()) {
     hls = new Hls()
     hls.loadSource(props.streamUrl)
-    hls.attachMedia(videoRef.value)
-  } else if (videoRef.value.canPlayType('application/vnd.apple.mpegurl')) {
-    videoRef.value.src = props.streamUrl
+    hls.attachMedia(video)
+  } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+    video.src = props.streamUrl
   }
+}
+
+function onVisibilityChange(visible: boolean) {
+  if (visible && !started) {
+    start()
+    return
+  }
+  if (!started) return
+  if (visible) {
+    hls?.startLoad()
+    videoRef.value?.play().catch(() => {})
+  } else {
+    hls?.stopLoad()
+    videoRef.value?.pause()
+  }
+}
+
+onMounted(() => {
+  if (!props.streamUrl || !rootRef.value) return
+  observer = new IntersectionObserver(
+    ([entry]) => onVisibilityChange(entry.isIntersecting),
+    { rootMargin: '200px 0px' },
+  )
+  observer.observe(rootRef.value)
 })
 
 onUnmounted(() => {
+  observer?.disconnect()
+  observer = null
   hls?.destroy()
   hls = null
 })
 </script>
 
 <template>
-  <div class="relative aspect-video bg-gradient-to-br from-[#3A5D82] via-deep-blue to-deep-blue-2 flex items-center justify-center overflow-hidden">
+  <div ref="rootRef" class="relative aspect-video bg-gradient-to-br from-[#3A5D82] via-deep-blue to-deep-blue-2 flex items-center justify-center overflow-hidden">
     <video
       v-if="streamUrl"
       ref="videoRef"
