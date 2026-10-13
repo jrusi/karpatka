@@ -1,0 +1,246 @@
+{
+  "common": {
+    "price": "{n} zł",
+    "pricePerHour": "{n} zł/h",
+    "logoAlt": "Karpatka — Wyciągi Narciarskie"
+  },
+  "seo": {
+    "title": "Karpatka Karpacz — Wyciągi Narciarskie, Szkoła, Wypożyczalnia narty snowboard {'|'} Cennik",
+    "description": "Wyciągi narciarskie w Karpaczu — cennik karnetów, szkoła nauki jazdy i wypożyczalnia nart oraz snowboardu (cennik od 40 zł/dzień). Taśma dla najmłodszych, górka saneczkowa, tuż pod Śnieżką, bezpłatny parking.",
+    "siteName": "Karpatka — Wyciągi Narciarskie",
+    "imageAlt": "Stok narciarski Karpatka w Karpaczu"
+  },
+  "nav": {
+    "cameras": "Kamery na żywo",
+    "pricing": "Cennik",
+    "school": "Szkoła",
+    "bar": "Bar",
+    "map": "Mapa stoku",
+    "faq": "FAQ",
+    "contact": "Kontakt",
+    "openMenu": "Otwórz menu"
+  },
+  "hero": {
+    "eyebrow": "Karpacz · Karkonosze · Wyciąg",
+    "titleMain": "Wyciągi narciarskie w Karpaczu",
+    "titleAccent": "nauka jazdy na nartach.",
+    "lead": "Dwa wyciągi orczykowe, taśma dla najmłodszych i górka saneczkowa — tuż pod Śnieżką, z bezpłatnym parkingiem przy samym stoku.",
+    "seePricing": "Zobacz cennik",
+    "call": "Zadzwoń: {tel}",
+    "boardTitle": "Tablica warunków · aktualizacja na żywo",
+    "online": "ONLINE",
+    "snow": "Pokrywa śnieżna",
+    "temperature": "Temperatura",
+    "openingHours": "Godziny otwarcia",
+    "slopeCameras": "Kamery na stoku →"
+  },
+  "hours": {
+    "closed": "Zamknięte",
+    "allDay": "całą dobę",
+    "closedTemporarily": "Obiekt tymczasowo zamknięty",
+    "weatherDependent": "Warunki zależne od pogody"
+  },
+  "schoolCallout": {
+    "title": "Pierwszy raz na nartach albo desce?",
+    "text": "Zacznij od Szkoły nauki jazdy — instruktorzy i sprzęt czekają na miejscu.",
+    "cta": "Poznaj szkołę"
+  },
+  "cameras": {
+    "eyebrow": "Kamery on-line (na żywo)",
+    "sectionTitle": "Sprwdź warunki na stoku - na żywo (live).",
+    "sectionLead": "Trzy kamery na żywo: widok z Chatki Karpatki, z kasy oraz na górną stację wyciągu.",
+    "view": "Widok: {title}",
+    "seeOthers": "Zobacz pozostałe kamery",
+    "live": "NA ŻYWO",
+    "index": "Kamera {n} z {total}",
+    "cam1": "Górna stacja wyciągu",
+    "cam2": "Dolna stacja wyciągu",
+    "cam3": "Taśma i bar (w zimie), Sokoliki i Krzyżna góra (lato)",
+    "pageTitle": "Kamery na żywo — Karpatka",
+    "pageDescription": "Podgląd na żywo z kamer na stoku wyciągu narciarskiego Karpatka w Karpaczu — sprawdź aktualne warunki na trasie przed wyjazdem.",
+    "pageHeading": "Zerknij na stok, zanim spakujesz auto.",
+    "pageLead": "Trzy kamery na żywo: widok z Chatki Karpatki, z kasy oraz na górną stację wyciągu — wszystkie w jednym miejscu.",
+    "pageNote": "* podgląd na żywo, zależny od stabilności połączenia kamer na stoku",
+    "backHome": "← Powrót do strony głównej"
+  },
+  "offer": {
+    "eyebrow": "Co znajdziesz na miejscu",
+    "title": "Wszystko, czego potrzebujesz w jednym miejscu.",
+    "lifts": {
+      "title": "Dwa wyciągi orczykowe",
+      "desc": "Wyciąg 1 i Wyciąg 2 — dla jeżdżących pewniej, z krótkim czasem oczekiwania."
+    },
+    "beltLift": {
+      "title": "Taśma dla początkujących",
+      "desc": "Łagodne wejście dla dzieci i osób stawiających pierwsze kroki na nartach."
+    },
+    "sledding": {
+      "title": "Górka saneczkowa",
+      "desc": "Sanki w cenie karnetu — dobra opcja, gdy narty czekają na kolejny dzień."
+    },
+    "school": {
+      "title": "Szkoła i wypożyczalnia",
+      "desc": "Sprzęt na miejscu i instruktorzy narciarstwa oraz snowboardu.",
+      "link": "Zobacz szczegóły →"
+    },
+    "parking": {
+      "title": "Bezpłatny parking",
+      "desc": "Bezpośrednio przy stoku — bez doliczania do ceny karnetu."
+    },
+    "cameras": {
+      "title": "Kamery na żywo",
+      "desc": "Podgląd na stok, kasę i górną stację — warunki sprawdzisz zanim wyjedziesz.",
+      "link": "Zobacz kamery"
+    }
+  },
+  "school": {
+    "eyebrow": "Dla początkujących i nie tylko",
+    "titleLine1": "Szkoła narciarska",
+    "titleLine2": "i wypożyczalnia",
+    "lead": "Nie masz sprzętu? Dopiero zaczynasz przygodę z nartami lub snowboardem? Nasi instruktorzy poprowadzą Cię krok po kroku, a wypożyczalnia zaopatrzy w sprzęt na miejscu — bez wcześniejszych przygotowań.",
+    "imageAlt": "Instruktor Karpatki na stoku z dzieckiem podczas nauki jazdy",
+    "highlights": {
+      "kids": { "title": "Dzieci", "subtitle": "i dorośli" },
+      "gear": { "title": "Narty", "subtitle": "i snowboard" },
+      "group": { "title": "Solo", "subtitle": "i w grupie" }
+    },
+    "features": {
+      "instructors": { "title": "Instruktorzy narciarstwa i snowboardu", "desc": "zajęcia indywidualne i grupowe." },
+      "basics": { "title": "Nauka od podstaw na taśmie", "desc": "łagodne, bezpieczne wejście w sport." },
+      "rental": { "title": "Pełny sprzęt do wypożyczenia", "desc": "narty, deska, kije i kaski." },
+      "onSite": { "title": "Wszystko na miejscu", "desc": "zapisy, sprzęt i pierwsza lekcja tego samego dnia." }
+    },
+    "rentalTitle": "Cennik wypożyczalni nart i snowboardu",
+    "rentalDay": "Dzień*",
+    "rentalNight": "Jazdy nocne",
+    "rentalNote": "Komplet: narty/deska, buty, kije. * w godzinach otwarcia wypożyczalni.",
+    "rentalItems": {
+      "carving": "Narty carving",
+      "snowboard": "Snowboard"
+    },
+    "lessonsTitle": "Nauka jazdy (narty / snowboard) · 55 min",
+    "lessonPeople": {
+      "1": "1 osoba",
+      "2": "2 osoby",
+      "3": "3 osoby",
+      "4": "4 osoby"
+    },
+    "lessonExtra": "Każda kolejna osoba: +{price}.",
+    "signUp": "Zapisz się na zajęcia",
+    "ld": {
+      "rentalName": "Wypożyczenie nart lub snowboardu — Karpatka Karpacz",
+      "rentalDescription": "Komplet sprzętu (narty lub snowboard, buty, kije) do wypożyczenia na stoku Karpatka w Karpaczu.",
+      "rentalOffer": "Wypożyczenie: {item} (dzień)",
+      "lessonName": "Nauka jazdy na nartach i snowboardzie — Karpatka Karpacz",
+      "lessonDescription": "Lekcje narciarstwa i snowboardu (55 min) dla dzieci i dorosłych, indywidualne i grupowe, z instruktorem na miejscu.",
+      "lessonOffer": "Lekcja 55 min: {people}"
+    }
+  },
+  "pricing": {
+    "season": "Sezon {years}",
+    "title": "Cennik karnetów",
+    "colPass": "Karnet",
+    "colNormal": "Normalny",
+    "colReduced": "Ulgowy",
+    "deposit": "Kaucja zwrotna za kartę: {price} (płatna tylko gotówką)",
+    "rows": {
+      "hour1": "1 godz.",
+      "hour2": "2 godz.",
+      "hour3": "3 godz.",
+      "hour4": "4 godz.",
+      "daily": "Dzienny (9:00–16:30)",
+      "evening": "Wieczorny (16:30–21:00)",
+      "sled1h": "Górka saneczkowa 1h",
+      "sled2h": "Górka saneczkowa 2h"
+    },
+    "ld": {
+      "liftName": "Karnet na wyciąg narciarski — Karpatka Karpacz",
+      "liftDescription": "Karnety na wyciągi orczykowe Karpatka w Karpaczu — od godzinnych po dzienne i wieczorne.",
+      "sledName": "Górka saneczkowa — Karpatka Karpacz",
+      "sledDescription": "Naśnieżana górka saneczkowa w Karpatce, sanki w cenie karnetu.",
+      "offer": "Karnet: {label}"
+    }
+  },
+  "bar": {
+    "eyebrow": "Ogrzej się",
+    "title": "Bar Karpatka",
+    "text": "Punkt tuż przy wyciągu, czynny w godzinach pracy stoku — gorąca herbata, czekolada i przekąski, żeby się rozgrzać między zjazdami.",
+    "hoursLink": "Godziny pracy →",
+    "imageAlt": "Karczma Karpatka wieczorem, z ogniskiem i miejscami siedzącymi na stoku"
+  },
+  "map": {
+    "eyebrow": "Mapa stoku",
+    "title": "Zobacz co gdzie jest.",
+    "lead": "Kliknij lub dotknij punktu na mapie, żeby sprawdzić wyciągi, taśmę, górkę saneczkową, kasę, parkingi i bar — wszystko w zasięgu kilkudziesięciu metrów.",
+    "imageAlt": "Mapa stoku Karpatka — wyciągi, taśma, górka saneczkowa, kasa, parkingi i bar",
+    "zoom": "Powiększ",
+    "closeZoom": "Zamknij powiększoną mapę",
+    "markers": {
+      "kasa": { "label": "Kasa", "tooltip": "Kasa — start tutaj, karnety i kaucja za kartę." },
+      "parking-1": { "label": "Parking", "tooltip": "Parking — bezpłatny, przy samym stoku." },
+      "parking-2": { "label": "Parking", "tooltip": "Drugi parking — kilka kroków od kasy." },
+      "wyciag-1": { "label": "Wyciąg 1", "tooltip": "Wyciąg 1 — orczyk, dłuższa trasa." },
+      "wyciag-2": { "label": "Wyciąg 2", "tooltip": "Wyciąg 2 — orczyk obok baru." },
+      "tasma": { "label": "Taśma", "tooltip": "Taśma — dla początkujących i dzieci." },
+      "gorka": { "label": "Górka saneczkowa", "tooltip": "Górka saneczkowa — sanki wliczone w cenę karnetu." },
+      "bar": { "label": "Bar", "tooltip": "Bar Karpatka — czynny w godzinach pracy stoku." }
+    }
+  },
+  "faq": {
+    "eyebrow": "Warto wiedzieć",
+    "title": "Najczęściej zadawane pytania",
+    "items": {
+      "rentalPrice": {
+        "q": "Ile kosztuje wypożyczenie nart lub snowboardu w Karpaczu?",
+        "a": "Komplet sprzętu (narty lub snowboard, buty i kije) w wypożyczalni Karpatka kosztuje {day} za dzień oraz {night} na jazdy nocne (17:00–21:00)."
+      },
+      "passPrice": {
+        "q": "Ile kosztuje karnet na wyciąg w Karpaczu?",
+        "a": "Ceny zaczynają się od {hourNormal} za godzinę ({hourReduced} ulgowy). Karnet dzienny (9:00–16:30) kosztuje {dailyNormal} ({dailyReduced} ulgowy), a wieczorny (16:30–21:00) — {eveningNormal} ({eveningReduced} ulgowy). Pełny cennik karnetów znajdziesz w sekcji Cennik."
+      },
+      "ownGear": {
+        "q": "Czy trzeba mieć własny sprzęt narciarski?",
+        "a": "Nie. Wypożyczalnia działa na miejscu i zapewnia pełny sprzęt — narty, snowboard, buty i kije — bez wcześniejszych przygotowań."
+      },
+      "learnBasics": {
+        "q": "Czy w Karpaczu można nauczyć się jeździć na nartach od podstaw?",
+        "a": "Tak. Dla początkujących jest łagodna taśma wyciągowa oraz instruktorzy narciarstwa i snowboardu prowadzący zajęcia indywidualne i grupowe (55 minut, od {lessonSolo} za 1 osobę, +{extra} za każdą kolejną osobę)."
+      },
+      "smallKids": {
+        "q": "Czy jest coś dla najmłodszych dzieci, które jeszcze nie jeżdżą na nartach?",
+        "a": "Tak — górka saneczkowa (1h za {sled1h}, 2h za {sled2h}) oraz taśma dla najmłodszych ułatwiająca pierwsze podejścia do nauki jazdy."
+      },
+      "sleddingWhere": {
+        "q": "Gdzie można pojeździć na sankach w Karpaczu?",
+        "a": "Na stoku Karpatka jest przygotowana górka saneczkowa — zapewniamy sprzęt (sanki), bezpieczne otoczenie, sztuczne naśnieżanie i oświetlenie."
+      },
+      "sledsIncluded": {
+        "q": "Czy sanki są w cenie karnetu na górkę saneczkową?",
+        "a": "Tak — sanki są wliczone w cenę karnetu na górkę saneczkową, nie trzeba przynosić własnych."
+      },
+      "sleddingSnow": {
+        "q": "Czy górka saneczkowa jest naśnieżana?",
+        "a": "Tak, jest naśnieżana sztucznie, dzięki czemu można z niej korzystać nawet przy niewielkiej ilości naturalnego śniegu."
+      },
+      "sleddingTicket": {
+        "q": "Gdzie można kupić karnet na górkę saneczkową?",
+        "a": "Karnet na górkę saneczkową kupisz w kasie stoku Karpatka, na miejscu."
+      },
+      "location": {
+        "q": "Gdzie dokładnie znajduje się wyciąg Karpatka?",
+        "a": "Wyciągi narciarskie Karpatka mieszczą się przy ul. Myśliwskiej 3 w Karpaczu (58-540), w Karkonoszach, tuż pod Śnieżką, z bezpłatnym parkingiem bezpośrednio przy stoku."
+      },
+      "openingHours": {
+        "q": "Jakie są aktualne godziny otwarcia stoku i wypożyczalni?",
+        "a": "Godziny otwarcia zależą od warunków śniegowych i pogodowych, dlatego aktualizujemy je na bieżąco — sprawdzisz je w tablicy warunków na górze strony oraz w stopce."
+      }
+    }
+  },
+  "footer": {
+    "about": "Wyciągi narciarskie w Karpaczu — Karkonosze. Miejsce na narty, snowboard i sanki dla dzieci i dorosłych.",
+    "contact": "Kontakt",
+    "directions": "Wskazówki dojazdu →",
+    "openingHours": "Godziny otwarcia",
+    "copyright": "© Karpatka — Wyciągi Narciarskie Karpacz"
+  }
+}

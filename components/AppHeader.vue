@@ -1,4 +1,7 @@
 <script setup lang="ts">
+const { t } = useI18n()
+const localePath = useLocalePath()
+
 const isSolid = ref(false)
 const isMenuOpen = ref(false)
 
@@ -24,7 +27,7 @@ const route = useRoute()
 
 function handleLogoClick() {
   closeMenu()
-  if (route.path === '/') {
+  if (route.path === localePath('/')) {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 }
@@ -45,11 +48,11 @@ function handleOutsideClick(event: MouseEvent) {
 const activeSection = ref<string | null>(null)
 
 function updateActiveSection() {
-  if (route.path !== '/') {
+  if (route.path !== localePath('/')) {
     activeSection.value = null
     return
   }
-  const ids = navLinks.filter((l) => l.href.startsWith('/#')).map((l) => l.href.slice(2))
+  const ids = navLinks.filter((l) => l.section).map((l) => l.section!)
   const sections = ids
     .map((id) => document.getElementById(id))
     .filter((el): el is HTMLElement => !!el)
@@ -65,22 +68,33 @@ function updateActiveSection() {
 
 watch(() => route.fullPath, () => nextTick(updateActiveSection))
 
-function isActive(href: string) {
-  if (href.startsWith('/#')) return activeSection.value === href.slice(2)
-  return route.path === href
+function isActive(link: NavLink) {
+  if (link.section) return activeSection.value === link.section
+  return route.path === localePath(link.path)
+}
+
+function linkTo(link: NavLink) {
+  return link.section ? `${localePath('/')}#${link.section}` : localePath(link.path)
 }
 
 onMounted(() => document.addEventListener('click', handleOutsideClick))
 onUnmounted(() => document.removeEventListener('click', handleOutsideClick))
 
-const navLinks = [
-  { href: '/kamery', label: 'Kamery na żywo' },
-  { href: '/#cennik', label: 'Cennik' },
-  { href: '/#szkola', label: 'Szkoła' },
-  { href: '/#bar', label: 'Bar' },
-  { href: '/#mapa', label: 'Mapa stoku' },
-  { href: '/#faq', label: 'FAQ' },
-  { href: '/#kontakt', label: 'Kontakt' },
+interface NavLink {
+  key: string
+  path: string
+  section?: string
+}
+
+// Either a page (path) or a section of the home page (section = element id).
+const navLinks: NavLink[] = [
+  { key: 'cameras', path: '/kamery' },
+  { key: 'pricing', path: '/', section: 'cennik' },
+  { key: 'school', path: '/', section: 'szkola' },
+  { key: 'bar', path: '/', section: 'bar' },
+  { key: 'map', path: '/', section: 'mapa' },
+  { key: 'faq', path: '/', section: 'faq' },
+  { key: 'contact', path: '/', section: 'kontakt' },
 ]
 </script>
 
@@ -91,18 +105,18 @@ const navLinks = [
     :class="{ solid: isSolid }"
   >
     <div class="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between h-16 md:h-20">
-      <NuxtLink to="/" class="flex items-center gap-3" @click="handleLogoClick">
-        <img src="/logo.png" alt="Karpatka — Wyciągi Narciarskie" class="h-11 md:h-16 w-auto">
+      <NuxtLink :to="localePath('/')" class="flex items-center gap-3" @click="handleLogoClick">
+        <img src="/logo.png" :alt="t('common.logoAlt')" class="h-11 md:h-16 w-auto">
       </NuxtLink>
       <nav class="hidden lg:flex items-center gap-8 font-mono text-[13px] uppercase tracking-wider text-ink-soft">
         <NuxtLink
           v-for="link in navLinks"
-          :key="link.href"
-          :to="link.href"
+          :key="link.key"
+          :to="linkTo(link)"
           class="hover:text-deep-blue transition-colors border-b-2 pb-0.5"
-          :class="isActive(link.href) ? 'text-deep-blue border-accent-blue' : 'border-transparent'"
-          :aria-current="isActive(link.href) ? 'location' : undefined"
-        >{{ link.label }}</NuxtLink>
+          :class="isActive(link) ? 'text-deep-blue border-accent-blue' : 'border-transparent'"
+          :aria-current="isActive(link) ? 'location' : undefined"
+        >{{ t(`nav.${link.key}`) }}</NuxtLink>
       </nav>
       <a
         :href="contactTelHref"
@@ -110,7 +124,7 @@ const navLinks = [
       >
         {{ contactTel }}
       </a>
-      <button ref="menuButtonRef" aria-label="Otwórz menu" class="lg:hidden text-deep-blue" @click="isMenuOpen = !isMenuOpen">
+      <button ref="menuButtonRef" :aria-label="t('nav.openMenu')" class="lg:hidden text-deep-blue" @click="isMenuOpen = !isMenuOpen">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
@@ -121,13 +135,13 @@ const navLinks = [
     >
       <NuxtLink
         v-for="link in navLinks"
-        :key="link.href"
-        :to="link.href"
+        :key="link.key"
+        :to="linkTo(link)"
         class="border-l-2 pl-3 -ml-3.5"
-        :class="isActive(link.href) ? 'text-deep-blue border-accent-blue' : 'border-transparent'"
-        :aria-current="isActive(link.href) ? 'location' : undefined"
+        :class="isActive(link) ? 'text-deep-blue border-accent-blue' : 'border-transparent'"
+        :aria-current="isActive(link) ? 'location' : undefined"
         @click="closeMenu"
-      >{{ link.label }}</NuxtLink>
+      >{{ t(`nav.${link.key}`) }}</NuxtLink>
       <a :href="contactTelHref" class="text-accent-blue" @click="closeMenu">{{ contactTel }}</a>
     </div>
   </header>

@@ -10,7 +10,19 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-09-01',
   devtools: { enabled: true },
 
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n'],
+
+  // Polish stays at / (no prefix); other languages get /de/, /en/, /cs/.
+  // Texts live in i18n/locales/<code>.json.
+  i18n: {
+    baseUrl: siteUrl,
+    defaultLocale: 'pl',
+    strategy: 'prefix_except_default',
+    detectBrowserLanguage: false,
+    locales: [
+      { code: 'pl', language: 'pl-PL', name: 'Polski', file: 'pl.json' },
+    ],
+  },
 
   // Server-only secrets — never exposed to the client bundle. Real values
   // come from environment variables (see .env.example); NUXT_GOOGLE_PLACES_API_KEY
@@ -49,33 +61,14 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'Karpatka Karpacz — Wyciągi Narciarskie, Szkoła, Wypożyczalnia narty snowboard | Cennik',
-      htmlAttrs: { lang: 'pl' },
+      // Title, description and OG/Twitter texts are set per language in app.vue.
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
-        {
-          name: 'description',
-          content: 'Wyciągi narciarskie w Karpaczu — cennik karnetów, szkoła nauki jazdy i wypożyczalnia nart oraz snowboardu (cennik od 40 zł/dzień). Taśma dla najmłodszych, górka saneczkowa, tuż pod Śnieżką, bezpłatny parking.',
-        },
         { property: 'og:type', content: 'website' },
-        { property: 'og:site_name', content: 'Karpatka — Wyciągi Narciarskie' },
-        { property: 'og:locale', content: 'pl_PL' },
-        { property: 'og:url', content: siteUrl },
-        { property: 'og:title', content: 'Karpatka Karpacz — Wyciągi Narciarskie, Szkoła, Wypożyczalnia narty snowboard | Cennik' },
-        {
-          property: 'og:description',
-          content: 'Wyciągi narciarskie w Karpaczu — cennik karnetów, szkoła nauki jazdy i wypożyczalnia nart oraz snowboardu (cennik od 40 zł/dzień). Taśma dla najmłodszych, górka saneczkowa, tuż pod Śnieżką, bezpłatny parking.',
-        },
         { property: 'og:image', content: `${siteUrl}/og-image-v2.jpg` },
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
-        { property: 'og:image:alt', content: 'Stok narciarski Karpatka w Karpaczu' },
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'Karpatka Karpacz — Wyciągi Narciarskie, Szkoła, Wypożyczalnia narty snowboard | Cennik' },
-        {
-          name: 'twitter:description',
-          content: 'Wyciągi narciarskie w Karpaczu — cennik karnetów, szkoła nauki jazdy i wypożyczalnia nart oraz snowboardu (cennik od 40 zł/dzień). Taśma dla najmłodszych, górka saneczkowa, tuż pod Śnieżką, bezpłatny parking.',
-        },
         { name: 'twitter:image', content: `${siteUrl}/og-image-v2.jpg` },
       ],
       link: [

@@ -6,6 +6,8 @@ defineProps<{
   link?: { href: string; label: string }
   route?: string
 }>()
+
+const { t } = useI18n()
 </script>
 
 <template>
@@ -18,7 +20,7 @@ defineProps<{
     <h3 class="font-display text-deep-blue text-xl mt-3 mb-2">{{ title }}</h3>
     <p class="text-ink-soft text-sm leading-relaxed mb-3">{{ desc }}</p>
     <span class="font-mono text-xs text-accent-blue underline underline-offset-4 decoration-accent-blue/25 group-hover:decoration-accent-blue inline-flex items-center gap-1">
-      Zobacz kamery <span class="transition-transform group-hover:translate-x-1">→</span>
+      {{ t('offer.cameras.link') }} <span class="transition-transform group-hover:translate-x-1">→</span>
     </span>
   </NuxtLink>
   <div v-else class="bg-white p-8">

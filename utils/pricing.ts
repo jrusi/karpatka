@@ -1,24 +1,35 @@
-export const season = 'Sezon 2025/2026'
+// Prices in PLN — the single source for every language. Row names live in
+// i18n/locales/<code>.json (pricing.rows.<id>, school.rentalItems.<id>,
+// school.lessonPeople.<people>); format with usePrice().
+export const seasonYears = '2025/2026'
 
 export const pricingRows = [
-  { label: '1 godz.', normal: '55 zł', reduced: '50 zł' },
-  { label: '2 godz.', normal: '70 zł', reduced: '65 zł' },
-  { label: '3 godz.', normal: '80 zł', reduced: '75 zł' },
-  { label: '4 godz.', normal: '90 zł', reduced: '85 zł' },
-  { label: 'Dzienny (9:00–16:30)', normal: '100 zł', reduced: '95 zł' },
-  { label: 'Wieczorny (16:30–21:00)', normal: '70 zł', reduced: '65 zł' },
-  { label: 'Górka saneczkowa 1h', normal: '25 zł', reduced: '25 zł' },
-  { label: 'Górka saneczkowa 2h', normal: '40 zł', reduced: '40 zł' },
+  { id: 'hour1', normal: 55, reduced: 50 },
+  { id: 'hour2', normal: 70, reduced: 65 },
+  { id: 'hour3', normal: 80, reduced: 75 },
+  { id: 'hour4', normal: 90, reduced: 85 },
+  { id: 'daily', normal: 100, reduced: 95 },
+  { id: 'evening', normal: 70, reduced: 65 },
+  { id: 'sled1h', normal: 25, reduced: 25, sled: true },
+  { id: 'sled2h', normal: 40, reduced: 40, sled: true },
 ]
 
 export const rentalRows = [
-  { name: 'Narty carving', day: '40 zł', night: '30 zł' },
-  { name: 'Snowboard', day: '40 zł', night: '30 zł' },
+  { id: 'carving', day: 40, night: 30 },
+  { id: 'snowboard', day: 40, night: 30 },
 ]
 
 export const lessonRows = [
-  { people: '1 osoba', price: '130 zł/h' },
-  { people: '2 osoby', price: '210 zł/h' },
-  { people: '3 osoby', price: '260 zł/h' },
-  { people: '4 osoby', price: '320 zł/h' },
+  { people: 1, price: 130 },
+  { people: 2, price: 210 },
+  { people: 3, price: 260 },
+  { people: 4, price: 320 },
 ]
+
+export const lessonExtraPerson = 60
+
+export const cardDeposit = 10
+
+export function pricingRow(id: string) {
+  return pricingRows.find(row => row.id === id)!
+}

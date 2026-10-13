@@ -1,35 +1,31 @@
-function formatTime(time: string): string {
-  // "0900" -> "9", "0930" -> "9:30"
-  const hours = parseInt(time.slice(0, 2), 10)
-  const minutes = time.slice(2, 4)
-  return minutes === '00' ? `${hours}` : `${hours}:${minutes}`
+// Returns language-neutral data only (status codes and raw "HHMM" times); the
+// texts are built per language in composables/useOpeningHours.ts, so the
+// once-a-day Google fetch serves every language.
+const WEEKDAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+
+function todayInPoland(): number {
+  // Google's period.open.day: 0 = Sunday ... 6 = Saturday. The server runs in
+  // UTC, so take the weekday in Polish time, not Date#getDay().
+  const weekday = new Intl.DateTimeFormat('en-US', { timeZone: 'Europe/Warsaw', weekday: 'short' }).format(new Date())
+  return WEEKDAYS.indexOf(weekday)
 }
 
 export default defineEventHandler(async () => {
   const stored = await getStoredOpeningHours()
 
   if (!stored) {
-    return { status: 'unknown', label: null, weekdayText: [] }
+    return { status: 'unknown', today: [], periods: [] }
   }
 
-  const weekdayText = stored.weekdayText
+  const periods = stored.periods
 
   if (stored.businessStatus === 'CLOSED_TEMPORARILY') {
-    return { status: 'closed_temporarily', label: 'Zamknięte', weekdayText }
+    return { status: 'closed_temporarily', today: [], periods }
   }
 
-  // Google's period.open.day: 0 = Sunday ... 6 = Saturday — matches Date#getDay().
-  const today = new Date().getDay()
-  const todayPeriods = stored.periods.filter((p) => p.open?.day === today)
+  const today = periods
+    .filter((p) => p.open?.day === todayInPoland())
+    .map((p) => ({ open: p.open.time, close: p.close?.time ?? null }))
 
-  if (todayPeriods.length === 0) {
-    return { status: 'closed_today', label: 'Zamknięte', weekdayText }
-  }
-
-  const ranges = todayPeriods.map((p) => {
-    if (!p.close) return 'całą dobę'
-    return `${formatTime(p.open.time)}–${formatTime(p.close.time)}`
-  })
-
-  return { status: 'open', label: ranges.join(', '), weekdayText }
+  return { status: today.length ? 'open' : 'closed_today', today, periods }
 })
