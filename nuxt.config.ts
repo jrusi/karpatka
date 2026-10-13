@@ -21,7 +21,9 @@ export default defineNuxtConfig({
     detectBrowserLanguage: false,
     locales: [
       { code: 'pl', language: 'pl-PL', name: 'Polski', file: 'pl.json' },
+      { code: 'de', language: 'de-DE', name: 'Deutsch', file: 'de.json' },
       { code: 'en', language: 'en-GB', name: 'English', file: 'en.json' },
+      { code: 'cs', language: 'cs-CZ', name: 'Čeština', file: 'cs.json' },
     ],
   },
 

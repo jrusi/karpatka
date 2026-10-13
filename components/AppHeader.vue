@@ -115,7 +115,7 @@ const navLinks: NavLink[] = [
       <NuxtLink :to="localePath('/')" class="flex items-center gap-3" @click="handleLogoClick">
         <img src="/logo.png" :alt="t('common.logoAlt')" class="h-11 md:h-16 w-auto">
       </NuxtLink>
-      <nav class="hidden lg:flex items-center gap-8 font-mono text-[13px] uppercase tracking-wider text-ink-soft">
+      <nav class="hidden lg:flex items-center gap-5 xl:gap-8 whitespace-nowrap font-mono text-[13px] uppercase tracking-wider text-ink-soft">
         <NuxtLink
           v-for="link in navLinks"
           :key="link.key"
@@ -125,7 +125,7 @@ const navLinks: NavLink[] = [
           :aria-current="isActive(link) ? 'location' : undefined"
         >{{ t(`nav.${link.key}`) }}</NuxtLink>
       </nav>
-      <div class="hidden lg:flex items-center gap-5">
+      <div class="hidden lg:flex items-center gap-3 xl:gap-5">
         <nav :aria-label="t('nav.language')" class="flex items-center gap-1 font-mono text-[13px]">
           <NuxtLink
             v-for="l in locales"

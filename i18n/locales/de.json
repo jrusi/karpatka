@@ -1,0 +1,247 @@
+{
+  "common": {
+    "price": "{n} PLN",
+    "pricePerHour": "{n} PLN/Std.",
+    "logoAlt": "Karpatka — Skilifte"
+  },
+  "seo": {
+    "title": "Karpatka Karpacz — Skilifte, Skischule, Ski- und Snowboardverleih {'|'} Preise",
+    "description": "Skilifte in Karpacz (Krummhübel), Polen — Skipass-Preise, Ski- und Snowboardschule, Ski- und Snowboardverleih (ab 40 PLN/Tag). Zauberteppich für die Kleinsten, Rodelhang, direkt unterhalb der Schneekoppe, kostenloser Parkplatz.",
+    "siteName": "Karpatka — Skilifte",
+    "imageAlt": "Skipiste Karpatka in Karpacz"
+  },
+  "nav": {
+    "cameras": "Live-Kameras",
+    "pricing": "Preise",
+    "school": "Skischule",
+    "bar": "Bar",
+    "map": "Pistenplan",
+    "faq": "FAQ",
+    "contact": "Kontakt",
+    "openMenu": "Menü öffnen",
+    "language": "Sprache"
+  },
+  "hero": {
+    "eyebrow": "Karpacz · Riesengebirge · Skilift",
+    "titleMain": "Skilifte in Karpacz",
+    "titleAccent": "Skifahren lernen.",
+    "lead": "Zwei Schlepplifte, ein Zauberteppich für die Kleinsten und ein Rodelhang — direkt unterhalb der Schneekoppe, mit kostenlosem Parkplatz direkt an der Piste.",
+    "seePricing": "Preise ansehen",
+    "call": "Anrufen: {tel}",
+    "boardTitle": "Pistenbericht · live aktualisiert",
+    "online": "ONLINE",
+    "snow": "Schneehöhe",
+    "temperature": "Temperatur",
+    "openingHours": "Öffnungszeiten",
+    "slopeCameras": "Pistenkameras →"
+  },
+  "hours": {
+    "closed": "Geschlossen",
+    "allDay": "24 Stunden geöffnet",
+    "closedTemporarily": "Vorübergehend geschlossen",
+    "weatherDependent": "Abhängig vom Wetter"
+  },
+  "schoolCallout": {
+    "title": "Zum ersten Mal auf Skiern oder dem Snowboard?",
+    "text": "Starten Sie in unserer Skischule — Skilehrer und Ausrüstung warten vor Ort.",
+    "cta": "Zur Skischule"
+  },
+  "cameras": {
+    "eyebrow": "Live-Webcams",
+    "sectionTitle": "Pistenbedingungen live prüfen.",
+    "sectionLead": "Drei Live-Kameras: Blick von der Chatka Karpatka, von der Kasse und auf die Bergstation des Lifts.",
+    "view": "Blick: {title}",
+    "seeOthers": "Weitere Kameras ansehen",
+    "live": "LIVE",
+    "index": "Kamera {n} von {total}",
+    "cam1": "Bergstation des Lifts",
+    "cam2": "Talstation des Lifts",
+    "cam3": "Zauberteppich und Bar (Winter), Sokoliki und Krzyżna Góra (Sommer)",
+    "pageTitle": "Live-Kameras — Karpatka",
+    "pageDescription": "Live-Blick von den Kameras an der Skipiste Karpatka in Karpacz — prüfen Sie die aktuellen Bedingungen vor der Anreise.",
+    "pageHeading": "Ein Blick auf die Piste, bevor Sie das Auto packen.",
+    "pageLead": "Drei Live-Kameras: Blick von der Chatka Karpatka, von der Kasse und auf die Bergstation des Lifts — alle an einem Ort.",
+    "pageNote": "* Live-Bild, abhängig von der Verbindungsqualität der Kameras an der Piste",
+    "backHome": "← Zurück zur Startseite"
+  },
+  "offer": {
+    "eyebrow": "Was Sie bei uns finden",
+    "title": "Alles, was Sie brauchen, an einem Ort.",
+    "lifts": {
+      "title": "Zwei Schlepplifte",
+      "desc": "Lift 1 und Lift 2 — für sicherere Fahrer, mit kurzen Wartezeiten."
+    },
+    "beltLift": {
+      "title": "Zauberteppich für Anfänger",
+      "desc": "Ein sanfter Einstieg für Kinder und alle, die ihre ersten Schritte auf Skiern machen."
+    },
+    "sledding": {
+      "title": "Rodelhang",
+      "desc": "Schlitten im Ticketpreis inbegriffen — eine gute Wahl, wenn die Skier einen Tag Pause haben."
+    },
+    "school": {
+      "title": "Skischule und Verleih",
+      "desc": "Ausrüstung vor Ort sowie Ski- und Snowboardlehrer.",
+      "link": "Details ansehen →"
+    },
+    "parking": {
+      "title": "Kostenloser Parkplatz",
+      "desc": "Direkt an der Piste — ohne Aufpreis zum Skipass."
+    },
+    "cameras": {
+      "title": "Live-Kameras",
+      "desc": "Blick auf die Piste, die Kasse und die Bergstation — prüfen Sie die Bedingungen vor der Abfahrt.",
+      "link": "Kameras ansehen"
+    }
+  },
+  "school": {
+    "eyebrow": "Für Anfänger und Fortgeschrittene",
+    "titleLine1": "Skischule",
+    "titleLine2": "und Verleih",
+    "lead": "Keine Ausrüstung? Sie fangen gerade erst mit Skifahren oder Snowboarden an? Unsere Skilehrer begleiten Sie Schritt für Schritt, und der Verleih stattet Sie vor Ort aus — ganz ohne Vorbereitung.",
+    "imageAlt": "Skilehrer der Karpatka mit einem Kind beim Skiunterricht auf der Piste",
+    "highlights": {
+      "kids": { "title": "Kinder", "subtitle": "und Erwachsene" },
+      "gear": { "title": "Ski", "subtitle": "und Snowboard" },
+      "group": { "title": "Einzeln", "subtitle": "oder in der Gruppe" }
+    },
+    "features": {
+      "instructors": { "title": "Ski- und Snowboardlehrer", "desc": "Einzel- und Gruppenunterricht." },
+      "basics": { "title": "Lernen von Grund auf am Zauberteppich", "desc": "ein sanfter, sicherer Einstieg in den Sport." },
+      "rental": { "title": "Komplette Ausrüstung zum Ausleihen", "desc": "Ski, Snowboards, Stöcke und Helme." },
+      "onSite": { "title": "Alles vor Ort", "desc": "Anmeldung, Ausrüstung und die erste Stunde am selben Tag." }
+    },
+    "rentalTitle": "Preise Ski- und Snowboardverleih",
+    "rentalDay": "Tag*",
+    "rentalNight": "Nachtskilauf",
+    "rentalNote": "Set: Ski/Snowboard, Schuhe, Stöcke. * während der Öffnungszeiten des Verleihs.",
+    "rentalItems": {
+      "carving": "Carving-Ski",
+      "snowboard": "Snowboard"
+    },
+    "lessonsTitle": "Unterricht (Ski / Snowboard) · 55 Min.",
+    "lessonPeople": {
+      "1": "1 Person",
+      "2": "2 Personen",
+      "3": "3 Personen",
+      "4": "4 Personen"
+    },
+    "lessonExtra": "Jede weitere Person: +{price}.",
+    "signUp": "Unterricht buchen",
+    "ld": {
+      "rentalName": "Ski- oder Snowboardverleih — Karpatka Karpacz",
+      "rentalDescription": "Komplette Ausrüstung (Ski oder Snowboard, Schuhe, Stöcke) zum Ausleihen an der Piste Karpatka in Karpacz.",
+      "rentalOffer": "Verleih: {item} (Tag)",
+      "lessonName": "Ski- und Snowboardunterricht — Karpatka Karpacz",
+      "lessonDescription": "Ski- und Snowboardunterricht (55 Min.) für Kinder und Erwachsene, einzeln oder in der Gruppe, mit Skilehrer vor Ort.",
+      "lessonOffer": "Unterricht 55 Min.: {people}"
+    }
+  },
+  "pricing": {
+    "season": "Saison {years}",
+    "title": "Skipass-Preise",
+    "colPass": "Skipass",
+    "colNormal": "Normal",
+    "colReduced": "Ermäßigt",
+    "deposit": "Kartenpfand (wird erstattet): {price} (nur bar)",
+    "rows": {
+      "hour1": "1 Std.",
+      "hour2": "2 Std.",
+      "hour3": "3 Std.",
+      "hour4": "4 Std.",
+      "daily": "Tageskarte (9:00–16:30)",
+      "evening": "Abendkarte (16:30–21:00)",
+      "sled1h": "Rodelhang 1 Std.",
+      "sled2h": "Rodelhang 2 Std."
+    },
+    "ld": {
+      "liftName": "Skipass — Karpatka Karpacz",
+      "liftDescription": "Skipässe für die Schlepplifte der Karpatka in Karpacz — von Stunden- bis Tages- und Abendkarten.",
+      "sledName": "Rodelhang — Karpatka Karpacz",
+      "sledDescription": "Beschneiter Rodelhang an der Karpatka, Schlitten im Ticketpreis inbegriffen.",
+      "offer": "Skipass: {label}"
+    }
+  },
+  "bar": {
+    "eyebrow": "Aufwärmen",
+    "title": "Bar Karpatka",
+    "text": "Direkt am Lift und während der Pistenbetriebszeiten geöffnet — heißer Tee, heiße Schokolade und Snacks zum Aufwärmen zwischen den Abfahrten.",
+    "hoursLink": "Öffnungszeiten →",
+    "imageAlt": "Karczma Karpatka am Abend, mit Lagerfeuer und Sitzplätzen an der Piste"
+  },
+  "map": {
+    "eyebrow": "Pistenplan",
+    "title": "Was ist wo?",
+    "lead": "Klicken oder tippen Sie auf einen Punkt der Karte, um Lifte, Zauberteppich, Rodelhang, Kasse, Parkplätze und Bar zu sehen — alles nur wenige Dutzend Meter voneinander entfernt.",
+    "imageAlt": "Pistenplan Karpatka — Lifte, Zauberteppich, Rodelhang, Kasse, Parkplätze und Bar",
+    "zoom": "Vergrößern",
+    "closeZoom": "Vergrößerte Karte schließen",
+    "markers": {
+      "kasa": { "label": "Kasse", "tooltip": "Kasse — hier geht's los: Skipässe und Kartenpfand." },
+      "parking-1": { "label": "Parkplatz", "tooltip": "Parkplatz — kostenlos, direkt an der Piste." },
+      "parking-2": { "label": "Parkplatz", "tooltip": "Zweiter Parkplatz — wenige Schritte von der Kasse." },
+      "wyciag-1": { "label": "Lift 1", "tooltip": "Lift 1 — Schlepplift, längere Abfahrt." },
+      "wyciag-2": { "label": "Lift 2", "tooltip": "Lift 2 — Schlepplift neben der Bar." },
+      "tasma": { "label": "Zauberteppich", "tooltip": "Zauberteppich — für Anfänger und Kinder." },
+      "gorka": { "label": "Rodelhang", "tooltip": "Rodelhang — Schlitten im Ticketpreis inbegriffen." },
+      "bar": { "label": "Bar", "tooltip": "Bar Karpatka — während der Pistenbetriebszeiten geöffnet." }
+    }
+  },
+  "faq": {
+    "eyebrow": "Gut zu wissen",
+    "title": "Häufig gestellte Fragen",
+    "items": {
+      "rentalPrice": {
+        "q": "Was kostet der Ski- oder Snowboardverleih in Karpacz?",
+        "a": "Eine komplette Ausrüstung (Ski oder Snowboard, Schuhe und Stöcke) im Verleih der Karpatka kostet {day} pro Tag und {night} für den Nachtskilauf (17:00–21:00)."
+      },
+      "passPrice": {
+        "q": "Was kostet ein Skipass in Karpacz?",
+        "a": "Die Preise beginnen bei {hourNormal} pro Stunde ({hourReduced} ermäßigt). Eine Tageskarte (9:00–16:30) kostet {dailyNormal} ({dailyReduced} ermäßigt), eine Abendkarte (16:30–21:00) — {eveningNormal} ({eveningReduced} ermäßigt). Die vollständige Preisliste finden Sie im Abschnitt Preise."
+      },
+      "ownGear": {
+        "q": "Brauche ich eine eigene Skiausrüstung?",
+        "a": "Nein. Der Verleih ist vor Ort und bietet die komplette Ausrüstung — Ski, Snowboards, Schuhe und Stöcke — ganz ohne Vorbereitung."
+      },
+      "learnBasics": {
+        "q": "Kann man in Karpacz Skifahren von Grund auf lernen?",
+        "a": "Ja. Für Anfänger gibt es einen sanften Zauberteppich sowie Ski- und Snowboardlehrer für Einzel- und Gruppenunterricht (55 Minuten, ab {lessonSolo} für 1 Person, +{extra} für jede weitere Person)."
+      },
+      "smallKids": {
+        "q": "Gibt es etwas für kleine Kinder, die noch nicht Ski fahren?",
+        "a": "Ja — den Rodelhang (1 Std. für {sled1h}, 2 Std. für {sled2h}) und einen Zauberteppich für die Kleinsten, der die ersten Versuche auf Skiern erleichtert."
+      },
+      "sleddingWhere": {
+        "q": "Wo kann man in Karpacz rodeln?",
+        "a": "An der Piste Karpatka gibt es einen präparierten Rodelhang — wir stellen die Ausrüstung (Schlitten), eine sichere Umgebung, Beschneiung und Beleuchtung."
+      },
+      "sledsIncluded": {
+        "q": "Sind die Schlitten im Ticket für den Rodelhang inbegriffen?",
+        "a": "Ja — die Schlitten sind im Ticketpreis für den Rodelhang inbegriffen, Sie müssen keine eigenen mitbringen."
+      },
+      "sleddingSnow": {
+        "q": "Wird der Rodelhang beschneit?",
+        "a": "Ja, er wird künstlich beschneit, sodass er auch bei wenig Naturschnee genutzt werden kann."
+      },
+      "sleddingTicket": {
+        "q": "Wo kann man ein Ticket für den Rodelhang kaufen?",
+        "a": "Tickets für den Rodelhang erhalten Sie vor Ort an der Kasse der Karpatka."
+      },
+      "location": {
+        "q": "Wo genau befindet sich der Skilift Karpatka?",
+        "a": "Die Skilifte Karpatka befinden sich in der ul. Myśliwska 3 in Karpacz (58-540), im Riesengebirge, direkt unterhalb der Schneekoppe, mit kostenlosem Parkplatz direkt an der Piste."
+      },
+      "openingHours": {
+        "q": "Wie sind die aktuellen Öffnungszeiten der Piste und des Verleihs?",
+        "a": "Die Öffnungszeiten hängen von Schnee- und Wetterbedingungen ab, deshalb aktualisieren wir sie laufend — Sie finden sie im Pistenbericht oben auf der Seite und in der Fußzeile."
+      }
+    }
+  },
+  "footer": {
+    "about": "Skilifte in Karpacz — Riesengebirge. Ein Ort zum Skifahren, Snowboarden und Rodeln für Kinder und Erwachsene.",
+    "contact": "Kontakt",
+    "directions": "Anfahrt →",
+    "openingHours": "Öffnungszeiten",
+    "copyright": "© Karpatka — Skilifte Karpacz"
+  }
+}

@@ -1,0 +1,247 @@
+{
+  "common": {
+    "price": "{n} PLN",
+    "pricePerHour": "{n} PLN/hod.",
+    "logoAlt": "Karpatka — Lyžařské vleky"
+  },
+  "seo": {
+    "title": "Karpatka Karpacz — Lyžařské vleky, Lyžařská škola, Půjčovna lyží a snowboardů {'|'} Ceník",
+    "description": "Lyžařské vleky v Karpaczi (Polsko) — ceník skipasů, lyžařská a snowboardová škola, půjčovna lyží a snowboardů (od 40 PLN/den). Pojízdný koberec pro nejmenší, sáňkařský svah, přímo pod Sněžkou, parkování zdarma.",
+    "siteName": "Karpatka — Lyžařské vleky",
+    "imageAlt": "Sjezdovka Karpatka v Karpaczi"
+  },
+  "nav": {
+    "cameras": "Kamery živě",
+    "pricing": "Ceník",
+    "school": "Škola",
+    "bar": "Bar",
+    "map": "Mapa svahu",
+    "faq": "FAQ",
+    "contact": "Kontakt",
+    "openMenu": "Otevřít menu",
+    "language": "Jazyk"
+  },
+  "hero": {
+    "eyebrow": "Karpacz · Krkonoše · Vlek",
+    "titleMain": "Lyžařské vleky v Karpaczi",
+    "titleAccent": "naučte se lyžovat.",
+    "lead": "Dva kotvové vleky, pojízdný koberec pro nejmenší a sáňkařský svah — přímo pod Sněžkou, s parkováním zdarma hned u svahu.",
+    "seePricing": "Zobrazit ceník",
+    "call": "Zavolat: {tel}",
+    "boardTitle": "Tabule podmínek · aktualizace živě",
+    "online": "ONLINE",
+    "snow": "Sněhová pokrývka",
+    "temperature": "Teplota",
+    "openingHours": "Otevírací doba",
+    "slopeCameras": "Kamery na svahu →"
+  },
+  "hours": {
+    "closed": "Zavřeno",
+    "allDay": "otevřeno nonstop",
+    "closedTemporarily": "Dočasně zavřeno",
+    "weatherDependent": "Podle počasí"
+  },
+  "schoolCallout": {
+    "title": "Poprvé na lyžích nebo na snowboardu?",
+    "text": "Začněte v naší lyžařské škole — instruktoři i vybavení čekají přímo na místě.",
+    "cta": "Poznat školu"
+  },
+  "cameras": {
+    "eyebrow": "Webkamery živě",
+    "sectionTitle": "Zkontrolujte podmínky na svahu živě.",
+    "sectionLead": "Tři kamery živě: pohled z Chatky Karpatka, od pokladny a na horní stanici vleku.",
+    "view": "Pohled: {title}",
+    "seeOthers": "Zobrazit další kamery",
+    "live": "ŽIVĚ",
+    "index": "Kamera {n} ze {total}",
+    "cam1": "Horní stanice vleku",
+    "cam2": "Dolní stanice vleku",
+    "cam3": "Pojízdný koberec a bar (v zimě), Sokoliki a Krzyżna Góra (v létě)",
+    "pageTitle": "Kamery živě — Karpatka",
+    "pageDescription": "Živý přenos z kamer na sjezdovce Karpatka v Karpaczi — zkontrolujte aktuální podmínky ještě před cestou.",
+    "pageHeading": "Podívejte se na svah, než začnete balit auto.",
+    "pageLead": "Tři kamery živě: pohled z Chatky Karpatka, od pokladny a na horní stanici vleku — vše na jednom místě.",
+    "pageNote": "* živý přenos; závisí na stabilitě připojení kamer na svahu",
+    "backHome": "← Zpět na hlavní stránku"
+  },
+  "offer": {
+    "eyebrow": "Co u nás najdete",
+    "title": "Vše, co potřebujete, na jednom místě.",
+    "lifts": {
+      "title": "Dva kotvové vleky",
+      "desc": "Vlek 1 a Vlek 2 — pro jistější lyžaře, s krátkým čekáním."
+    },
+    "beltLift": {
+      "title": "Pojízdný koberec pro začátečníky",
+      "desc": "Pozvolný začátek pro děti a všechny, kdo na lyžích dělají první kroky."
+    },
+    "sledding": {
+      "title": "Sáňkařský svah",
+      "desc": "Sáně v ceně vstupenky — dobrá volba, když lyže čekají na další den."
+    },
+    "school": {
+      "title": "Škola a půjčovna",
+      "desc": "Vybavení na místě a instruktoři lyžování a snowboardingu.",
+      "link": "Zobrazit podrobnosti →"
+    },
+    "parking": {
+      "title": "Parkování zdarma",
+      "desc": "Přímo u svahu — bez příplatku ke skipasu."
+    },
+    "cameras": {
+      "title": "Kamery živě",
+      "desc": "Pohled na svah, pokladnu a horní stanici — podmínky zkontrolujete ještě před odjezdem.",
+      "link": "Zobrazit kamery"
+    }
+  },
+  "school": {
+    "eyebrow": "Pro začátečníky i pokročilé",
+    "titleLine1": "Lyžařská škola",
+    "titleLine2": "a půjčovna",
+    "lead": "Nemáte vybavení? S lyžováním nebo snowboardingem teprve začínáte? Naši instruktoři vás provedou krok za krokem a půjčovna vás vybaví přímo na místě — bez jakékoli přípravy.",
+    "imageAlt": "Instruktor Karpatky na svahu s dítětem při výuce lyžování",
+    "highlights": {
+      "kids": { "title": "Děti", "subtitle": "i dospělí" },
+      "gear": { "title": "Lyže", "subtitle": "i snowboard" },
+      "group": { "title": "Jednotlivě", "subtitle": "i ve skupině" }
+    },
+    "features": {
+      "instructors": { "title": "Instruktoři lyžování a snowboardingu", "desc": "individuální i skupinová výuka." },
+      "basics": { "title": "Výuka od základů na pojízdném koberci", "desc": "pozvolný a bezpečný začátek." },
+      "rental": { "title": "Kompletní vybavení k zapůjčení", "desc": "lyže, snowboardy, hůlky a helmy." },
+      "onSite": { "title": "Vše na místě", "desc": "přihláška, vybavení i první lekce ve stejný den." }
+    },
+    "rentalTitle": "Ceník půjčovny lyží a snowboardů",
+    "rentalDay": "Den*",
+    "rentalNight": "Večerní lyžování",
+    "rentalNote": "Sada: lyže/snowboard, boty, hůlky. * v otevírací době půjčovny.",
+    "rentalItems": {
+      "carving": "Carvingové lyže",
+      "snowboard": "Snowboard"
+    },
+    "lessonsTitle": "Výuka (lyže / snowboard) · 55 min",
+    "lessonPeople": {
+      "1": "1 osoba",
+      "2": "2 osoby",
+      "3": "3 osoby",
+      "4": "4 osoby"
+    },
+    "lessonExtra": "Každá další osoba: +{price}.",
+    "signUp": "Objednat výuku",
+    "ld": {
+      "rentalName": "Půjčovna lyží a snowboardů — Karpatka Karpacz",
+      "rentalDescription": "Kompletní vybavení (lyže nebo snowboard, boty, hůlky) k zapůjčení na sjezdovce Karpatka v Karpaczi.",
+      "rentalOffer": "Zapůjčení: {item} (den)",
+      "lessonName": "Výuka lyžování a snowboardingu — Karpatka Karpacz",
+      "lessonDescription": "Lekce lyžování a snowboardingu (55 min) pro děti i dospělé, individuální i skupinové, s instruktorem na místě.",
+      "lessonOffer": "Lekce 55 min: {people}"
+    }
+  },
+  "pricing": {
+    "season": "Sezóna {years}",
+    "title": "Ceník skipasů",
+    "colPass": "Skipas",
+    "colNormal": "Plné",
+    "colReduced": "Zlevněné",
+    "deposit": "Vratná záloha za kartu: {price} (pouze v hotovosti)",
+    "rows": {
+      "hour1": "1 hodina",
+      "hour2": "2 hodiny",
+      "hour3": "3 hodiny",
+      "hour4": "4 hodiny",
+      "daily": "Celodenní (9:00–16:30)",
+      "evening": "Večerní (16:30–21:00)",
+      "sled1h": "Sáňkařský svah 1 hod.",
+      "sled2h": "Sáňkařský svah 2 hod."
+    },
+    "ld": {
+      "liftName": "Skipas na lyžařský vlek — Karpatka Karpacz",
+      "liftDescription": "Skipasy na kotvové vleky Karpatka v Karpaczi — od hodinových po celodenní a večerní.",
+      "sledName": "Sáňkařský svah — Karpatka Karpacz",
+      "sledDescription": "Zasněžovaný sáňkařský svah v Karpatce, sáně v ceně vstupenky.",
+      "offer": "Skipas: {label}"
+    }
+  },
+  "bar": {
+    "eyebrow": "Zahřejte se",
+    "title": "Bar Karpatka",
+    "text": "Hned u vleku, otevřeno po dobu provozu svahu — horký čaj, čokoláda a občerstvení, abyste se mezi jízdami zahřáli.",
+    "hoursLink": "Otevírací doba →",
+    "imageAlt": "Karczma Karpatka večer, s ohništěm a posezením na svahu"
+  },
+  "map": {
+    "eyebrow": "Mapa svahu",
+    "title": "Podívejte se, co kde je.",
+    "lead": "Klikněte nebo klepněte na bod na mapě a uvidíte vleky, pojízdný koberec, sáňkařský svah, pokladnu, parkoviště a bar — vše v okruhu několika desítek metrů.",
+    "imageAlt": "Mapa svahu Karpatka — vleky, pojízdný koberec, sáňkařský svah, pokladna, parkoviště a bar",
+    "zoom": "Zvětšit",
+    "closeZoom": "Zavřít zvětšenou mapu",
+    "markers": {
+      "kasa": { "label": "Pokladna", "tooltip": "Pokladna — začněte zde: skipasy a záloha za kartu." },
+      "parking-1": { "label": "Parkoviště", "tooltip": "Parkoviště — zdarma, přímo u svahu." },
+      "parking-2": { "label": "Parkoviště", "tooltip": "Druhé parkoviště — pár kroků od pokladny." },
+      "wyciag-1": { "label": "Vlek 1", "tooltip": "Vlek 1 — kotva, delší trať." },
+      "wyciag-2": { "label": "Vlek 2", "tooltip": "Vlek 2 — kotva vedle baru." },
+      "tasma": { "label": "Pojízdný koberec", "tooltip": "Pojízdný koberec — pro začátečníky a děti." },
+      "gorka": { "label": "Sáňkařský svah", "tooltip": "Sáňkařský svah — sáně v ceně vstupenky." },
+      "bar": { "label": "Bar", "tooltip": "Bar Karpatka — otevřeno po dobu provozu svahu." }
+    }
+  },
+  "faq": {
+    "eyebrow": "Dobré vědět",
+    "title": "Často kladené otázky",
+    "items": {
+      "rentalPrice": {
+        "q": "Kolik stojí zapůjčení lyží nebo snowboardu v Karpaczi?",
+        "a": "Kompletní vybavení (lyže nebo snowboard, boty a hůlky) v půjčovně Karpatka stojí {day} na den a {night} na večerní lyžování (17:00–21:00)."
+      },
+      "passPrice": {
+        "q": "Kolik stojí skipas v Karpaczi?",
+        "a": "Ceny začínají na {hourNormal} za hodinu ({hourReduced} zlevněné). Celodenní skipas (9:00–16:30) stojí {dailyNormal} ({dailyReduced} zlevněné) a večerní (16:30–21:00) — {eveningNormal} ({eveningReduced} zlevněné). Kompletní ceník najdete v sekci Ceník."
+      },
+      "ownGear": {
+        "q": "Potřebuji vlastní lyžařské vybavení?",
+        "a": "Ne. Půjčovna je přímo na místě a nabízí kompletní vybavení — lyže, snowboardy, boty a hůlky — bez jakékoli přípravy."
+      },
+      "learnBasics": {
+        "q": "Dá se v Karpaczi naučit lyžovat od úplných základů?",
+        "a": "Ano. Pro začátečníky je tu pozvolný pojízdný koberec a instruktoři lyžování a snowboardingu, kteří vedou individuální i skupinovou výuku (55 minut, od {lessonSolo} za 1 osobu, +{extra} za každou další osobu)."
+      },
+      "smallKids": {
+        "q": "Je tu něco pro nejmenší děti, které ještě nelyžují?",
+        "a": "Ano — sáňkařský svah (1 hod. za {sled1h}, 2 hod. za {sled2h}) a pojízdný koberec pro nejmenší, který usnadňuje první pokusy na lyžích."
+      },
+      "sleddingWhere": {
+        "q": "Kde se dá v Karpaczi sáňkovat?",
+        "a": "Na sjezdovce Karpatka je upravený sáňkařský svah — zajišťujeme vybavení (sáně), bezpečné prostředí, technické zasněžování a osvětlení."
+      },
+      "sledsIncluded": {
+        "q": "Jsou sáně v ceně vstupenky na sáňkařský svah?",
+        "a": "Ano — sáně jsou v ceně vstupenky na sáňkařský svah, vlastní nemusíte vozit."
+      },
+      "sleddingSnow": {
+        "q": "Je sáňkařský svah zasněžovaný?",
+        "a": "Ano, je technicky zasněžovaný, takže se dá využívat i při malém množství přírodního sněhu."
+      },
+      "sleddingTicket": {
+        "q": "Kde se dá koupit vstupenka na sáňkařský svah?",
+        "a": "Vstupenku na sáňkařský svah koupíte přímo na místě v pokladně sjezdovky Karpatka."
+      },
+      "location": {
+        "q": "Kde přesně se nachází vlek Karpatka?",
+        "a": "Lyžařské vleky Karpatka najdete na ul. Myśliwska 3 v Karpaczi (58-540), v Krkonoších, přímo pod Sněžkou, s parkováním zdarma hned u svahu."
+      },
+      "openingHours": {
+        "q": "Jaká je aktuální otevírací doba svahu a půjčovny?",
+        "a": "Otevírací doba závisí na sněhových a povětrnostních podmínkách, proto ji průběžně aktualizujeme — najdete ji na tabuli podmínek v horní části stránky a v zápatí."
+      }
+    }
+  },
+  "footer": {
+    "about": "Lyžařské vleky v Karpaczi — Krkonoše. Místo pro lyžování, snowboarding a sáňkování pro děti i dospělé.",
+    "contact": "Kontakt",
+    "directions": "Jak se k nám dostat →",
+    "openingHours": "Otevírací doba",
+    "copyright": "© Karpatka — Lyžařské vleky Karpacz"
+  }
+}
