@@ -30,23 +30,26 @@ onUnmounted(() => {
     </div>
 
     <div class="relative max-w-7xl mx-auto px-5 md:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-x-10 gap-y-5 md:items-center">
-        <p class="md:col-start-1 md:row-start-1 text-center tabular-nums text-[13px] uppercase tracking-[0.2em] text-accent-blue">{{ t('hero.eyebrow') }}</p>
-        <img
-          src="/logo.png"
-          :alt="t('common.logoAlt')"
-          class="md:col-start-2 md:row-start-1 md:row-span-2 h-28 md:h-36 lg:h-44 w-auto shrink-0 justify-self-center md:justify-self-end"
-        >
-        <h1 class="md:col-start-1 md:row-start-2 min-w-0 font-display text-deep-blue text-4xl sm:text-5xl md:text-6xl leading-[1.05] max-w-3xl">
-          {{ t('hero.titleMain') }}<br class="hidden md:block"> <span class="italic font-medium text-accent-blue"> {{ t('hero.titleAccent') }}</span>
-        </h1>
-      </div>
-      <p class="mt-6 text-ink-soft max-w-xl text-base md:text-lg leading-relaxed">
-        {{ t('hero.lead') }}
-      </p>
-      <div class="mt-9 flex flex-wrap gap-4">
-        <a href="#cennik" class="bg-red hover:bg-red-deep text-white font-semibold px-7 py-3.5 rounded-full transition-colors">{{ t('hero.seePricing') }}</a>
-        <a :href="contactTelHref" class="bg-white/90 backdrop-blur-sm border border-deep-blue/25 hover:border-accent-blue text-deep-blue px-7 py-3.5 rounded-full transition-colors tabular-nums text-sm flex items-center shadow-sm">{{ t('hero.call', { tel: contactTelShort }) }}</a>
+      <!-- Heading, logo, lead and buttons: centered as one block, text left-aligned inside -->
+      <div class="max-w-5xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-x-10 gap-y-5 md:items-center">
+          <p class="md:col-start-1 md:row-start-1 text-center tabular-nums text-[13px] uppercase tracking-[0.2em] text-accent-blue">{{ t('hero.eyebrow') }}</p>
+          <img
+            src="/logo.png"
+            :alt="t('common.logoAlt')"
+            class="md:col-start-2 md:row-start-1 md:row-span-2 h-28 md:h-36 lg:h-44 w-auto shrink-0 justify-self-center md:justify-self-end"
+          >
+          <h1 class="md:col-start-1 md:row-start-2 min-w-0 font-display text-deep-blue text-4xl sm:text-5xl md:text-6xl leading-[1.05] max-w-3xl">
+            {{ t('hero.titleMain') }}<br class="hidden md:block"> <span class="italic font-medium text-accent-blue"> {{ t('hero.titleAccent') }}</span>
+          </h1>
+        </div>
+        <p class="mt-6 text-ink-soft max-w-xl text-base md:text-lg leading-relaxed">
+          {{ t('hero.lead') }}
+        </p>
+        <div class="mt-9 flex flex-wrap gap-4">
+          <a href="#cennik" class="bg-red hover:bg-red-deep text-white font-semibold px-7 py-3.5 rounded-full transition-colors">{{ t('hero.seePricing') }}</a>
+          <a :href="contactTelHref" class="bg-white/90 backdrop-blur-sm border border-deep-blue/25 hover:border-accent-blue text-deep-blue px-7 py-3.5 rounded-full transition-colors tabular-nums text-sm flex items-center shadow-sm">{{ t('hero.call', { tel: contactTelShort }) }}</a>
+        </div>
       </div>
 
       <!-- SIGNATURE: conditions board -->
