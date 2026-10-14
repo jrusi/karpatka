@@ -50,7 +50,7 @@ onUnmounted(() => {
       </div>
 
       <!-- SIGNATURE: conditions board -->
-      <div class="board mt-14 rounded-2xl px-6 py-5 md:px-8 md:py-6 max-w-3xl">
+      <div class="board mt-14 mx-auto rounded-2xl px-6 py-5 md:px-8 md:py-6 max-w-3xl">
         <div class="flex items-center justify-between mb-4">
           <span class="tabular-nums text-[11px] uppercase tracking-[0.2em] text-ink-soft">{{ t('hero.boardTitle') }}</span>
           <span class="flex items-center gap-2 tabular-nums text-[11px] text-accent-blue">
