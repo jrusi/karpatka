@@ -31,7 +31,7 @@ onUnmounted(() => {
 
     <div class="relative max-w-7xl mx-auto px-5 md:px-8">
       <div class="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-x-10 gap-y-5 md:items-center">
-        <p class="md:col-start-1 md:row-start-1 text-center font-mono text-[13px] uppercase tracking-[0.2em] text-accent-blue">{{ t('hero.eyebrow') }}</p>
+        <p class="md:col-start-1 md:row-start-1 text-center tabular-nums text-[13px] uppercase tracking-[0.2em] text-accent-blue">{{ t('hero.eyebrow') }}</p>
         <img
           src="/logo.png"
           :alt="t('common.logoAlt')"
@@ -46,18 +46,18 @@ onUnmounted(() => {
       </p>
       <div class="mt-9 flex flex-wrap gap-4">
         <a href="#cennik" class="bg-red hover:bg-red-deep text-white font-semibold px-7 py-3.5 rounded-full transition-colors">{{ t('hero.seePricing') }}</a>
-        <a :href="contactTelHref" class="bg-white/90 backdrop-blur-sm border border-deep-blue/25 hover:border-accent-blue text-deep-blue px-7 py-3.5 rounded-full transition-colors font-mono text-sm flex items-center shadow-sm">{{ t('hero.call', { tel: contactTelShort }) }}</a>
+        <a :href="contactTelHref" class="bg-white/90 backdrop-blur-sm border border-deep-blue/25 hover:border-accent-blue text-deep-blue px-7 py-3.5 rounded-full transition-colors tabular-nums text-sm flex items-center shadow-sm">{{ t('hero.call', { tel: contactTelShort }) }}</a>
       </div>
 
       <!-- SIGNATURE: conditions board -->
       <div class="board mt-14 rounded-2xl px-6 py-5 md:px-8 md:py-6 max-w-3xl">
         <div class="flex items-center justify-between mb-4">
-          <span class="font-mono text-[11px] uppercase tracking-[0.2em] text-ink-soft">{{ t('hero.boardTitle') }}</span>
-          <span class="flex items-center gap-2 font-mono text-[11px] text-accent-blue">
+          <span class="tabular-nums text-[11px] uppercase tracking-[0.2em] text-ink-soft">{{ t('hero.boardTitle') }}</span>
+          <span class="flex items-center gap-2 tabular-nums text-[11px] text-accent-blue">
             <span class="w-1.5 h-1.5 rounded-full bg-accent-blue animate-pulse"></span>{{ t('hero.online') }}
           </span>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-[1fr_1fr_1fr_auto] gap-6 font-mono">
+        <div class="grid grid-cols-2 md:grid-cols-[1fr_1fr_1fr_auto] gap-6 tabular-nums">
           <div>
             <div class="board-digit text-2xl md:text-3xl font-medium">0<span class="text-base">cm</span></div>
             <div class="text-ink-soft text-[11px] uppercase tracking-wider mt-1">{{ t('hero.snow') }}</div>

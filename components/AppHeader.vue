@@ -115,7 +115,7 @@ const navLinks: NavLink[] = [
       <NuxtLink :to="localePath('/')" class="flex items-center gap-3" @click="handleLogoClick">
         <img src="/logo.png" :alt="t('common.logoAlt')" class="h-11 md:h-16 w-auto">
       </NuxtLink>
-      <nav class="hidden lg:flex items-center gap-5 xl:gap-8 whitespace-nowrap font-mono text-[13px] uppercase tracking-wider text-ink-soft">
+      <nav class="hidden lg:flex items-center gap-5 xl:gap-8 whitespace-nowrap tabular-nums text-[13px] uppercase tracking-wider text-ink-soft">
         <NuxtLink
           v-for="link in navLinks"
           :key="link.key"
@@ -126,7 +126,7 @@ const navLinks: NavLink[] = [
         >{{ t(`nav.${link.key}`) }}</NuxtLink>
       </nav>
       <div class="hidden lg:flex items-center gap-3 xl:gap-5">
-        <nav :aria-label="t('nav.language')" class="flex items-center gap-1 font-mono text-[13px]">
+        <nav :aria-label="t('nav.language')" class="flex items-center gap-1 tabular-nums text-[13px]">
           <NuxtLink
             v-for="l in locales"
             :key="l.code"
@@ -140,7 +140,7 @@ const navLinks: NavLink[] = [
         </nav>
         <a
           :href="contactTelHref"
-          class="inline-flex items-center gap-2 border border-deep-blue/25 hover:border-accent-blue hover:text-accent-blue text-deep-blue rounded-full px-5 py-2 font-mono text-[13px] transition-colors"
+          class="inline-flex items-center gap-2 border border-deep-blue/25 hover:border-accent-blue hover:text-accent-blue text-deep-blue rounded-full px-5 py-2 tabular-nums text-[13px] transition-colors"
         >
           {{ contactTel }}
         </a>
@@ -152,7 +152,7 @@ const navLinks: NavLink[] = [
     <div
       v-show="isMenuOpen"
       ref="menuPanelRef"
-      class="lg:hidden bg-frost border-t border-deep-blue/10 px-5 pb-6 pt-4 flex flex-col gap-4 font-mono text-sm uppercase tracking-wider text-ink-soft"
+      class="lg:hidden bg-frost border-t border-deep-blue/10 px-5 pb-6 pt-4 flex flex-col gap-4 tabular-nums text-sm uppercase tracking-wider text-ink-soft"
     >
       <NuxtLink
         v-for="link in navLinks"

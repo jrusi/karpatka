@@ -55,11 +55,11 @@ useHead(() => ({
         >
       </div>
       <div v-reveal class="reveal order-1 md:order-2">
-        <p class="font-mono text-xs uppercase tracking-[0.2em] text-ice mb-3">{{ t('school.eyebrow') }}</p>
+        <p class="tabular-nums text-xs uppercase tracking-[0.2em] text-ice mb-3">{{ t('school.eyebrow') }}</p>
         <h2 class="font-display text-3xl md:text-5xl mb-6 text-white">{{ t('school.titleLine1') }}<br>{{ t('school.titleLine2') }}</h2>
         <p class="text-white/65 leading-relaxed mb-7 max-w-md">{{ t('school.lead') }}</p>
 
-        <div class="grid grid-cols-3 gap-4 mb-8 font-mono">
+        <div class="grid grid-cols-3 gap-4 mb-8 tabular-nums">
           <div v-for="item in highlights" :key="item" class="border-t border-white/15 pt-3">
             <div class="text-white text-lg">{{ t(`school.highlights.${item}.title`) }}</div>
             <div class="text-white/40 text-[11px] uppercase tracking-wider mt-1">{{ t(`school.highlights.${item}.subtitle`) }}</div>
@@ -73,17 +73,17 @@ useHead(() => ({
           </li>
         </ul>
 
-        <p class="font-mono text-xs uppercase tracking-[0.2em] text-ice mb-3">{{ t('pricing.season', { years: seasonYears }) }}</p>
+        <p class="tabular-nums text-xs uppercase tracking-[0.2em] text-ice mb-3">{{ t('pricing.season', { years: seasonYears }) }}</p>
         <div class="grid sm:grid-cols-2 gap-4 mb-9">
           <div id="wypozyczalnia" class="rounded-2xl border border-white/15 bg-white/5 overflow-hidden">
-            <h3 class="font-mono text-[11px] uppercase tracking-wider text-white/40 px-5 pt-5 mb-3">{{ t('school.rentalTitle') }}</h3>
-            <div class="grid grid-cols-3 font-mono text-[11px] uppercase tracking-wider text-white/40 px-5 pb-2">
+            <h3 class="tabular-nums text-[11px] uppercase tracking-wider text-white/40 px-5 pt-5 mb-3">{{ t('school.rentalTitle') }}</h3>
+            <div class="grid grid-cols-3 tabular-nums text-[11px] uppercase tracking-wider text-white/40 px-5 pb-2">
               <span></span>
               <span class="text-right">{{ t('school.rentalDay') }}</span>
               <span class="text-right leading-tight">{{ t('school.rentalNight') }}<br><span class="normal-case tracking-normal text-white/30">17:00–21:00</span></span>
             </div>
             <div class="divide-y divide-white/10">
-              <div v-for="row in rentalRows" :key="row.id" class="grid grid-cols-3 items-center px-5 py-3 font-mono text-sm text-white/85">
+              <div v-for="row in rentalRows" :key="row.id" class="grid grid-cols-3 items-center px-5 py-3 tabular-nums text-sm text-white/85">
                 <span>{{ t(`school.rentalItems.${row.id}`) }}</span>
                 <span class="text-right text-ice font-medium">{{ price(row.day) }}</span>
                 <span class="text-right text-ice font-medium">{{ price(row.night) }}</span>
@@ -92,8 +92,8 @@ useHead(() => ({
             <p class="text-white/35 text-[11px] px-5 py-3 leading-relaxed">{{ t('school.rentalNote') }}</p>
           </div>
           <div class="rounded-2xl border border-white/15 bg-white/5 p-5">
-            <p class="font-mono text-[11px] uppercase tracking-wider text-white/40 mb-3">{{ t('school.lessonsTitle') }}</p>
-            <div class="space-y-2.5 font-mono text-sm">
+            <p class="tabular-nums text-[11px] uppercase tracking-wider text-white/40 mb-3">{{ t('school.lessonsTitle') }}</p>
+            <div class="space-y-2.5 tabular-nums text-sm">
               <div v-for="row in lessonRows" :key="row.people" class="flex justify-between items-baseline text-white/85">
                 <span>{{ t(`school.lessonPeople.${row.people}`) }}</span><span class="text-ice font-medium">{{ pricePerHour(row.price) }}</span>
               </div>
@@ -104,7 +104,7 @@ useHead(() => ({
 
         <div class="flex flex-wrap gap-4">
           <a :href="contactTelHref" class="bg-red hover:bg-red-deep text-white font-semibold px-7 py-3.5 rounded-full transition-colors">{{ t('school.signUp') }}</a>
-          <a :href="contactTelHref" class="border border-white/25 hover:border-white text-white px-7 py-3.5 rounded-full transition-colors font-mono text-sm flex items-center">{{ contactTelShort }}</a>
+          <a :href="contactTelHref" class="border border-white/25 hover:border-white text-white px-7 py-3.5 rounded-full transition-colors tabular-nums text-sm flex items-center">{{ contactTelShort }}</a>
         </div>
       </div>
     </div>

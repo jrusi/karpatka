@@ -21,7 +21,7 @@ const cameras = [
 <template>
   <section class="pt-32 pb-24 md:pt-44 md:pb-32 bg-paper">
     <div class="max-w-7xl mx-auto px-5 md:px-8">
-      <p class="font-mono text-xs uppercase tracking-[0.2em] text-accent-blue mb-3">{{ t('cameras.eyebrow') }}</p>
+      <p class="tabular-nums text-xs uppercase tracking-[0.2em] text-accent-blue mb-3">{{ t('cameras.eyebrow') }}</p>
       <h1 class="font-display text-3xl md:text-5xl text-deep-blue mb-4 max-w-2xl">{{ t('cameras.pageHeading') }}</h1>
       <p class="text-ink-soft max-w-lg mb-14 leading-relaxed">{{ t('cameras.pageLead') }}</p>
 
@@ -35,12 +35,12 @@ const cameras = [
         />
       </div>
 
-      <p class="font-mono text-[11px] text-ink-soft/70 mt-8">{{ t('cameras.pageNote') }}</p>
+      <p class="tabular-nums text-[11px] text-ink-soft/70 mt-8">{{ t('cameras.pageNote') }}</p>
 
       <div class="mt-10 flex justify-center">
         <NuxtLink
           :to="localePath('/')"
-          class="inline-flex items-center gap-2 border border-deep-blue/25 hover:border-accent-blue hover:text-accent-blue text-deep-blue px-7 py-3.5 rounded-full transition-colors font-mono text-sm"
+          class="inline-flex items-center gap-2 border border-deep-blue/25 hover:border-accent-blue hover:text-accent-blue text-deep-blue px-7 py-3.5 rounded-full transition-colors tabular-nums text-sm"
         >
           {{ t('cameras.backHome') }}
         </NuxtLink>

@@ -105,7 +105,7 @@ onUnmounted(() => {
     <div class="max-w-7xl mx-auto px-5 md:px-8">
       <div v-reveal class="reveal grid md:grid-cols-2 gap-4 items-end mb-12">
         <div>
-          <p class="font-mono text-xs uppercase tracking-[0.2em] text-accent-blue mb-3">{{ t('map.eyebrow') }}</p>
+          <p class="tabular-nums text-xs uppercase tracking-[0.2em] text-accent-blue mb-3">{{ t('map.eyebrow') }}</p>
           <h2 class="font-display text-3xl md:text-5xl leading-tight text-deep-blue">{{ t('map.title') }}</h2>
         </div>
         <p class="text-ink-soft leading-relaxed">{{ t('map.lead') }}</p>
@@ -121,7 +121,7 @@ onUnmounted(() => {
             height="533"
           >
 
-          <span class="md:hidden absolute top-3 left-3 pointer-events-none flex items-center gap-1.5 bg-deep-blue/80 text-white text-[11px] font-mono px-3 py-1.5 rounded-full">
+          <span class="md:hidden absolute top-3 left-3 pointer-events-none flex items-center gap-1.5 bg-deep-blue/80 text-white text-[11px] tabular-nums px-3 py-1.5 rounded-full">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
             {{ t('map.zoom') }}
           </span>
@@ -142,7 +142,7 @@ onUnmounted(() => {
                 @click.stop="toggleMarker(marker.id)"
               ></button>
               <div
-                class="tooltip absolute left-1/2 -translate-x-1/2 bg-deep-blue text-white text-xs rounded-lg px-3 py-2 font-mono"
+                class="tooltip absolute left-1/2 -translate-x-1/2 bg-deep-blue text-white text-xs rounded-lg px-3 py-2 tabular-nums"
                 :class="marker.tooltipClass"
               >{{ t(`map.markers.${marker.id}.tooltip`) }}</div>
             </div>

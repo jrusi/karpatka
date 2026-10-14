@@ -93,7 +93,7 @@ onUnmounted(() => {
       </span>
     </template>
 
-    <span class="absolute top-4 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-black/30 backdrop-blur px-3 py-1.5 rounded-full font-mono text-[11px] text-white pointer-events-none">
+    <span class="absolute top-4 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-black/30 backdrop-blur px-3 py-1.5 rounded-full tabular-nums text-[11px] text-white pointer-events-none">
       <span class="w-1.5 h-1.5 rounded-full bg-red animate-pulse"></span>{{ t('cameras.live') }}
     </span>
   </div>

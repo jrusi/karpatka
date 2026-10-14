@@ -15,7 +15,7 @@ const items = computed(() => [
 <template>
   <section id="oferta" class="py-24 md:py-32 bg-paper relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-5 md:px-8 relative">
-      <p v-reveal class="reveal font-mono text-xs uppercase tracking-[0.2em] text-accent-blue mb-3">{{ t('offer.eyebrow') }}</p>
+      <p v-reveal class="reveal tabular-nums text-xs uppercase tracking-[0.2em] text-accent-blue mb-3">{{ t('offer.eyebrow') }}</p>
       <h2 v-reveal class="reveal font-display text-deep-blue text-3xl md:text-5xl mb-14 max-w-2xl">{{ t('offer.title') }}</h2>
 
       <div v-reveal class="reveal grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-deep-blue/10 rounded-2xl overflow-hidden">

@@ -28,7 +28,6 @@ export default <Config>{
       fontFamily: {
         sans: ['Work Sans', 'sans-serif'],
         display: ['Fraunces', 'serif'],
-        mono: ['JetBrains Mono', 'monospace'],
       },
       keyframes: {
         draw: {

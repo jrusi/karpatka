@@ -67,7 +67,7 @@ useHead(() => ({
   <section id="faq" class="py-24 md:py-32 bg-paper">
     <div class="max-w-3xl mx-auto px-5 md:px-8">
       <div v-reveal class="reveal mb-12">
-        <p class="font-mono text-xs uppercase tracking-[0.2em] text-accent-blue mb-3">{{ t('faq.eyebrow') }}</p>
+        <p class="tabular-nums text-xs uppercase tracking-[0.2em] text-accent-blue mb-3">{{ t('faq.eyebrow') }}</p>
         <h2 class="font-display text-3xl md:text-5xl text-deep-blue">{{ t('faq.title') }}</h2>
       </div>
 
@@ -75,7 +75,7 @@ useHead(() => ({
         <details v-for="item in faqs" :key="item.q" class="group px-6 py-5 md:px-8 md:py-6">
           <summary class="flex items-center justify-between gap-4 cursor-pointer list-none font-display text-base md:text-lg text-deep-blue">
             {{ item.q }}
-            <span class="shrink-0 font-mono text-accent-blue transition-transform group-open:rotate-45">+</span>
+            <span class="shrink-0 tabular-nums text-accent-blue transition-transform group-open:rotate-45">+</span>
           </summary>
           <p class="mt-3 text-ink-soft text-sm md:text-base leading-relaxed">{{ item.a }}</p>
         </details>

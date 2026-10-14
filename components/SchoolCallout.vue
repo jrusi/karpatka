@@ -19,7 +19,7 @@ const { t } = useI18n()
             <span class="block text-white/60 text-sm mt-0.5">{{ t('schoolCallout.text') }}</span>
           </span>
         </span>
-        <span class="font-mono text-xs uppercase tracking-wider text-ice group-hover:text-white flex items-center gap-2 shrink-0">
+        <span class="tabular-nums text-xs uppercase tracking-wider text-ice group-hover:text-white flex items-center gap-2 shrink-0">
           {{ t('schoolCallout.cta') }} <span class="transition-transform group-hover:translate-x-1">→</span>
         </span>
       </a>
