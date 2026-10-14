@@ -5,57 +5,57 @@ const { t } = useI18n()
 const markers = [
   {
     id: 'kasa',
-    left: '38%',
-    top: '82%',
+    left: '37.7%',
+    top: '83.2%',
     dotClass: 'w-7 h-7 md:w-10 md:h-10',
     tooltipClass: 'bottom-7 w-40',
   },
   {
     id: 'parking-1',
-    left: '26%',
-    top: '88%',
+    left: '27.0%',
+    top: '89.5%',
     dotClass: 'w-6 h-6 md:w-8 md:h-8',
     tooltipClass: 'bottom-6 w-36',
   },
   {
     id: 'parking-2',
-    left: '46%',
-    top: '85%',
+    left: '45.9%',
+    top: '86.4%',
     dotClass: 'w-6 h-6 md:w-8 md:h-8',
     tooltipClass: 'bottom-6 w-36',
   },
   {
     id: 'wyciag-1',
-    left: '46%',
-    top: '65%',
+    left: '45.9%',
+    top: '65.6%',
     dotClass: 'w-7 h-7 md:w-10 md:h-10',
     tooltipClass: 'bottom-7 w-44',
   },
   {
     id: 'wyciag-2',
-    left: '54%',
-    top: '76%',
+    left: '54.1%',
+    top: '77.0%',
     dotClass: 'w-7 h-7 md:w-10 md:h-10',
     tooltipClass: 'bottom-7 w-44',
   },
   {
     id: 'tasma',
-    left: '67%',
-    top: '60%',
+    left: '67.4%',
+    top: '60.4%',
     dotClass: 'w-7 h-7 md:w-10 md:h-10',
     tooltipClass: 'bottom-7 w-48',
   },
   {
     id: 'gorka',
-    left: '78%',
-    top: '66%',
+    left: '78.7%',
+    top: '66.6%',
     dotClass: 'w-7 h-7 md:w-10 md:h-10',
     tooltipClass: 'bottom-7 w-48',
   },
   {
     id: 'bar',
-    left: '61%',
-    top: '75%',
+    left: '61.3%',
+    top: '76.0%',
     dotClass: 'w-7 h-7 md:w-10 md:h-10',
     tooltipClass: 'bottom-7 w-44',
   },
@@ -112,13 +112,13 @@ onUnmounted(() => {
       </div>
 
       <div v-reveal class="reveal relative bg-paper rounded-3xl p-4 md:p-10 overflow-visible">
-        <div class="relative aspect-[800/533] rounded-2xl overflow-hidden cursor-pointer md:cursor-default" @click="openFullscreen">
+        <div class="relative aspect-[780/513] rounded-2xl overflow-hidden cursor-pointer md:cursor-default" @click="openFullscreen">
           <img
             src="/mapa-stoku.jpg"
             :alt="t('map.imageAlt')"
             class="absolute inset-0 w-full h-full object-cover"
-            width="800"
-            height="533"
+            width="780"
+            height="513"
           >
 
           <span class="md:hidden absolute top-3 left-3 pointer-events-none flex items-center gap-1.5 bg-deep-blue/80 text-white text-[11px] tabular-nums px-3 py-1.5 rounded-full">
