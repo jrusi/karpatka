@@ -46,15 +46,15 @@ useHead(() => ({
     <svg class="absolute inset-0 w-full h-full opacity-[.08]" viewBox="0 0 1400 700" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
       <path class="sketch-line" stroke="white" d="M-50 520 L180 380 L340 460 L520 300 L650 420 L820 260 L980 440 L1150 340 L1300 460 L1460 380"/>
     </svg>
-    <div class="relative max-w-7xl mx-auto px-5 md:px-8 grid md:grid-cols-2 gap-14 items-center">
-      <div v-reveal class="reveal order-2 md:order-1 aspect-[4/3] rounded-3xl overflow-hidden border border-white/15">
+    <div class="relative max-w-7xl mx-auto px-5 md:px-8 grid lg:grid-cols-2 gap-14 items-center">
+      <div v-reveal class="reveal order-2 lg:order-1 aspect-[4/3] rounded-3xl overflow-hidden border border-white/15">
         <img
           src="/instruktor.jpg"
           :alt="t('school.imageAlt')"
           class="w-full h-full object-cover object-top"
         >
       </div>
-      <div v-reveal class="reveal order-1 md:order-2">
+      <div v-reveal class="reveal order-1 lg:order-2">
         <p class="tabular-nums text-xs uppercase tracking-[0.2em] text-ice mb-3">{{ t('school.eyebrow') }}</p>
         <h2 class="font-display text-3xl md:text-5xl mb-6 text-white">{{ t('school.titleLine1') }}<br>{{ t('school.titleLine2') }}</h2>
         <p class="text-white/65 leading-relaxed mb-7 max-w-md">{{ t('school.lead') }}</p>
@@ -74,7 +74,7 @@ useHead(() => ({
         </ul>
 
         <p class="tabular-nums text-xs uppercase tracking-[0.2em] text-ice mb-3">{{ t('pricing.season', { years: seasonYears }) }}</p>
-        <div class="grid sm:grid-cols-2 gap-4 mb-9">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-1 gap-4 mb-9">
           <div id="wypozyczalnia" class="rounded-2xl border border-white/15 bg-white/5 overflow-hidden">
             <h3 class="tabular-nums text-[11px] uppercase tracking-wider text-white/40 px-5 pt-5 mb-3">{{ t('school.rentalTitle') }}</h3>
             <div class="grid grid-cols-3 tabular-nums text-[11px] uppercase tracking-wider text-white/40 px-5 pb-2">
