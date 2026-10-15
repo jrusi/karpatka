@@ -96,8 +96,8 @@ interface NavLink {
 // Either a page (path) or a section of the home page (section = element id).
 const navLinks: NavLink[] = [
   { key: 'cameras', path: '/kamery' },
-  { key: 'pricing', path: '/', section: 'cennik' },
   { key: 'school', path: '/', section: 'szkola' },
+  { key: 'pricing', path: '/', section: 'cennik' },
   { key: 'bar', path: '/', section: 'bar' },
   { key: 'map', path: '/', section: 'mapa' },
   { key: 'faq', path: '/', section: 'faq' },
