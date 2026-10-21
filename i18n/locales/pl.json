@@ -2,7 +2,8 @@
   "common": {
     "price": "{n} zł",
     "pricePerHour": "{n} zł/h",
-    "logoAlt": "Karpatka — Wyciągi Narciarskie"
+    "logoAlt": "Karpatka — Wyciągi Narciarskie",
+    "gallery": { "prev": "Poprzednie zdjęcie", "next": "Następne zdjęcie", "show": "Pokaż zdjęcie {n}", "showVideo": "Pokaż film" }
   },
   "seo": {
     "title": "Karpatka Karpacz — Wyciągi Narciarskie, Szkoła, Wypożyczalnia narty snowboard {'|'} Cennik",
@@ -67,6 +68,21 @@
   "offer": {
     "eyebrow": "Co znajdziesz na miejscu",
     "title": "Wszystko, czego potrzebujesz w jednym miejscu.",
+    "galleryAlt": {
+      "p1": "Świeżo przygotowany stok Karpatka — sztruks ratrakowy i armatka śnieżna o zachodzie słońca",
+      "p2": "Widok ze stoku Karpatka na Karpacz i okoliczne góry w słoneczny dzień",
+      "p3": "Ratrak przygotowuje oświetlony stok Karpatka wieczorem",
+      "p4": "Szeroki, łagodny stok Karpatka otoczony zaśnieżonym lasem",
+      "p5": "Wyratrakowana trasa narciarska Karpatka wśród ośnieżonych świerków",
+      "p6": "Widok z kamer na żywo na stoku Karpatka — przygotowana trasa o poranku",
+      "p7": "Wyciąg orczykowy Karpatka w słońcu, wśród oszronionych świerków",
+      "p8": "Widok z kamery na stok Karpatka pełen narciarzy, z panoramą Karpacza w tle",
+      "video": "Film: stok narciarski Karpatka w Karpaczu — wyciągi, nauka jazdy i trasa zjazdowa"
+    },
+    "ld": {
+      "videoName": "Karpatka — stok narciarski w Karpaczu",
+      "videoDescription": "Krótki film o stoku Karpatka w Karpaczu: wyciągi orczykowe, przygotowana trasa oraz nauka jazdy na nartach i snowboardzie dla dzieci i dorosłych."
+    },
     "lifts": {
       "title": "Dwa wyciągi orczykowe",
       "desc": "Wyciąg 1 i Wyciąg 2 — dla jeżdżących pewniej, z krótkim czasem oczekiwania."
@@ -100,6 +116,15 @@
     "titleLine2": "i wypożyczalnia",
     "lead": "Nie masz sprzętu? Dopiero zaczynasz przygodę z nartami lub snowboardem? Nasi instruktorzy poprowadzą Cię krok po kroku, a wypożyczalnia zaopatrzy w sprzęt na miejscu — bez wcześniejszych przygotowań.",
     "imageAlt": "Instruktor Karpatki na stoku z dzieckiem podczas nauki jazdy",
+    "galleryAlt": {
+      "p1": "Instruktor narciarstwa Karpatki prowadzi za ręce dziecko na nartach podczas lekcji na stoku w Karpaczu",
+      "p2": "Instruktor Szkoły Karpatka w żółtej kurtce na oślej łączce przy stoku w Karpaczu",
+      "p3": "Instruktor Karpatki zjeżdża z dzieckiem na nartach, ucząc skrętów na łagodnym stoku",
+      "p4": "Instruktor i dziecko na nartach wjeżdżają taśmą wyciągową dla początkujących na stoku Karpatka",
+      "p5": "Instruktor narciarstwa z dzieckiem w kasku i goglach na stoku Karpatka w Karpaczu",
+      "p6": "Instruktor narciarstwa w niebieskim stroju z dzieckiem na nartach podczas lekcji w Karpaczu",
+      "p7": "Nauka jazdy na snowboardzie — instruktor z dzieckiem na desce na stoku Karpatka"
+    },
     "highlights": {
       "kids": { "title": "Dzieci", "subtitle": "i dorośli" },
       "gear": { "title": "Narty", "subtitle": "i snowboard" },
@@ -167,7 +192,17 @@
     "title": "Bar Karpatka",
     "text": "Punkt tuż przy wyciągu, czynny w godzinach pracy stoku — gorąca herbata, czekolada i przekąski, żeby się rozgrzać między zjazdami.",
     "hoursLink": "Godziny pracy →",
-    "imageAlt": "Karczma Karpatka wieczorem, z ogniskiem i miejscami siedzącymi na stoku"
+    "imageAlt": "Karczma Karpatka wieczorem, z ogniskiem i miejscami siedzącymi na stoku",
+    "imageAltDay": "Karczma Karpatka za dnia — drewniany budynek przy stoku w Karpaczu, w scenerii zaśnieżonych gór",
+    "galleryAlt": {
+      "p2": "Wnętrze Karczmy Karpatka — drewniana sala z długimi stołami i widokiem na zaśnieżony stok",
+      "p3": "Bar w Karczmie Karpatka — drewniana lada, ciepłe lampy i stoły dla narciarzy",
+      "p4": "Piwo Karpatka 40 Limited Edition podane z przekąskami w Karczmie Karpatka",
+      "p5": "Karczma Karpatka latem — drewniany budynek z paleniskiem i ławkami u podnóża stoku w Karpaczu",
+      "p6": "Zadaszona drewniana wiata przy Karczmie Karpatka w zimowej scenerii",
+      "p7": "Rzeźbione drewniane drzwi z napisem „Chatka Karpatka” i ławki na tarasie",
+      "p8": "Karczma Karpatka zimą, tuż przy ogrodzonym stoku narciarskim w Karpaczu"
+    }
   },
   "map": {
     "eyebrow": "Mapa stoku",

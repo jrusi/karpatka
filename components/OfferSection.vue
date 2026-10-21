@@ -1,6 +1,48 @@
 <script setup lang="ts">
+import type { GalleryPhoto } from '~/components/PhotoGallery.vue'
+
 const { t } = useI18n()
 const localePath = useLocalePath()
+
+// Photo 6 is a wide two-camera webcam strip, so it is shown whole rather than cropped.
+const photo = (n: number): GalleryPhoto => ({
+  src: `/stok/stok-${n}.webp`,
+  thumb: `/stok/stok-${n}-thumb.webp`,
+  alt: t(`offer.galleryAlt.p${n}`),
+  contain: n === 6,
+})
+const gallery = computed<GalleryPhoto[]>(() => [
+  ...[8, 4, 5, 1, 2, 3, 7, 6].map(photo),
+  {
+    src: '/stok/karpatka-film-poster.webp',
+    thumb: '/stok/karpatka-film-thumb.webp',
+    alt: t('offer.galleryAlt.video'),
+    video: '/stok/karpatka-film.mp4',
+  },
+])
+
+const { public: { siteUrl } } = useRuntimeConfig()
+
+// Lets search engines list the promo video. The video's on-screen text is Polish in every locale.
+useHead(() => ({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'VideoObject',
+        name: t('offer.ld.videoName'),
+        description: t('offer.ld.videoDescription'),
+        thumbnailUrl: `${siteUrl}/stok/karpatka-film-poster.webp`,
+        contentUrl: `${siteUrl}/stok/karpatka-film.mp4`,
+        uploadDate: '2016-12-13',
+        duration: 'PT1M39S',
+        inLanguage: 'pl',
+        publisher: { '@type': 'Organization', name: 'Karpatka', url: siteUrl },
+      }),
+    },
+  ],
+}))
 
 const items = computed(() => [
   { num: '01', key: 'lifts' },
@@ -29,6 +71,8 @@ const items = computed(() => [
           :route="item.route"
         />
       </div>
+
+      <PhotoGallery v-reveal class="reveal mt-14 max-w-5xl mx-auto" :photos="gallery" theme="light" wide />
     </div>
   </section>
 </template>

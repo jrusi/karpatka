@@ -2,7 +2,8 @@
   "common": {
     "price": "{n} PLN",
     "pricePerHour": "{n} PLN/Std.",
-    "logoAlt": "Karpatka — Skilifte"
+    "logoAlt": "Karpatka — Skilifte",
+    "gallery": { "prev": "Vorheriges Foto", "next": "Nächstes Foto", "show": "Foto {n} anzeigen", "showVideo": "Video anzeigen" }
   },
   "seo": {
     "title": "Karpatka Karpacz — Skilifte, Skischule, Ski- und Snowboardverleih {'|'} Preise",
@@ -67,6 +68,21 @@
   "offer": {
     "eyebrow": "Was Sie bei uns finden",
     "title": "Alles, was Sie brauchen, an einem Ort.",
+    "galleryAlt": {
+      "p1": "Frisch präparierte Piste der Karpatka mit Cordmuster und Schneekanone bei Sonnenuntergang",
+      "p2": "Blick von der Piste Karpatka über Karpacz und die umliegenden Berge an einem sonnigen Tag",
+      "p3": "Pistenraupe präpariert die beleuchtete Piste der Karpatka am Abend",
+      "p4": "Die breite, sanfte Piste der Karpatka, umgeben von verschneitem Wald",
+      "p5": "Präparierte Skipiste der Karpatka zwischen verschneiten Fichten",
+      "p6": "Livekamera-Bilder der Piste Karpatka — die präparierte Abfahrt am Morgen",
+      "p7": "Schlepplift der Karpatka an einem sonnigen Tag zwischen bereiften Fichten",
+      "p8": "Webcam-Blick auf die belebte Piste der Karpatka mit Karpacz im Hintergrund",
+      "video": "Video: Skipiste Karpatka in Karpacz — Lifte, Skikurse und Abfahrt"
+    },
+    "ld": {
+      "videoName": "Karpatka — Skipiste in Karpacz",
+      "videoDescription": "Ein kurzer Film über die Skipiste Karpatka in Karpacz: Schlepplifte, die präparierte Abfahrt sowie Ski- und Snowboardkurse für Kinder und Erwachsene."
+    },
     "lifts": {
       "title": "Zwei Schlepplifte",
       "desc": "Lift 1 und Lift 2 — für sicherere Fahrer, mit kurzen Wartezeiten."
@@ -100,6 +116,15 @@
     "titleLine2": "und Verleih",
     "lead": "Keine Ausrüstung? Sie fangen gerade erst mit Skifahren oder Snowboarden an? Unsere Skilehrer begleiten Sie Schritt für Schritt, und der Verleih stattet Sie vor Ort aus — ganz ohne Vorbereitung.",
     "imageAlt": "Skilehrer der Karpatka mit einem Kind beim Skiunterricht auf der Piste",
+    "galleryAlt": {
+      "p1": "Skilehrer der Karpatka hält ein Kind an den Händen beim Anfänger-Skikurs in Karpacz",
+      "p2": "Skilehrer der Skischule Karpatka in gelber Jacke im Anfängerbereich der Piste in Karpacz",
+      "p3": "Karpatka-Skilehrer fährt mit einem Kind ab und übt Kurven am flachen Hang",
+      "p4": "Skilehrer und Kind auf Skiern auf dem Zauberteppich für Anfänger an der Karpatka",
+      "p5": "Skilehrer mit einem Kind mit Helm und Skibrille an der Piste Karpatka in Karpacz",
+      "p6": "Skilehrer in Blau mit einem Kind auf Skiern während einer Skistunde in Karpacz",
+      "p7": "Snowboardkurs — Lehrer mit einem Kind auf dem Snowboard an der Piste Karpatka"
+    },
     "highlights": {
       "kids": { "title": "Kinder", "subtitle": "und Erwachsene" },
       "gear": { "title": "Ski", "subtitle": "und Snowboard" },
@@ -167,7 +192,17 @@
     "title": "Bar Karpatka",
     "text": "Direkt am Lift und während der Pistenbetriebszeiten geöffnet — heißer Tee, heiße Schokolade und Snacks zum Aufwärmen zwischen den Abfahrten.",
     "hoursLink": "Öffnungszeiten →",
-    "imageAlt": "Karczma Karpatka am Abend, mit Lagerfeuer und Sitzplätzen an der Piste"
+    "imageAlt": "Karczma Karpatka am Abend, mit Lagerfeuer und Sitzplätzen an der Piste",
+    "imageAltDay": "Karczma Karpatka bei Tag — Holzhütte direkt an der Piste in Karpacz vor verschneiten Bergen",
+    "galleryAlt": {
+      "p2": "Innenraum der Karczma Karpatka — holzvertäfelter Gastraum mit langen Tischen und Blick auf die verschneite Piste",
+      "p3": "Theke der Karczma Karpatka — Holztresen, warmes Licht und Tische für Skifahrer",
+      "p4": "Karpatka-Bier 40 Limited Edition mit Snacks in der Karczma Karpatka",
+      "p5": "Karczma Karpatka im Sommer — Holzhaus mit Feuerstelle und Bänken am Fuß der Piste in Karpacz",
+      "p6": "Überdachter Holzunterstand neben der Karczma Karpatka im Winter",
+      "p7": "Geschnitzte Holztür mit der Aufschrift „Chatka Karpatka“ und Bänke auf der Terrasse",
+      "p8": "Karczma Karpatka im Winter, direkt an der abgesperrten Skipiste in Karpacz"
+    }
   },
   "map": {
     "eyebrow": "Pistenplan",

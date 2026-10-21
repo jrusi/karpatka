@@ -2,7 +2,8 @@
   "common": {
     "price": "{n} PLN",
     "pricePerHour": "{n} PLN/h",
-    "logoAlt": "Karpatka — Ski Lifts"
+    "logoAlt": "Karpatka — Ski Lifts",
+    "gallery": { "prev": "Previous photo", "next": "Next photo", "show": "Show photo {n}", "showVideo": "Show video" }
   },
   "seo": {
     "title": "Karpatka Karpacz — Ski Lifts, Ski School, Ski & Snowboard Rental {'|'} Prices",
@@ -67,6 +68,21 @@
   "offer": {
     "eyebrow": "What you'll find here",
     "title": "Everything you need in one place.",
+    "galleryAlt": {
+      "p1": "Freshly groomed corduroy on the Karpatka slope with a snow cannon at sunset",
+      "p2": "View from the Karpatka slope over Karpacz and the surrounding mountains on a sunny day",
+      "p3": "Snow groomer preparing the floodlit Karpatka slope in the evening",
+      "p4": "The wide, gentle Karpatka slope surrounded by snowy forest",
+      "p5": "Groomed ski run at Karpatka among snow-covered spruces",
+      "p6": "Live camera views of the Karpatka slope — the groomed run in the morning",
+      "p7": "Karpatka T-bar lift on a sunny day among frosted spruces",
+      "p8": "Webcam view of the Karpatka slope busy with skiers, with Karpacz in the background",
+      "video": "Video: Karpatka ski slope in Karpacz — lifts, lessons and the run"
+    },
+    "ld": {
+      "videoName": "Karpatka — ski slope in Karpacz",
+      "videoDescription": "A short film about the Karpatka ski slope in Karpacz, Poland: T-bar lifts, the groomed run, and ski and snowboard lessons for kids and adults."
+    },
     "lifts": {
       "title": "Two T-bar lifts",
       "desc": "Lift 1 and Lift 2 — for more confident skiers, with short waiting times."
@@ -100,6 +116,15 @@
     "titleLine2": "and rental",
     "lead": "No equipment? Just starting out with skiing or snowboarding? Our instructors will guide you step by step, and the rental shop will equip you on site — no preparation needed.",
     "imageAlt": "Karpatka instructor on the slope with a child during a lesson",
+    "galleryAlt": {
+      "p1": "Karpatka ski instructor holding a child’s hands during a beginner ski lesson in Karpacz",
+      "p2": "Karpatka ski school instructor in a yellow jacket on the beginner area of the slope in Karpacz",
+      "p3": "Karpatka instructor skiing down with a child, teaching turns on a gentle slope",
+      "p4": "Instructor and child on skis riding the beginner conveyor lift at Karpatka",
+      "p5": "Ski instructor with a child in a helmet and goggles on the Karpatka slope in Karpacz",
+      "p6": "Ski instructor in blue with a child on skis during a lesson in Karpacz",
+      "p7": "Snowboard lesson — instructor with a child on a snowboard on the Karpatka slope"
+    },
     "highlights": {
       "kids": { "title": "Kids", "subtitle": "and adults" },
       "gear": { "title": "Skis", "subtitle": "and snowboard" },
@@ -167,7 +192,17 @@
     "title": "Karpatka Bar",
     "text": "Right by the lift and open during slope hours — hot tea, hot chocolate and snacks to warm you up between runs.",
     "hoursLink": "Opening hours →",
-    "imageAlt": "Karczma Karpatka in the evening, with a bonfire and seating on the slope"
+    "imageAlt": "Karczma Karpatka in the evening, with a bonfire and seating on the slope",
+    "imageAltDay": "Karczma Karpatka by day — a wooden lodge beside the slope in Karpacz, with snowy mountains behind",
+    "galleryAlt": {
+      "p2": "Inside Karczma Karpatka — a wooden dining room with long tables and windows onto the snowy slope",
+      "p3": "The bar at Karczma Karpatka — wooden counter, warm lamps and tables for skiers",
+      "p4": "Karpatka 40 Limited Edition beer served with snacks at Karczma Karpatka",
+      "p5": "Karczma Karpatka in summer — a wooden lodge with a fire pit and benches at the foot of the slope in Karpacz",
+      "p6": "Covered wooden shelter next to Karczma Karpatka in winter",
+      "p7": "Carved wooden door reading “Chatka Karpatka” and benches on the terrace",
+      "p8": "Karczma Karpatka in winter, right beside the fenced ski slope in Karpacz"
+    }
   },
   "map": {
     "eyebrow": "Slope map",

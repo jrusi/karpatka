@@ -2,7 +2,8 @@
   "common": {
     "price": "{n} PLN",
     "pricePerHour": "{n} PLN/hod.",
-    "logoAlt": "Karpatka — Lyžařské vleky"
+    "logoAlt": "Karpatka — Lyžařské vleky",
+    "gallery": { "prev": "Předchozí fotka", "next": "Další fotka", "show": "Zobrazit fotku {n}", "showVideo": "Zobrazit video" }
   },
   "seo": {
     "title": "Karpatka Karpacz — Lyžařské vleky, Lyžařská škola, Půjčovna lyží a snowboardů {'|'} Ceník",
@@ -67,6 +68,21 @@
   "offer": {
     "eyebrow": "Co u nás najdete",
     "title": "Vše, co potřebujete, na jednom místě.",
+    "galleryAlt": {
+      "p1": "Čerstvě upravená sjezdovka Karpatka s manšestrem a sněžným dělem při západu slunce",
+      "p2": "Výhled ze svahu Karpatka na Karpacz a okolní hory za slunečného dne",
+      "p3": "Rolba upravuje osvětlenou sjezdovku Karpatka večer",
+      "p4": "Široký, mírný svah Karpatka obklopený zasněženým lesem",
+      "p5": "Upravená sjezdovka Karpatka mezi zasněženými smrky",
+      "p6": "Záběry z živých kamer na svah Karpatka — upravená sjezdovka ráno",
+      "p7": "Kotvový vlek Karpatka za slunečného dne mezi ojíněnými smrky",
+      "p8": "Pohled z kamery na sjezdovku Karpatka plnou lyžařů s Karpaczem v pozadí",
+      "video": "Video: lyžařský areál Karpatka v Karpaczi — vleky, výuka a sjezdovka"
+    },
+    "ld": {
+      "videoName": "Karpatka — sjezdovka v Karpaczi",
+      "videoDescription": "Krátký film o lyžařském areálu Karpatka v Karpaczi: kotvové vleky, upravená sjezdovka a výuka lyžování a snowboardingu pro děti i dospělé."
+    },
     "lifts": {
       "title": "Dva kotvové vleky",
       "desc": "Vlek 1 a Vlek 2 — pro jistější lyžaře, s krátkým čekáním."
@@ -100,6 +116,15 @@
     "titleLine2": "a půjčovna",
     "lead": "Nemáte vybavení? S lyžováním nebo snowboardingem teprve začínáte? Naši instruktoři vás provedou krok za krokem a půjčovna vás vybaví přímo na místě — bez jakékoli přípravy.",
     "imageAlt": "Instruktor Karpatky na svahu s dítětem při výuce lyžování",
+    "galleryAlt": {
+      "p1": "Instruktor Karpatky drží za ruce dítě na lyžích při lekci pro začátečníky v Karpaczi",
+      "p2": "Instruktor lyžařské školy Karpatka ve žluté bundě v oblasti pro začátečníky na svahu v Karpaczi",
+      "p3": "Instruktor Karpatky sjíždí s dítětem na lyžích a učí ho oblouky na mírném svahu",
+      "p4": "Instruktor a dítě na lyžích jedou pojízdným kobercem pro začátečníky na Karpatce",
+      "p5": "Lyžařský instruktor s dítětem v helmě a brýlích na svahu Karpatka v Karpaczi",
+      "p6": "Lyžařský instruktor v modrém s dítětem na lyžích při lekci v Karpaczi",
+      "p7": "Výuka snowboardingu — instruktor s dítětem na snowboardu na svahu Karpatka"
+    },
     "highlights": {
       "kids": { "title": "Děti", "subtitle": "i dospělí" },
       "gear": { "title": "Lyže", "subtitle": "i snowboard" },
@@ -167,7 +192,17 @@
     "title": "Bar Karpatka",
     "text": "Hned u vleku, otevřeno po dobu provozu svahu — horký čaj, čokoláda a občerstvení, abyste se mezi jízdami zahřáli.",
     "hoursLink": "Otevírací doba →",
-    "imageAlt": "Karczma Karpatka večer, s ohništěm a posezením na svahu"
+    "imageAlt": "Karczma Karpatka večer, s ohništěm a posezením na svahu",
+    "imageAltDay": "Karczma Karpatka ve dne — dřevěná chata u svahu v Karpaczi se zasněženými horami v pozadí",
+    "galleryAlt": {
+      "p2": "Interiér Karczmy Karpatka — dřevěná jídelna s dlouhými stoly a výhledem na zasněžený svah",
+      "p3": "Bar v Karczmě Karpatka — dřevěný pult, teplá světla a stoly pro lyžaře",
+      "p4": "Pivo Karpatka 40 Limited Edition s občerstvením v Karczmě Karpatka",
+      "p5": "Karczma Karpatka v létě — dřevěná budova s ohništěm a lavičkami pod svahem v Karpaczi",
+      "p6": "Krytý dřevěný přístřešek u Karczmy Karpatka v zimě",
+      "p7": "Vyřezávané dřevěné dveře s nápisem „Chatka Karpatka“ a lavičky na terase",
+      "p8": "Karczma Karpatka v zimě, hned u ohrazené sjezdovky v Karpaczi"
+    }
   },
   "map": {
     "eyebrow": "Mapa svahu",

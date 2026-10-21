@@ -1,9 +1,23 @@
 <script setup lang="ts">
+import type { GalleryPhoto } from '~/components/PhotoGallery.vue'
+
 const { t } = useI18n()
 const { price, pricePerHour } = usePrice()
 
 const highlights = ['kids', 'gear', 'group']
 const features = ['instructors', 'basics', 'rental', 'onSite']
+
+// The instructor photo stays first; the rest come from the school photo set.
+const portraitPhotos = new Set([5, 6, 7])
+const gallery = computed<GalleryPhoto[]>(() => [
+  { src: '/instruktor.jpg', thumb: '/szkola/instruktor-thumb.webp', alt: t('school.imageAlt') },
+  ...[1, 2, 3, 4, 5, 6, 7].map(n => ({
+    src: `/szkola/szkola-${n}.webp`,
+    thumb: `/szkola/szkola-${n}-thumb.webp`,
+    alt: t(`school.galleryAlt.p${n}`),
+    contain: portraitPhotos.has(n),
+  })),
+])
 
 useHead(() => ({
   script: [
@@ -47,13 +61,7 @@ useHead(() => ({
       <path class="sketch-line" stroke="white" d="M-50 520 L180 380 L340 460 L520 300 L650 420 L820 260 L980 440 L1150 340 L1300 460 L1460 380"/>
     </svg>
     <div class="relative max-w-7xl mx-auto px-5 md:px-8 grid lg:grid-cols-2 gap-14 items-center">
-      <div v-reveal class="reveal order-2 lg:order-1 aspect-[4/3] rounded-3xl overflow-hidden border border-white/15">
-        <img
-          src="/instruktor.jpg"
-          :alt="t('school.imageAlt')"
-          class="w-full h-full object-cover object-top"
-        >
-      </div>
+      <PhotoGallery v-reveal class="reveal order-2 lg:order-1" :photos="gallery" />
       <div v-reveal class="reveal order-1 lg:order-2">
         <p class="tabular-nums text-xs uppercase tracking-[0.2em] text-ice mb-3">{{ t('school.eyebrow') }}</p>
         <h2 class="font-display text-3xl md:text-5xl mb-6 text-white">{{ t('school.titleLine1') }}<br>{{ t('school.titleLine2') }}</h2>

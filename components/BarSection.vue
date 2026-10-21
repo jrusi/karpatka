@@ -1,5 +1,18 @@
 <script setup lang="ts">
+import type { GalleryPhoto } from '~/components/PhotoGallery.vue'
+
 const { t } = useI18n()
+
+// The daytime photo stays first; the rest come from the karczma photo set.
+const gallery = computed<GalleryPhoto[]>(() => [
+  { src: '/bar.jpg', thumb: '/karczma/bar-thumb.webp', alt: t('bar.imageAltDay') },
+  ...[2, 3, 1, 4, 5, 6, 7, 8].map(n => ({
+    src: `/karczma/karczma-${n}.webp`,
+    thumb: `/karczma/karczma-${n}-thumb.webp`,
+    alt: n === 1 ? t('bar.imageAlt') : t(`bar.galleryAlt.p${n}`),
+    contain: n === 4,
+  })),
+])
 </script>
 
 <template>
@@ -11,13 +24,7 @@ const { t } = useI18n()
         <p class="text-ink-soft leading-relaxed mb-6 max-w-md">{{ t('bar.text') }}</p>
         <a href="#kontakt" class="inline-flex items-center gap-2 tabular-nums text-sm text-purple border-b border-purple/40 hover:border-purple pb-1">{{ t('bar.hoursLink') }}</a>
       </div>
-      <div v-reveal class="reveal aspect-[4/3] rounded-3xl overflow-hidden border border-white">
-        <img
-          src="/bar.jpg"
-          :alt="t('bar.imageAlt')"
-          class="w-full h-full object-cover"
-        >
-      </div>
+      <PhotoGallery v-reveal class="reveal" :photos="gallery" theme="light" />
     </div>
   </section>
 </template>
