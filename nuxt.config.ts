@@ -73,10 +73,11 @@ export default defineNuxtConfig({
         { name: 'twitter:image', content: `${siteUrl}/og-image-v2.jpg` },
       ],
       link: [
-        { rel: 'icon', href: '/favicon.ico', sizes: '48x48' },
-        { rel: 'icon', type: 'image/png', href: '/favicon-32x32.png', sizes: '32x32' },
-        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
-        { rel: 'manifest', href: '/site.webmanifest' },
+        // ?v= busts browsers' icon cache; bump it whenever the icon files change.
+        { rel: 'icon', href: '/favicon.ico?v=2', sizes: '48x48' },
+        { rel: 'icon', type: 'image/png', href: '/favicon-32x32.png?v=2', sizes: '32x32' },
+        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png?v=2' },
+        { rel: 'manifest', href: '/site.webmanifest?v=2' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
         {

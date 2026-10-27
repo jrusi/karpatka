@@ -10,6 +10,12 @@
 [functions]
   directory = "netlify/functions"
 
+# Netlify serves .webmanifest as application/octet-stream by default.
+[[headers]]
+  for = "/site.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json; charset=utf-8"
+
 # Legacy PHP endpoints still served by the old server (178.62.196.229).
 # Proxied (status 200) so https://wyciag-karpacz.pl/<file>.php keeps working
 # for external tools and the thermometers (which POST readings) after DNS
