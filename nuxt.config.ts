@@ -64,6 +64,7 @@ export default defineNuxtConfig({
       // Title, description and OG/Twitter texts are set per language in app.vue.
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
+        { name: 'theme-color', content: '#203A56' },
         { property: 'og:type', content: 'website' },
         { property: 'og:image', content: `${siteUrl}/og-image-v2.jpg` },
         { property: 'og:image:width', content: '1200' },
@@ -72,6 +73,10 @@ export default defineNuxtConfig({
         { name: 'twitter:image', content: `${siteUrl}/og-image-v2.jpg` },
       ],
       link: [
+        { rel: 'icon', href: '/favicon.ico', sizes: '48x48' },
+        { rel: 'icon', type: 'image/png', href: '/favicon-32x32.png', sizes: '32x32' },
+        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
+        { rel: 'manifest', href: '/site.webmanifest' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
         {

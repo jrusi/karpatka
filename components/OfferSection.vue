@@ -35,7 +35,7 @@ useHead(() => ({
         description: t('offer.ld.videoDescription'),
         thumbnailUrl: `${siteUrl}/stok/karpatka-film-poster.webp`,
         contentUrl: `${siteUrl}/stok/karpatka-film.mp4`,
-        uploadDate: '2016-12-13',
+        uploadDate: '2016-12-13T12:00:00+01:00',
         duration: 'PT1M39S',
         inLanguage: 'pl',
         publisher: { '@type': 'Organization', name: 'Karpatka', url: siteUrl },
