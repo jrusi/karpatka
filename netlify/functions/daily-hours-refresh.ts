@@ -23,13 +23,23 @@ export const handler = schedule('5 0 * * *', async () => {
     return { statusCode: 500 }
   }
 
-  const response = await fetch(`${siteUrl}/api/opening-hours/refresh`, {
-    method: 'POST',
-    headers: { 'X-Refresh-Secret': secret! },
-  })
+  const target = `${siteUrl!.trim().replace(/\/+$/, '')}/api/opening-hours/refresh`
 
-  const body = await response.text()
-  console.log('[daily-hours-refresh]', response.status, body)
+  try {
+    const response = await fetch(target, {
+      method: 'POST',
+      headers: { 'X-Refresh-Secret': secret! },
+    })
+
+    const body = await response.text()
+    console.log('[daily-hours-refresh]', target, response.status, body)
+  } catch (error) {
+    // A bare "fetch failed" hides the reason (DNS, TLS, refused connection) in
+    // error.cause, and without the URL it's unclear whether SITE_URL is wrong.
+    const cause = (error as { cause?: unknown }).cause
+    console.error('[daily-hours-refresh] Request to', target, 'failed:', cause ?? error)
+    return { statusCode: 500 }
+  }
 
   return { statusCode: 200 }
 })
