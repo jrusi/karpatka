@@ -58,12 +58,33 @@
     "cam1": "Górna stacja wyciągu",
     "cam2": "Dolna stacja wyciągu",
     "cam3": "Taśma i bar (w zimie), Sokoliki i Krzyżna góra (lato)",
-    "pageTitle": "Kamery na żywo — Karpatka",
-    "pageDescription": "Podgląd na żywo z kamer na stoku wyciągu narciarskiego Karpatka w Karpaczu — sprawdź aktualne warunki na trasie przed wyjazdem.",
+    "pageTitle": "Kamery na żywo Karpacz — stok narciarski Karpatka",
+    "pageDescription": "Karpacz — kamery na żywo ze stoku narciarskiego Karpatka: wyciągi, taśma i górka saneczkowa. Sprawdź warunki przed wyjazdem. Na miejscu szkoła narciarska i nauka jazdy na nartach.",
     "pageHeading": "Zerknij na stok, zanim spakujesz auto.",
     "pageLead": "Trzy kamery na żywo: widok z Chatki Karpatki, z kasy oraz na górną stację wyciągu — wszystkie w jednym miejscu.",
     "pageNote": "* podgląd na żywo, zależny od stabilności połączenia kamer na stoku",
-    "backHome": "← Powrót do strony głównej"
+    "backHome": "← Powrót do strony głównej",
+    "seo": {
+      "title": "Kamery live Karpacz — stok narciarski Karpatka na żywo",
+      "intro": "Kamery na żywo w Karpaczu pokazują stok narciarski Karpatka przy ul. Myśliwskiej 3, tuż pod Śnieżką w Karkonoszach. Zanim wyjedziesz z domu, sprawdź na żywo pokrywę śnieżną, przygotowanie trasy i ruch przy wyciągach.",
+      "viewsTitle": "Co widać na kamerach?",
+      "viewsText": "Kamera 1 obejmuje górną stację wyciągu, a kamera 2 — dolną stację. Kamera 3 pokazuje zimą taśmę dla początkujących i bar, a latem panoramę Sokolików i Krzyżnej Góry. Dzięki temu w jednym miejscu zobaczysz cały stok — od startu wyciągu po szczyt trasy.",
+      "slope": {
+        "title": "Stok narciarski w Karpaczu",
+        "text": "Karpatka to stok narciarski w Karpaczu z dwoma wyciągami orczykowymi, taśmą dla początkujących i bezpłatnym parkingiem tuż przy trasie. Dobre miejsce zarówno na pierwsze zjazdy, jak i na spokojne doszlifowanie techniki.",
+        "link": "Co znajdziesz na miejscu →"
+      },
+      "school": {
+        "title": "Nauka jazdy na nartach — szkoła narciarska",
+        "text": "Na stoku działa szkoła narciarska i snowboardowa. Instruktorzy prowadzą lekcje nauki jazdy na nartach i snowboardzie (55 minut) dla dzieci i dorosłych — indywidualnie i w grupach. Sprzęt wypożyczysz na miejscu.",
+        "link": "Szkoła i wypożyczalnia →"
+      },
+      "sledding": {
+        "title": "Górka saneczkowa",
+        "text": "Obok tras narciarskich jest naśnieżana górka saneczkowa, a sanki są w cenie karnetu. Na kamerach łatwo sprawdzić, czy warunki pozwalają na zjazdy z dziećmi.",
+        "link": "Zobacz cennik →"
+      }
+    }
   },
   "offer": {
     "eyebrow": "Co znajdziesz na miejscu",

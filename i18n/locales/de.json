@@ -58,12 +58,33 @@
     "cam1": "Bergstation des Lifts",
     "cam2": "Talstation des Lifts",
     "cam3": "Zauberteppich und Bar (Winter), Sokoliki und Krzyżna Góra (Sommer)",
-    "pageTitle": "Live-Kameras — Karpatka",
-    "pageDescription": "Live-Blick von den Kameras an der Skipiste Karpatka in Karpacz — prüfen Sie die aktuellen Bedingungen vor der Anreise.",
+    "pageTitle": "Webcams Karpacz live — Skipiste Karpatka",
+    "pageDescription": "Webcams Karpacz live von der Skipiste Karpatka: Lifte, Zauberteppich und Rodelhang. Prüfen Sie die Bedingungen vor der Anfahrt. Skischule und Skikurse direkt vor Ort.",
     "pageHeading": "Ein Blick auf die Piste, bevor Sie das Auto packen.",
     "pageLead": "Drei Live-Kameras: Blick von der Chatka Karpatka, von der Kasse und auf die Bergstation des Lifts — alle an einem Ort.",
     "pageNote": "* Live-Bild, abhängig von der Verbindungsqualität der Kameras an der Piste",
-    "backHome": "← Zurück zur Startseite"
+    "backHome": "← Zurück zur Startseite",
+    "seo": {
+      "title": "Live-Kameras Karpacz — die Skipiste Karpatka in Echtzeit",
+      "intro": "Unsere Live-Kameras in Karpacz zeigen die Skipiste Karpatka in der ul. Myśliwska 3, direkt unterhalb der Schneekoppe im Riesengebirge. Prüfen Sie vor der Abfahrt live die Schneelage, die Pistenpräparierung und den Andrang an den Liften.",
+      "viewsTitle": "Was zeigen die Kameras?",
+      "viewsText": "Kamera 1 zeigt die Bergstation des Lifts, Kamera 2 die Talstation. Kamera 3 zeigt im Winter den Zauberteppich für Anfänger und die Bar, im Sommer den Blick auf Sokoliki und Krzyżna Góra. So sehen Sie an einem Ort die ganze Piste — von der Talstation bis zum oberen Ende der Abfahrt.",
+      "slope": {
+        "title": "Skipiste in Karpacz",
+        "text": "Die Karpatka ist eine Skipiste in Karpacz mit zwei Schleppliften, einem Zauberteppich für Anfänger und einem kostenlosen Parkplatz direkt an der Piste. Ideal für die ersten Schwünge ebenso wie für entspanntes Techniktraining.",
+        "link": "Was Sie vor Ort finden →"
+      },
+      "school": {
+        "title": "Skikurse — Skischule an der Piste",
+        "text": "Direkt an der Piste gibt es eine Ski- und Snowboardschule. Die Lehrer geben Ski- und Snowboardkurse (55 Minuten) für Kinder und Erwachsene — als Einzel- oder Gruppenunterricht. Die komplette Ausrüstung können Sie vor Ort leihen.",
+        "link": "Skischule und Verleih →"
+      },
+      "sledding": {
+        "title": "Rodelhang",
+        "text": "Neben den Skipisten gibt es einen beschneiten Rodelhang — die Schlitten sind im Ticketpreis enthalten. Über die Kameras sehen Sie schnell, ob die Bedingungen zum Rodeln mit Kindern passen.",
+        "link": "Preise ansehen →"
+      }
+    }
   },
   "offer": {
     "eyebrow": "Was Sie bei uns finden",

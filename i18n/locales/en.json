@@ -58,12 +58,33 @@
     "cam1": "Top lift station",
     "cam2": "Bottom lift station",
     "cam3": "Conveyor lift and bar (winter), Sokoliki and Krzyżna Góra (summer)",
-    "pageTitle": "Live cameras — Karpatka",
-    "pageDescription": "Live view from the cameras on the Karpatka ski slope in Karpacz — check current conditions before you set off.",
+    "pageTitle": "Karpacz live webcams — Karpatka ski slope",
+    "pageDescription": "Karpacz live webcams from the Karpatka ski slope: lifts, conveyor lift and sledding hill. Check conditions before you set off. Ski school and ski lessons on site.",
     "pageHeading": "Take a look at the slope before you pack the car.",
     "pageLead": "Three live cameras: views from Chatka Karpatka, from the ticket office and of the top lift station — all in one place.",
     "pageNote": "* live view; depends on the stability of the cameras' connection on the slope",
-    "backHome": "← Back to the home page"
+    "backHome": "← Back to the home page",
+    "seo": {
+      "title": "Karpacz live cameras — the Karpatka ski slope in real time",
+      "intro": "Our live cameras in Karpacz show the Karpatka ski slope at ul. Myśliwska 3, right below Śnieżka in the Karkonosze Mountains. Before you leave home, check the snow cover, how the run is groomed and how busy the lifts are — live.",
+      "viewsTitle": "What do the cameras show?",
+      "viewsText": "Camera 1 covers the top lift station and camera 2 the bottom station. Camera 3 shows the beginner conveyor lift and the bar in winter, and the view of Sokoliki and Krzyżna Góra in summer. Together they show the whole slope — from the bottom of the lift to the top of the run.",
+      "slope": {
+        "title": "Ski slope in Karpacz",
+        "text": "Karpatka is a ski slope in Karpacz with two T-bar lifts, a conveyor lift for beginners and free parking right next to the run. A good place both for first runs and for polishing your technique at an easy pace.",
+        "link": "What you’ll find on site →"
+      },
+      "school": {
+        "title": "Ski lessons — ski school on the slope",
+        "text": "There is a ski and snowboard school right on the slope. Instructors teach skiing and snowboarding (55-minute lessons) for kids and adults — one-to-one or in groups. You can rent all the equipment on site.",
+        "link": "School and rental →"
+      },
+      "sledding": {
+        "title": "Sledding hill",
+        "text": "Next to the ski runs there is a snow-groomed sledding hill, with sleds included in the ticket. The cameras make it easy to check whether conditions are good for sledding with the kids.",
+        "link": "See prices →"
+      }
+    }
   },
   "offer": {
     "eyebrow": "What you'll find here",

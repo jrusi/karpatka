@@ -58,12 +58,33 @@
     "cam1": "Horní stanice vleku",
     "cam2": "Dolní stanice vleku",
     "cam3": "Pojízdný koberec a bar (v zimě), Sokoliki a Krzyżna Góra (v létě)",
-    "pageTitle": "Kamery živě — Karpatka",
-    "pageDescription": "Živý přenos z kamer na sjezdovce Karpatka v Karpaczi — zkontrolujte aktuální podmínky ještě před cestou.",
+    "pageTitle": "Kamery Karpacz živě — sjezdovka Karpatka",
+    "pageDescription": "Kamery Karpacz živě ze sjezdovky Karpatka: vleky, pojízdný koberec a sáňkařský svah. Zkontrolujte podmínky před cestou. Na místě lyžařská škola a výuka lyžování.",
     "pageHeading": "Podívejte se na svah, než začnete balit auto.",
     "pageLead": "Tři kamery živě: pohled z Chatky Karpatka, od pokladny a na horní stanici vleku — vše na jednom místě.",
     "pageNote": "* živý přenos; závisí na stabilitě připojení kamer na svahu",
-    "backHome": "← Zpět na hlavní stránku"
+    "backHome": "← Zpět na hlavní stránku",
+    "seo": {
+      "title": "Živé kamery Karpacz — sjezdovka Karpatka v reálném čase",
+      "intro": "Naše živé kamery v Karpaczi ukazují sjezdovku Karpatka v ulici Myśliwska 3, přímo pod Sněžkou v Krkonoších. Než vyrazíte z domu, zkontrolujte živě sněhovou pokrývku, úpravu tratě a provoz u vleků.",
+      "viewsTitle": "Co ukazují kamery?",
+      "viewsText": "Kamera 1 snímá horní stanici vleku, kamera 2 dolní stanici. Kamera 3 ukazuje v zimě pojízdný koberec pro začátečníky a bar, v létě výhled na Sokoliki a Krzyżnou Góru. Na jednom místě tak uvidíte celý svah — od nástupu na vlek až po horní konec sjezdovky.",
+      "slope": {
+        "title": "Sjezdovka v Karpaczi",
+        "text": "Karpatka je sjezdovka v Karpaczi se dvěma kotvovými vleky, pojízdným kobercem pro začátečníky a bezplatným parkovištěm hned u svahu. Vhodná pro první jízdy i pro klidné zdokonalování techniky.",
+        "link": "Co najdete na místě →"
+      },
+      "school": {
+        "title": "Výuka lyžování — lyžařská škola na svahu",
+        "text": "Přímo na svahu působí lyžařská a snowboardová škola. Instruktoři vedou lekce lyžování a snowboardingu (55 minut) pro děti i dospělé — individuálně i ve skupinách. Vybavení si půjčíte na místě.",
+        "link": "Škola a půjčovna →"
+      },
+      "sledding": {
+        "title": "Sáňkařský svah",
+        "text": "Vedle sjezdovek je zasněžovaný sáňkařský svah a sáně jsou v ceně jízdenky. Na kamerách snadno zjistíte, zda jsou podmínky vhodné pro sáňkování s dětmi.",
+        "link": "Zobrazit ceník →"
+      }
+    }
   },
   "offer": {
     "eyebrow": "Co u nás najdete",

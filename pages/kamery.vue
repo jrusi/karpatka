@@ -16,6 +16,12 @@ const cameras = [
   { id: 'cam2', streamUrl: 'https://stream1.wyciag-karpacz.pl/2/video.m3u8' },
   { id: 'cam3', streamUrl: 'https://stream2.wyciag-karpacz.pl/3/video.m3u8' },
 ]
+
+const seoTopics = [
+  { key: 'slope', hash: '#oferta' },
+  { key: 'school', hash: '#szkola' },
+  { key: 'sledding', hash: '#cennik' },
+]
 </script>
 
 <template>
@@ -36,6 +42,26 @@ const cameras = [
       </div>
 
       <p class="tabular-nums text-[11px] text-ink-soft/70 mt-8">{{ t('cameras.pageNote') }}</p>
+
+      <!-- Descriptive copy for search (live cameras, ski school, sledding) with links into the home page. -->
+      <div class="mt-20 border-t border-deep-blue/10 pt-14">
+        <div class="max-w-3xl">
+          <h2 class="font-display text-2xl md:text-4xl text-deep-blue mb-5">{{ t('cameras.seo.title') }}</h2>
+          <p class="text-ink-soft leading-relaxed mb-8">{{ t('cameras.seo.intro') }}</p>
+          <h3 class="text-deep-blue font-semibold text-lg mb-2">{{ t('cameras.seo.viewsTitle') }}</h3>
+          <p class="text-ink-soft leading-relaxed">{{ t('cameras.seo.viewsText') }}</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 mt-12">
+          <div v-for="topic in seoTopics" :key="topic.key" class="rounded-2xl bg-white/60 border border-deep-blue/10 p-6 flex flex-col">
+            <h3 class="text-deep-blue font-semibold text-lg mb-2">{{ t(`cameras.seo.${topic.key}.title`) }}</h3>
+            <p class="text-ink-soft text-sm leading-relaxed mb-5">{{ t(`cameras.seo.${topic.key}.text`) }}</p>
+            <NuxtLink :to="{ path: localePath('/'), hash: topic.hash }" class="mt-auto self-start tabular-nums text-sm text-accent-blue border-b border-accent-blue/40 hover:border-accent-blue pb-0.5">
+              {{ t(`cameras.seo.${topic.key}.link`) }}
+            </NuxtLink>
+          </div>
+        </div>
+      </div>
 
       <div class="mt-10 flex justify-center">
         <NuxtLink
