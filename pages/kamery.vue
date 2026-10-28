@@ -28,7 +28,8 @@ const seoTopics = [
   <section class="pt-32 pb-24 md:pt-44 md:pb-32 bg-paper">
     <div class="max-w-7xl mx-auto px-5 md:px-8">
       <p class="tabular-nums text-xs uppercase tracking-[0.2em] text-accent-blue mb-3">{{ t('cameras.eyebrow') }}</p>
-      <h1 class="font-display text-3xl md:text-5xl text-deep-blue mb-4 max-w-2xl">{{ t('cameras.pageHeading') }}</h1>
+      <h1 class="font-display text-3xl md:text-5xl text-deep-blue mb-3 max-w-3xl">{{ t('cameras.pageH1') }}</h1>
+      <p class="font-display text-xl md:text-2xl text-deep-blue/75 mb-4 max-w-2xl">{{ t('cameras.pageHeading') }}</p>
       <p class="text-ink-soft max-w-lg mb-14 leading-relaxed">{{ t('cameras.pageLead') }}</p>
 
       <div class="grid md:grid-cols-3 gap-6">
