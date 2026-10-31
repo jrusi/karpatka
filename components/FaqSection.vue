@@ -41,26 +41,6 @@ const faqs = computed(() => faqKeys.map(key => ({
   q: t(`faq.items.${key}.q`),
   a: t(`faq.items.${key}.a`, answerParams[key] ?? {}),
 })))
-
-useHead(() => ({
-  script: [
-    {
-      type: 'application/ld+json',
-      innerHTML: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: faqs.value.map(item => ({
-          '@type': 'Question',
-          name: item.q,
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: item.a,
-          },
-        })),
-      }),
-    },
-  ],
-}))
 </script>
 
 <template>
@@ -71,15 +51,7 @@ useHead(() => ({
         <h2 class="font-display text-3xl md:text-5xl text-deep-blue">{{ t('faq.title') }}</h2>
       </div>
 
-      <div v-reveal class="reveal board rounded-2xl divide-y divide-deep-blue/8 overflow-hidden">
-        <details v-for="item in faqs" :key="item.q" class="group px-6 py-5 md:px-8 md:py-6">
-          <summary class="flex items-center justify-between gap-4 cursor-pointer list-none font-display text-base md:text-lg text-deep-blue">
-            {{ item.q }}
-            <span class="shrink-0 tabular-nums text-accent-blue transition-transform group-open:rotate-45">+</span>
-          </summary>
-          <p class="mt-3 text-ink-soft text-sm md:text-base leading-relaxed">{{ item.a }}</p>
-        </details>
-      </div>
+      <FaqList v-reveal class="reveal" :items="faqs" />
     </div>
   </section>
 </template>

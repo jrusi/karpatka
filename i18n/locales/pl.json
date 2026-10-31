@@ -6,9 +6,10 @@
     "gallery": { "prev": "Poprzednie zdjęcie", "next": "Następne zdjęcie", "show": "Pokaż zdjęcie {n}", "showVideo": "Pokaż film" }
   },
   "seo": {
-    "title": "Karpatka Karpacz — Wyciągi Narciarskie, Szkoła, Wypożyczalnia narty snowboard {'|'} Cennik",
-    "description": "Wyciągi narciarskie w Karpaczu — cennik karnetów, szkoła nauki jazdy i wypożyczalnia nart oraz snowboardu (cennik od 40 zł/dzień). Taśma dla najmłodszych, górka saneczkowa, tuż pod Śnieżką, bezpłatny parking.",
+    "title": "Stok narciarski Karpacz — Karpatka: wyciągi, szkoła narciarska, wypożyczalnia nart",
+    "description": "Stok narciarski w Karpaczu: dwa wyciągi, taśma dla początkujących i górka saneczkowa. Szkoła narciarska — nauka jazdy na nartach dla dzieci i dorosłych — oraz wypożyczalnia nart od 40 zł/dzień. Bezpłatny parking.",
     "siteName": "Karpatka — Wyciągi Narciarskie",
+    "amenities": { "parking": "Bezpłatny parking przy stoku", "school": "Szkoła narciarska i snowboardowa", "rental": "Wypożyczalnia nart i snowboardu", "sledding": "Górka saneczkowa" },
     "imageAlt": "Stok narciarski Karpatka w Karpaczu"
   },
   "nav": {
@@ -24,8 +25,8 @@
   },
   "hero": {
     "eyebrow": "Karpacz · Karkonosze · Wyciąg",
-    "titleMain": "Wyciągi narciarskie w Karpaczu",
-    "titleAccent": "nauka jazdy na nartach.",
+    "titleMain": "Stok narciarski w Karpaczu",
+    "titleAccent": "wyciągi i nauka jazdy na nartach.",
     "lead": "Dwa wyciągi orczykowe, taśma dla najmłodszych i górka saneczkowa — tuż pod Śnieżką, z bezpłatnym parkingiem przy samym stoku.",
     "seePricing": "Zobacz cennik",
     "call": "Zadzwoń: {tel}",
@@ -49,7 +50,7 @@
   },
   "cameras": {
     "eyebrow": "Kamery on-line (na żywo)",
-    "sectionTitle": "Sprwdź warunki na stoku - na żywo (live).",
+    "sectionTitle": "Sprawdź warunki na stoku — na żywo (live).",
     "sectionLead": "Trzy kamery na żywo: widok z Chatki Karpatki, z kasy oraz na górną stację wyciągu.",
     "view": "Widok: {title}",
     "seeOthers": "Zobacz pozostałe kamery",
@@ -154,6 +155,7 @@
     },
     "features": {
       "instructors": { "title": "Instruktorzy narciarstwa i snowboardu", "desc": "zajęcia indywidualne i grupowe." },
+      "preschool": { "title": "Przedszkole narciarskie od 3–4 lat", "desc": "zajęcia grupowe w formie zabawy, najpierw na taśmie, potem na orczyku." },
       "basics": { "title": "Nauka od podstaw na taśmie", "desc": "łagodne, bezpieczne wejście w sport." },
       "rental": { "title": "Pełny sprzęt do wypożyczenia", "desc": "narty, deska, kije i kaski." },
       "onSite": { "title": "Wszystko na miejscu", "desc": "zapisy, sprzęt i pierwsza lekcja tego samego dnia." }
@@ -174,6 +176,8 @@
       "4": "4 osoby"
     },
     "lessonExtra": "Każda kolejna osoba: +{price}.",
+    "moreLessons": "Nauka jazdy na nartach — więcej →",
+    "moreRental": "Wypożyczalnia nart →",
     "signUp": "Zapisz się na zajęcia",
     "ld": {
       "rentalName": "Wypożyczenie nart lub snowboardu — Karpatka Karpacz",
@@ -298,7 +302,149 @@
     "about": "Wyciągi narciarskie w Karpaczu — Karkonosze. Miejsce na narty, snowboard i sanki dla dzieci i dorosłych.",
     "contact": "Kontakt",
     "directions": "Wskazówki dojazdu →",
+    "links": "Na stoku",
+    "pages": { "school": "Szkoła narciarska — nauka jazdy", "rental": "Wypożyczalnia nart i snowboardu", "cameras": "Kamery na żywo" },
     "openingHours": "Godziny otwarcia",
     "copyright": "© Karpatka — Wyciągi Narciarskie Karpacz"
+  },
+  "landing": {
+    "related": "Zobacz też",
+    "links": {
+      "school": "Szkoła narciarska — nauka jazdy",
+      "rental": "Wypożyczalnia nart i snowboardu",
+      "cameras": "Kamery na żywo ze stoku",
+      "slope": "Stok, wyciągi i cennik karnetów"
+    }
+  },
+  "schoolPage": {
+    "title": "Szkoła narciarska Karpacz Karpatka — nauka jazdy na nartach i przedszkole narciarskie",
+    "description": "Szkoła narciarska w Karpaczu: przedszkole narciarskie dla dzieci od 3–4 lat, nauka jazdy na nartach i snowboardzie dla dzieci i dorosłych, taśma dla początkujących, wypożyczalnia nart na miejscu.",
+    "eyebrow": "Szkoła narciarska Karpatka · Karpacz",
+    "h1": "Nauka jazdy na nartach w Karpaczu",
+    "subtitle": "Szkoła narciarska i snowboardowa dla dzieci i dorosłych — tuż pod Śnieżką.",
+    "lead": "Instruktorzy Karpatki uczą jazdy na nartach i snowboardzie od pierwszego kroku. Zajęcia odbywają się na łagodnym stoku z taśmą dla początkujących, a sprzęt wypożyczysz na miejscu — przyjeżdżasz, zapisujesz się i zaczynasz jeszcze tego samego dnia.",
+    "call": "Zapisz się: {tel}",
+    "seePrices": "Cennik lekcji",
+    "sections": {
+      "kids": {
+        "title": "Nauka jazdy na nartach dla dzieci",
+        "text": "Dzieci zaczynają na łagodnej części stoku z taśmą — z dala od szybszej jazdy przy wyciągach orczykowych. Instruktor pracuje w tempie dziecka: najpierw oswojenie z nartami, wjazd taśmą i hamowanie pługiem, potem pierwsze skręty i samodzielne zjazdy. 55-minutowe zajęcia dobrze sprawdzają się u najmłodszych, a po lekcji obok czeka górka saneczkowa i bar."
+      },
+      "preschool": {
+        "title": "Przedszkole narciarskie w Karpaczu",
+        "text": "Przedszkole narciarskie Karpatki przyjmuje dzieci już od 3–4 lat — w zależności od predyspozycji malucha. Zajęcia są grupowe i prowadzone w formie zabawy, dzięki czemu dzieci uczą się jeździć, nawet nie zauważając, że to lekcja. Zaczynamy na taśmie, a gdy dziecko jest gotowe, przechodzi na wyciąg orczykowy."
+      },
+      "slope": {
+        "title": "Stok idealny dla początkujących",
+        "text": "Stok Karpatki ma łagodne, równomierne nachylenie, które idealnie sprawdza się przy nauce jazdy. Taśma pozwala bezpiecznie zacząć bez wyciągu, a gdy przyjdzie pewność, kolejnym krokiem jest orczyk — wszystko na jednym stoku, bez przejazdów i stresu."
+      },
+      "adults": {
+        "title": "Nauka jazdy na nartach dla dorosłych",
+        "text": "Pierwszy raz na nartach albo powrót na stok po latach przerwy? Na lekcji indywidualnej instruktor skupia się tylko na Tobie: ustawia postawę, uczy bezpiecznego hamowania i skrętów, a gdy poczujesz się pewnie — przechodzicie z taśmy na wyciąg orczykowy. Osoby jeżdżące samodzielnie mogą doszlifować technikę i carving."
+      },
+      "snowboard": {
+        "title": "Nauka jazdy na snowboardzie",
+        "text": "Szkoła Karpatka uczy też jazdy na desce. Zaczynamy od równowagi i ześlizgów na łagodnym terenie, potem przychodzą skręty i jazda wyciągiem. Deskę i buty snowboardowe wypożyczysz na miejscu."
+      },
+      "lessons": {
+        "title": "Jak wyglądają zajęcia?",
+        "text": "Lekcja trwa 55 minut — indywidualnie albo w grupie z rodziną lub znajomymi, a każda kolejna osoba to tylko +{extra}. Na pierwszą lekcję wystarczy ciepłe, nieprzemakalne ubranie, rękawice i gogle lub okulary przeciwsłoneczne. Narty lub deskę, buty i kije wypożyczysz przy stoku, a cały komplet kosztuje {day} za dzień."
+      }
+    },
+    "pricesTitle": "Cennik nauki jazdy na nartach i snowboardzie",
+    "pricesNote": "Lekcja z instruktorem trwa 55 minut.",
+    "faqTitle": "Pytania o naukę jazdy",
+    "faq": {
+      "preschool": {
+        "q": "Czy w Karpaczu jest przedszkole narciarskie?",
+        "a": "Tak — na stoku Karpatka działa przedszkole narciarskie dla dzieci od 3–4 lat, w zależności od predyspozycji dziecka. To zajęcia grupowe w formie zabawy: najpierw na taśmie, a później na wyciągu orczykowym."
+      },
+      "age": {
+        "q": "Od ilu lat dziecko może uczyć się jeździć na nartach?",
+        "a": "Zwykle od 3–4 lat — zależy to od predyspozycji dziecka. Najmłodsi zaczynają w przedszkolu narciarskim na taśmie, a starsze dzieci mogą też wybrać lekcje indywidualne z instruktorem."
+      },
+      "price": {
+        "q": "Ile kosztuje nauka jazdy na nartach w Karpaczu?",
+        "a": "Lekcja z instruktorem trwa 55 minut i kosztuje {solo} za 1 osobę, {duo} za 2 osoby, {trio} za 3 osoby i {quad} za 4 osoby. Każda kolejna osoba w grupie to +{extra}."
+      },
+      "kids": {
+        "q": "Czy prowadzicie naukę jazdy na nartach dla dzieci?",
+        "a": "Tak. Dzieci uczą się z instruktorem na łagodnej części stoku z taśmą dla początkujących — indywidualnie albo razem z rodzeństwem lub znajomymi."
+      },
+      "gear": {
+        "q": "Czy na lekcję trzeba mieć własny sprzęt?",
+        "a": "Nie. Narty lub snowboard, buty i kije wypożyczysz na miejscu — komplet kosztuje {day} za dzień."
+      },
+      "snowboard": {
+        "q": "Czy szkoła uczy też jazdy na snowboardzie?",
+        "a": "Tak — instruktorzy prowadzą zajęcia z narciarstwa i snowboardu, dla dzieci i dorosłych."
+      },
+      "where": {
+        "q": "Gdzie odbywają się lekcje?",
+        "a": "Na stoku Karpatka przy ul. Myśliwskiej 3 w Karpaczu, tuż pod Śnieżką. Przy stoku jest bezpłatny parking."
+      },
+      "book": {
+        "q": "Jak zapisać się na naukę jazdy?",
+        "a": "Zadzwoń pod numer {tel} — ustalimy termin i liczbę osób. W weekendy i w czasie ferii warto zarezerwować lekcję z wyprzedzeniem."
+      }
+    },
+    "ld": {
+      "serviceType": "Szkoła narciarska"
+    }
+  },
+  "rentalPage": {
+    "title": "Wypożyczalnia nart Karpacz — narty i snowboard przy stoku Karpatka",
+    "description": "Wypożyczalnia nart i snowboardu w Karpaczu, przy samym stoku Karpatka. Komplet (narty lub deska, buty, kije) {day} za dzień, {night} na jazdę wieczorną. Szkoła narciarska na miejscu, bezpłatny parking.",
+    "eyebrow": "Wypożyczalnia Karpatka · Karpacz",
+    "h1": "Wypożyczalnia nart w Karpaczu",
+    "subtitle": "Narty, snowboard, buty i kije — przy samym stoku, bez wożenia sprzętu.",
+    "lead": "Nie musisz pakować nart do bagażnika. Wypożyczalnia działa przy stoku Karpatka: dobierzemy narty lub deskę, buty i kije, a po kilku minutach możesz ruszać na wyciąg albo na pierwszą lekcję.",
+    "call": "Zadzwoń: {tel}",
+    "seePrices": "Cennik wypożyczalni",
+    "sections": {
+      "gear": {
+        "title": "Co wypożyczysz?",
+        "text": "Komplet narciarski: narty carvingowe, buty i kije. Komplet snowboardowy: deska i buty. Na miejscu dostępne są też kaski — szczególnie polecamy je dzieciom i osobom, które dopiero uczą się jeździć."
+      },
+      "fit": {
+        "title": "Sprzęt dobrany do Ciebie",
+        "text": "Narty i buty dobieramy do wzrostu, wagi i poziomu jazdy — inaczej dla początkujących, inaczej dla osób, które jeżdżą pewnie. Dzięki temu pierwsze zjazdy są łatwiejsze i bezpieczniejsze."
+      },
+      "evening": {
+        "title": "Narty wieczorem",
+        "text": "Sprzęt wypożyczysz także na jazdę wieczorną. Komplet na wieczór (17:00–21:00) kosztuje {night}, a karnet wieczorny na wyciąg obowiązuje od 16:30 do 21:00."
+      },
+      "school": {
+        "title": "Wypożyczalnia i szkoła w jednym miejscu",
+        "text": "Pierwszy raz na nartach? Połącz wypożyczenie sprzętu z lekcją w szkole narciarskiej Karpatka — instruktor sprawdzi, czy wszystko dobrze leży, i od razu zabierze Cię na taśmę dla początkujących."
+      }
+    },
+    "pricesTitle": "Cennik wypożyczalni nart i snowboardu",
+    "faqTitle": "Pytania o wypożyczalnię",
+    "faq": {
+      "price": {
+        "q": "Ile kosztuje wypożyczenie nart w Karpaczu?",
+        "a": "Komplet narciarski (narty, buty, kije) kosztuje {day} za dzień i {night} na jazdę wieczorną (17:00–21:00)."
+      },
+      "included": {
+        "q": "Co wchodzi w skład kompletu?",
+        "a": "Komplet to narty lub deska snowboardowa, buty i kije. Kask również wypożyczysz na miejscu."
+      },
+      "snowboard": {
+        "q": "Czy można wypożyczyć snowboard?",
+        "a": "Tak — komplet snowboardowy kosztuje tyle samo co narciarski: {day} za dzień i {night} wieczorem."
+      },
+      "where": {
+        "q": "Gdzie jest wypożyczalnia nart?",
+        "a": "Na stoku Karpatka przy ul. Myśliwskiej 3 w Karpaczu, tuż pod Śnieżką. Samochód zostawisz na bezpłatnym parkingu przy stoku."
+      },
+      "hours": {
+        "q": "W jakich godzinach działa wypożyczalnia?",
+        "a": "Wypożyczalnia działa w godzinach otwarcia stoku, które zależą od warunków śniegowych. Aktualne godziny sprawdzisz w stopce strony, a warunki na stoku — na kamerach na żywo."
+      }
+    },
+    "ld": {
+      "serviceType": "Wypożyczalnia nart"
+    }
   }
 }

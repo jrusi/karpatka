@@ -6,9 +6,10 @@
     "gallery": { "prev": "Předchozí fotka", "next": "Další fotka", "show": "Zobrazit fotku {n}", "showVideo": "Zobrazit video" }
   },
   "seo": {
-    "title": "Karpatka Karpacz — Lyžařské vleky, Lyžařská škola, Půjčovna lyží a snowboardů {'|'} Ceník",
-    "description": "Lyžařské vleky v Karpaczi (Polsko) — ceník skipasů, lyžařská a snowboardová škola, půjčovna lyží a snowboardů (od 40 PLN/den). Pojízdný koberec pro nejmenší, sáňkařský svah, přímo pod Sněžkou, parkování zdarma.",
+    "title": "Sjezdovka v Karpaczi — Karpatka: vleky, lyžařská škola, půjčovna lyží",
+    "description": "Sjezdovka v Karpaczi (Polsko): dva lyžařské vleky, pojízdný koberec pro začátečníky a sáňkařský svah. Lyžařská škola s výukou pro děti i dospělé a půjčovna lyží od 40 PLN/den. Parkování zdarma.",
     "siteName": "Karpatka — Lyžařské vleky",
+    "amenities": { "parking": "Parkování zdarma u svahu", "school": "Lyžařská a snowboardová škola", "rental": "Půjčovna lyží a snowboardů", "sledding": "Sáňkařský svah" },
     "imageAlt": "Sjezdovka Karpatka v Karpaczi"
   },
   "nav": {
@@ -24,8 +25,8 @@
   },
   "hero": {
     "eyebrow": "Karpacz · Krkonoše · Vlek",
-    "titleMain": "Lyžařské vleky v Karpaczi",
-    "titleAccent": "naučte se lyžovat.",
+    "titleMain": "Sjezdovka v Karpaczi",
+    "titleAccent": "vleky a výuka lyžování.",
     "lead": "Dva kotvové vleky, pojízdný koberec pro nejmenší a sáňkařský svah — přímo pod Sněžkou, s parkováním zdarma hned u svahu.",
     "seePricing": "Zobrazit ceník",
     "call": "Zavolat: {tel}",
@@ -154,6 +155,7 @@
     },
     "features": {
       "instructors": { "title": "Instruktoři lyžování a snowboardingu", "desc": "individuální i skupinová výuka." },
+      "preschool": { "title": "Lyžařská školka od 3–4 let", "desc": "skupinové lekce formou hry, nejdřív na koberci, pak na kotvě." },
       "basics": { "title": "Výuka od základů na pojízdném koberci", "desc": "pozvolný a bezpečný začátek." },
       "rental": { "title": "Kompletní vybavení k zapůjčení", "desc": "lyže, snowboardy, hůlky a helmy." },
       "onSite": { "title": "Vše na místě", "desc": "přihláška, vybavení i první lekce ve stejný den." }
@@ -174,6 +176,8 @@
       "4": "4 osoby"
     },
     "lessonExtra": "Každá další osoba: +{price}.",
+    "moreLessons": "Více o výuce lyžování →",
+    "moreRental": "Půjčovna lyží →",
     "signUp": "Objednat výuku",
     "ld": {
       "rentalName": "Půjčovna lyží a snowboardů — Karpatka Karpacz",
@@ -298,7 +302,149 @@
     "about": "Lyžařské vleky v Karpaczi — Krkonoše. Místo pro lyžování, snowboarding a sáňkování pro děti i dospělé.",
     "contact": "Kontakt",
     "directions": "Jak se k nám dostat →",
+    "links": "Na svahu",
+    "pages": { "school": "Lyžařská škola — výuka", "rental": "Půjčovna lyží a snowboardů", "cameras": "Živé kamery" },
     "openingHours": "Otevírací doba",
     "copyright": "© Karpatka — Lyžařské vleky Karpacz"
+  },
+  "landing": {
+    "related": "Viz také",
+    "links": {
+      "school": "Lyžařská škola — výuka",
+      "rental": "Půjčovna lyží a snowboardů",
+      "cameras": "Živé kamery ze svahu",
+      "slope": "Svah, vleky a ceník skipasů"
+    }
+  },
+  "schoolPage": {
+    "title": "Lyžařská škola v Karpaczi — výuka lyžování a lyžařská školka",
+    "description": "Lyžařská škola v Karpaczi (Polsko): lyžařská školka pro děti od 3–4 let, výuka lyžování a snowboardingu pro děti i dospělé, pojízdný koberec pro začátečníky a půjčovna lyží na místě.",
+    "eyebrow": "Lyžařská škola Karpatka · Karpacz",
+    "h1": "Výuka lyžování v Karpaczi",
+    "subtitle": "Lyžařská a snowboardová škola pro děti i dospělé — přímo pod Sněžkou.",
+    "lead": "Instruktoři Karpatky učí lyžovat a jezdit na snowboardu od úplných začátků. Lekce probíhají na mírném svahu s pojízdným kobercem pro začátečníky a vybavení si půjčíte na místě — přijedete, přihlásíte se a začnete ještě ten den.",
+    "call": "Přihlásit se: {tel}",
+    "seePrices": "Ceník lekcí",
+    "sections": {
+      "kids": {
+        "title": "Výuka lyžování pro děti",
+        "text": "Děti začínají na mírné části svahu s pojízdným kobercem — mimo rychlejší jízdu u kotvových vleků. Instruktor se přizpůsobí tempu dítěte: nejdřív si zvyknout na lyže, jízda na koberci a brzdění pluhem, pak první oblouky a samostatné sjezdy. 55minutové lekce nejmenším dobře vyhovují a hned vedle čeká sáňkařský svah a bar."
+      },
+      "preschool": {
+        "title": "Lyžařská školka v Karpaczi",
+        "text": "Lyžařská školka Karpatky přijímá děti už od 3–4 let — podle předpokladů dítěte. Lekce jsou skupinové a probíhají formou hry, takže se děti učí lyžovat, aniž by si všimly, že jde o výuku. Začínáme na pojízdném koberci, a když je dítě připravené, přejde na kotvový vlek."
+      },
+      "slope": {
+        "title": "Svah jako stvořený pro začátečníky",
+        "text": "Svah Karpatky má mírný, rovnoměrný sklon, který je pro výuku ideální. Pojízdný koberec umožní bezpečně začít bez vleku, a jakmile přijde jistota, dalším krokem je kotva — vše na jednom svahu, bez přejezdů a bez stresu."
+      },
+      "adults": {
+        "title": "Výuka lyžování pro dospělé",
+        "text": "Poprvé na lyžích, nebo návrat na svah po letech? Na individuální lekci se instruktor věnuje jen vám: postoji, bezpečnému brzdění a obloukům — a jakmile se budete cítit jistě, přejdete spolu z koberce na kotvový vlek. Kdo už jezdí samostatně, může vypilovat techniku a carving."
+      },
+      "snowboard": {
+        "title": "Výuka snowboardingu",
+        "text": "Škola Karpatka učí i jízdu na snowboardu. Začínáme rovnováhou a smykem na mírném terénu, pak přijdou oblouky a jízda na vleku. Prkno a snowboardové boty si půjčíte na místě."
+      },
+      "lessons": {
+        "title": "Jak lekce probíhají?",
+        "text": "Lekce trvá 55 minut — individuálně nebo ve skupině s rodinou či přáteli, každá další osoba stojí jen +{extra}. Na první lekci stačí teplé nepromokavé oblečení, rukavice a lyžařské nebo sluneční brýle. Lyže nebo prkno, boty a hůlky si půjčíte u svahu; celá sada stojí {day} na den."
+      }
+    },
+    "pricesTitle": "Ceník výuky lyžování a snowboardingu",
+    "pricesNote": "Lekce s instruktorem trvá 55 minut.",
+    "faqTitle": "Otázky k výuce",
+    "faq": {
+      "preschool": {
+        "q": "Je v Karpaczi lyžařská školka?",
+        "a": "Ano — na sjezdovce Karpatka funguje lyžařská školka pro děti od 3–4 let, podle předpokladů dítěte. Lekce jsou skupinové a formou hry: nejdřív na pojízdném koberci, později na kotvovém vleku."
+      },
+      "age": {
+        "q": "Od kolika let se dítě může učit lyžovat?",
+        "a": "Obvykle od 3–4 let — záleží na předpokladech dítěte. Nejmenší začínají v lyžařské školce na koberci, starší děti si mohou vybrat i individuální lekce s instruktorem."
+      },
+      "price": {
+        "q": "Kolik stojí výuka lyžování v Karpaczi?",
+        "a": "Lekce s instruktorem trvá 55 minut a stojí {solo} pro 1 osobu, {duo} pro 2 osoby, {trio} pro 3 osoby a {quad} pro 4 osoby. Každá další osoba ve skupině je +{extra}."
+      },
+      "kids": {
+        "q": "Nabízíte výuku lyžování pro děti?",
+        "a": "Ano. Děti se učí s instruktorem na mírné části svahu s pojízdným kobercem pro začátečníky — samostatně nebo se sourozenci či kamarády."
+      },
+      "gear": {
+        "q": "Potřebuji na lekci vlastní vybavení?",
+        "a": "Ne. Lyže nebo snowboard, boty a hůlky si půjčíte na místě — celá sada stojí {day} na den."
+      },
+      "snowboard": {
+        "q": "Učí škola i snowboarding?",
+        "a": "Ano — instruktoři vyučují lyžování i snowboarding, pro děti i dospělé."
+      },
+      "where": {
+        "q": "Kde lekce probíhají?",
+        "a": "Na sjezdovce Karpatka, ul. Myśliwska 3 v Karpaczi, přímo pod Sněžkou. U svahu je parkování zdarma."
+      },
+      "book": {
+        "q": "Jak se přihlásit na výuku?",
+        "a": "Zavolejte na {tel} — domluvíme termín a počet osob. O víkendech a o prázdninách se vyplatí rezervovat předem."
+      }
+    },
+    "ld": {
+      "serviceType": "Lyžařská škola"
+    }
+  },
+  "rentalPage": {
+    "title": "Půjčovna lyží Karpacz — lyže a snowboardy u sjezdovky Karpatka",
+    "description": "Půjčovna lyží a snowboardů v Karpaczi (Polsko), přímo u sjezdovky Karpatka. Sada (lyže nebo prkno, boty, hůlky) {day} na den, {night} na večerní lyžování. Lyžařská škola na místě, parkování zdarma.",
+    "eyebrow": "Půjčovna Karpatka · Karpacz",
+    "h1": "Půjčovna lyží v Karpaczi",
+    "subtitle": "Lyže, snowboardy, boty a hůlky — přímo u svahu, bez vození vlastního vybavení.",
+    "lead": "Nemusíte vozit lyže v kufru. Půjčovna je přímo u sjezdovky Karpatka: vybereme vám lyže nebo prkno, boty a hůlky a za pár minut můžete vyrazit na vlek nebo na první lekci.",
+    "call": "Zavolat: {tel}",
+    "seePrices": "Ceník půjčovny",
+    "sections": {
+      "gear": {
+        "title": "Co si můžete půjčit?",
+        "text": "Lyžařská sada: carvingové lyže, boty a hůlky. Snowboardová sada: prkno a boty. Na místě jsou k dispozici i helmy — doporučujeme je hlavně dětem a začátečníkům."
+      },
+      "fit": {
+        "title": "Vybavení podle vás",
+        "text": "Lyže a boty vybíráme podle výšky, váhy a úrovně jízdy — jinak pro začátečníky, jinak pro jisté lyžaře. První sjezdy jsou tak snazší a bezpečnější."
+      },
+      "evening": {
+        "title": "Večerní lyžování",
+        "text": "Vybavení si můžete půjčit i na večerní lyžování. Večerní sada (17:00–21:00) stojí {night} a večerní skipas platí od 16:30 do 21:00."
+      },
+      "school": {
+        "title": "Půjčovna a škola na jednom místě",
+        "text": "Poprvé na lyžích? Spojte půjčení vybavení s lekcí v lyžařské škole Karpatka — instruktor zkontroluje, že vše dobře sedí, a rovnou vás vezme na pojízdný koberec pro začátečníky."
+      }
+    },
+    "pricesTitle": "Ceník půjčovny lyží a snowboardů",
+    "faqTitle": "Otázky k půjčovně",
+    "faq": {
+      "price": {
+        "q": "Kolik stojí půjčení lyží v Karpaczi?",
+        "a": "Lyžařská sada (lyže, boty, hůlky) stojí {day} na den a {night} na večerní lyžování (17:00–21:00)."
+      },
+      "included": {
+        "q": "Co je součástí sady?",
+        "a": "Sada obsahuje lyže nebo snowboard, boty a hůlky. Helmu si můžete půjčit také na místě."
+      },
+      "snowboard": {
+        "q": "Lze si půjčit snowboard?",
+        "a": "Ano — snowboardová sada stojí stejně jako lyžařská: {day} na den a {night} večer."
+      },
+      "where": {
+        "q": "Kde je půjčovna lyží?",
+        "a": "Na sjezdovce Karpatka, ul. Myśliwska 3 v Karpaczi, přímo pod Sněžkou. Auto necháte na parkovišti zdarma u svahu."
+      },
+      "hours": {
+        "q": "Jaká je otevírací doba půjčovny?",
+        "a": "Půjčovna je otevřená v otevírací době svahu, která závisí na sněhových podmínkách. Aktuální dobu najdete v zápatí stránky a podmínky na svahu na živých kamerách."
+      }
+    },
+    "ld": {
+      "serviceType": "Půjčovna lyží"
+    }
   }
 }

@@ -6,9 +6,10 @@
     "gallery": { "prev": "Vorheriges Foto", "next": "Nächstes Foto", "show": "Foto {n} anzeigen", "showVideo": "Video anzeigen" }
   },
   "seo": {
-    "title": "Karpatka Karpacz — Skilifte, Skischule, Ski- und Snowboardverleih {'|'} Preise",
-    "description": "Skilifte in Karpacz (Krummhübel), Polen — Skipass-Preise, Ski- und Snowboardschule, Ski- und Snowboardverleih (ab 40 PLN/Tag). Zauberteppich für die Kleinsten, Rodelhang, direkt unterhalb der Schneekoppe, kostenloser Parkplatz.",
+    "title": "Skipiste in Karpacz — Karpatka: Skilifte, Skischule, Skiverleih",
+    "description": "Skipiste in Karpacz (Krummhübel): zwei Skilifte, ein Zauberteppich für Anfänger und ein Rodelhang. Skischule mit Skikursen für Kinder und Erwachsene, Skiverleih ab 40 PLN/Tag. Kostenloser Parkplatz.",
     "siteName": "Karpatka — Skilifte",
+    "amenities": { "parking": "Kostenloser Parkplatz an der Piste", "school": "Ski- und Snowboardschule", "rental": "Ski- und Snowboardverleih", "sledding": "Rodelhang" },
     "imageAlt": "Skipiste Karpatka in Karpacz"
   },
   "nav": {
@@ -24,8 +25,8 @@
   },
   "hero": {
     "eyebrow": "Karpacz · Riesengebirge · Skilift",
-    "titleMain": "Skilifte in Karpacz",
-    "titleAccent": "Skifahren lernen.",
+    "titleMain": "Skipiste in Karpacz",
+    "titleAccent": "Lifte und Skikurse.",
     "lead": "Zwei Schlepplifte, ein Zauberteppich für die Kleinsten und ein Rodelhang — direkt unterhalb der Schneekoppe, mit kostenlosem Parkplatz direkt an der Piste.",
     "seePricing": "Preise ansehen",
     "call": "Anrufen: {tel}",
@@ -154,6 +155,7 @@
     },
     "features": {
       "instructors": { "title": "Ski- und Snowboardlehrer", "desc": "Einzel- und Gruppenunterricht." },
+      "preschool": { "title": "Skikindergarten ab 3–4 Jahren", "desc": "spielerischer Gruppenunterricht, erst auf dem Zauberteppich, dann am Schlepplift." },
       "basics": { "title": "Lernen von Grund auf am Zauberteppich", "desc": "ein sanfter, sicherer Einstieg in den Sport." },
       "rental": { "title": "Komplette Ausrüstung zum Ausleihen", "desc": "Ski, Snowboards, Stöcke und Helme." },
       "onSite": { "title": "Alles vor Ort", "desc": "Anmeldung, Ausrüstung und die erste Stunde am selben Tag." }
@@ -174,6 +176,8 @@
       "4": "4 Personen"
     },
     "lessonExtra": "Jede weitere Person: +{price}.",
+    "moreLessons": "Mehr über Skikurse →",
+    "moreRental": "Skiverleih →",
     "signUp": "Unterricht buchen",
     "ld": {
       "rentalName": "Ski- oder Snowboardverleih — Karpatka Karpacz",
@@ -298,7 +302,149 @@
     "about": "Skilifte in Karpacz — Riesengebirge. Ein Ort zum Skifahren, Snowboarden und Rodeln für Kinder und Erwachsene.",
     "contact": "Kontakt",
     "directions": "Anfahrt →",
+    "links": "An der Piste",
+    "pages": { "school": "Skischule — Skikurse", "rental": "Ski- und Snowboardverleih", "cameras": "Live-Webcams" },
     "openingHours": "Öffnungszeiten",
     "copyright": "© Karpatka — Skilifte Karpacz"
+  },
+  "landing": {
+    "related": "Siehe auch",
+    "links": {
+      "school": "Skischule — Skikurse",
+      "rental": "Ski- und Snowboardverleih",
+      "cameras": "Live-Webcams von der Piste",
+      "slope": "Piste, Lifte und Skipass-Preise"
+    }
+  },
+  "schoolPage": {
+    "title": "Skischule in Karpacz — Skikurse und Skikindergarten",
+    "description": "Skischule in Karpacz (Krummhübel): Skikindergarten für Kinder ab 3–4 Jahren, Ski- und Snowboardkurse für Kinder und Erwachsene, Zauberteppich für Anfänger und Skiverleih vor Ort.",
+    "eyebrow": "Skischule Karpatka · Karpacz",
+    "h1": "Skifahren lernen in Karpacz",
+    "subtitle": "Ski- und Snowboardschule für Kinder und Erwachsene — direkt unterhalb der Schneekoppe.",
+    "lead": "Die Skilehrer der Karpatka bringen Ihnen Skifahren und Snowboarden vom ersten Schritt an bei. Der Unterricht findet auf einem sanften Hang mit Zauberteppich statt, und die Ausrüstung leihen Sie vor Ort — ankommen, anmelden und noch am selben Tag loslegen.",
+    "call": "Anmelden: {tel}",
+    "seePrices": "Kurspreise",
+    "sections": {
+      "kids": {
+        "title": "Skikurse für Kinder",
+        "text": "Kinder beginnen auf dem sanften Pistenteil mit Zauberteppich — abseits der schnelleren Fahrer an den Schleppliften. Der Skilehrer richtet sich nach dem Tempo des Kindes: erst Gewöhnung an die Ski, Fahren mit dem Zauberteppich und Bremsen im Pflug, dann die ersten Schwünge und eigene Abfahrten. 55-minütige Stunden passen gut zu den Kleinsten, und gleich daneben warten der Rodelhang und die Bar."
+      },
+      "preschool": {
+        "title": "Skikindergarten in Karpacz",
+        "text": "Der Skikindergarten der Karpatka nimmt Kinder schon ab 3–4 Jahren auf — je nach Veranlagung des Kindes. Der Unterricht findet in Gruppen und spielerisch statt, sodass die Kinder Skifahren lernen, fast ohne zu merken, dass es eine Stunde ist. Wir beginnen auf dem Zauberteppich, und wenn das Kind so weit ist, geht es an den Schlepplift."
+      },
+      "slope": {
+        "title": "Eine Piste wie gemacht für Anfänger",
+        "text": "Die Piste der Karpatka hat ein sanftes, gleichmäßiges Gefälle, das sich ideal zum Lernen eignet. Mit dem Zauberteppich beginnt man sicher ohne Lift, und sobald man sich sicher fühlt, folgt der Schlepplift — alles an einer Piste, ohne Wege und ohne Stress."
+      },
+      "adults": {
+        "title": "Skikurse für Erwachsene",
+        "text": "Zum ersten Mal auf Ski oder nach Jahren zurück auf der Piste? Im Einzelunterricht konzentriert sich der Skilehrer ganz auf Sie: Haltung, sicheres Bremsen und Schwingen — und sobald Sie sich sicher fühlen, wechseln Sie gemeinsam vom Zauberteppich zum Schlepplift. Wer schon selbstständig fährt, kann Technik und Carving verfeinern."
+      },
+      "snowboard": {
+        "title": "Snowboardkurse",
+        "text": "Die Skischule Karpatka unterrichtet auch Snowboarden. Wir beginnen mit Gleichgewicht und Rutschen auf sanftem Gelände, danach folgen Kurven und Liftfahren. Board und Snowboardschuhe leihen Sie vor Ort."
+      },
+      "lessons": {
+        "title": "Wie läuft der Unterricht ab?",
+        "text": "Eine Stunde dauert 55 Minuten — einzeln oder in der Gruppe mit Familie oder Freunden, jede weitere Person kostet nur +{extra}. Für die erste Stunde genügen warme, wasserdichte Kleidung, Handschuhe und eine Skibrille oder Sonnenbrille. Ski oder Board, Schuhe und Stöcke leihen Sie an der Piste; das komplette Set kostet {day} pro Tag."
+      }
+    },
+    "pricesTitle": "Preise für Ski- und Snowboardkurse",
+    "pricesNote": "Eine Stunde mit Skilehrer dauert 55 Minuten.",
+    "faqTitle": "Fragen zu den Skikursen",
+    "faq": {
+      "preschool": {
+        "q": "Gibt es in Karpacz einen Skikindergarten?",
+        "a": "Ja — an der Piste Karpatka gibt es einen Skikindergarten für Kinder ab 3–4 Jahren, je nach Veranlagung des Kindes. Der Unterricht ist in Gruppen und spielerisch: zuerst auf dem Zauberteppich, später am Schlepplift."
+      },
+      "age": {
+        "q": "Ab welchem Alter kann ein Kind Skifahren lernen?",
+        "a": "Meist ab 3–4 Jahren — das hängt von der Veranlagung des Kindes ab. Die Kleinsten beginnen im Skikindergarten auf dem Zauberteppich, ältere Kinder können auch Einzelunterricht mit einem Skilehrer wählen."
+      },
+      "price": {
+        "q": "Was kostet ein Skikurs in Karpacz?",
+        "a": "Eine Stunde mit Skilehrer dauert 55 Minuten und kostet {solo} für 1 Person, {duo} für 2 Personen, {trio} für 3 Personen und {quad} für 4 Personen. Jede weitere Person in der Gruppe kostet +{extra}."
+      },
+      "kids": {
+        "q": "Gibt es Skikurse für Kinder?",
+        "a": "Ja. Kinder lernen mit einem Skilehrer auf dem sanften Pistenteil mit Zauberteppich — einzeln oder zusammen mit Geschwistern oder Freunden."
+      },
+      "gear": {
+        "q": "Brauche ich für den Kurs eigene Ausrüstung?",
+        "a": "Nein. Ski oder Snowboard, Schuhe und Stöcke leihen Sie vor Ort — das komplette Set kostet {day} pro Tag."
+      },
+      "snowboard": {
+        "q": "Unterrichtet die Schule auch Snowboarden?",
+        "a": "Ja — die Lehrer unterrichten Skifahren und Snowboarden, für Kinder und Erwachsene."
+      },
+      "where": {
+        "q": "Wo findet der Unterricht statt?",
+        "a": "An der Piste Karpatka, ul. Myśliwska 3 in Karpacz, direkt unterhalb der Schneekoppe. An der Piste gibt es einen kostenlosen Parkplatz."
+      },
+      "book": {
+        "q": "Wie melde ich mich zum Skikurs an?",
+        "a": "Rufen Sie {tel} an — wir vereinbaren Termin und Personenzahl. An Wochenenden und in den Ferien lohnt es sich, frühzeitig zu buchen."
+      }
+    },
+    "ld": {
+      "serviceType": "Skischule"
+    }
+  },
+  "rentalPage": {
+    "title": "Skiverleih in Karpacz — Ski und Snowboard an der Piste Karpatka",
+    "description": "Ski- und Snowboardverleih in Karpacz (Krummhübel), direkt an der Piste Karpatka. Komplettset (Ski oder Board, Schuhe, Stöcke) {day} pro Tag, {night} für das Abendskifahren. Skischule vor Ort, kostenloser Parkplatz.",
+    "eyebrow": "Verleih Karpatka · Karpacz",
+    "h1": "Skiverleih in Karpacz",
+    "subtitle": "Ski, Snowboard, Schuhe und Stöcke — direkt an der Piste, ohne eigene Ausrüstung.",
+    "lead": "Sie müssen keine Ski ins Auto packen. Der Verleih befindet sich direkt an der Piste Karpatka: Wir suchen Ski oder Board, Schuhe und Stöcke für Sie aus, und wenige Minuten später geht es zum Lift oder zur ersten Skistunde.",
+    "call": "Anrufen: {tel}",
+    "seePrices": "Verleihpreise",
+    "sections": {
+      "gear": {
+        "title": "Was kann man ausleihen?",
+        "text": "Ski-Set: Carving-Ski, Schuhe und Stöcke. Snowboard-Set: Board und Schuhe. Vor Ort gibt es auch Helme — besonders empfohlen für Kinder und Anfänger."
+      },
+      "fit": {
+        "title": "Ausrüstung, die passt",
+        "text": "Ski und Schuhe wählen wir nach Größe, Gewicht und Können aus — anders für Anfänger, anders für sichere Fahrer. So werden die ersten Abfahrten leichter und sicherer."
+      },
+      "evening": {
+        "title": "Abendskifahren",
+        "text": "Ausrüstung können Sie auch für das Abendskifahren leihen. Ein Abend-Set (17:00–21:00) kostet {night}, der Abend-Skipass gilt von 16:30 bis 21:00."
+      },
+      "school": {
+        "title": "Verleih und Skischule an einem Ort",
+        "text": "Zum ersten Mal auf Ski? Verbinden Sie den Verleih mit einer Stunde in der Skischule Karpatka — der Skilehrer prüft, ob alles richtig sitzt, und geht mit Ihnen gleich zum Zauberteppich."
+      }
+    },
+    "pricesTitle": "Preise für Ski- und Snowboardverleih",
+    "faqTitle": "Fragen zum Verleih",
+    "faq": {
+      "price": {
+        "q": "Was kostet der Skiverleih in Karpacz?",
+        "a": "Ein Ski-Set (Ski, Schuhe, Stöcke) kostet {day} pro Tag und {night} für das Abendskifahren (17:00–21:00)."
+      },
+      "included": {
+        "q": "Was gehört zum Set?",
+        "a": "Das Set umfasst Ski oder Snowboard, Schuhe und Stöcke. Einen Helm können Sie vor Ort ebenfalls leihen."
+      },
+      "snowboard": {
+        "q": "Kann man ein Snowboard leihen?",
+        "a": "Ja — ein Snowboard-Set kostet genauso viel wie ein Ski-Set: {day} pro Tag und {night} am Abend."
+      },
+      "where": {
+        "q": "Wo befindet sich der Skiverleih?",
+        "a": "An der Piste Karpatka, ul. Myśliwska 3 in Karpacz, direkt unterhalb der Schneekoppe. Das Auto parken Sie kostenlos an der Piste."
+      },
+      "hours": {
+        "q": "Wann hat der Verleih geöffnet?",
+        "a": "Der Verleih ist während der Öffnungszeiten der Piste geöffnet, die von der Schneelage abhängen. Die aktuellen Zeiten finden Sie in der Fußzeile, die Pistenbedingungen auf den Live-Webcams."
+      }
+    },
+    "ld": {
+      "serviceType": "Skiverleih"
+    }
   }
 }

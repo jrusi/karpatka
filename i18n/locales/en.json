@@ -6,9 +6,10 @@
     "gallery": { "prev": "Previous photo", "next": "Next photo", "show": "Show photo {n}", "showVideo": "Show video" }
   },
   "seo": {
-    "title": "Karpatka Karpacz — Ski Lifts, Ski School, Ski & Snowboard Rental {'|'} Prices",
-    "description": "Ski lifts in Karpacz, Poland — lift pass prices, ski and snowboard school, ski and snowboard rental (from 40 PLN/day). Beginner conveyor lift, sledding hill, right below Śnieżka, free parking.",
+    "title": "Ski slope in Karpacz — Karpatka: ski lifts, ski school, ski rental",
+    "description": "Ski slope in Karpacz, Poland: two ski lifts, a beginner conveyor lift and a sledding hill. Ski school with lessons for children and adults, and ski rental from 40 PLN/day. Free parking.",
     "siteName": "Karpatka — Ski Lifts",
+    "amenities": { "parking": "Free parking by the slope", "school": "Ski and snowboard school", "rental": "Ski and snowboard rental", "sledding": "Sledding hill" },
     "imageAlt": "Karpatka ski slope in Karpacz"
   },
   "nav": {
@@ -24,8 +25,8 @@
   },
   "hero": {
     "eyebrow": "Karpacz · Karkonosze Mountains · Ski lift",
-    "titleMain": "Ski lifts in Karpacz",
-    "titleAccent": "learn to ski with us.",
+    "titleMain": "Ski slope in Karpacz",
+    "titleAccent": "lifts and ski lessons.",
     "lead": "Two T-bar lifts, a conveyor lift for the little ones and a sledding hill — right below Śnieżka, with free parking next to the slope.",
     "seePricing": "See prices",
     "call": "Call: {tel}",
@@ -154,6 +155,7 @@
     },
     "features": {
       "instructors": { "title": "Ski and snowboard instructors", "desc": "private and group lessons." },
+      "preschool": { "title": "Ski kindergarten from 3–4 years", "desc": "group lessons run as play, first on the conveyor lift, then on the T-bar." },
       "basics": { "title": "Learning from scratch on the conveyor lift", "desc": "a gentle, safe start to the sport." },
       "rental": { "title": "Full equipment for rent", "desc": "skis, snowboards, poles and helmets." },
       "onSite": { "title": "Everything on site", "desc": "sign-up, equipment and your first lesson on the same day." }
@@ -174,6 +176,8 @@
       "4": "4 people"
     },
     "lessonExtra": "Each additional person: +{price}.",
+    "moreLessons": "More about ski lessons →",
+    "moreRental": "Ski rental →",
     "signUp": "Book a lesson",
     "ld": {
       "rentalName": "Ski or snowboard rental — Karpatka Karpacz",
@@ -298,7 +302,149 @@
     "about": "Ski lifts in Karpacz — Karkonosze Mountains. A place for skiing, snowboarding and sledding for children and adults.",
     "contact": "Contact",
     "directions": "Directions →",
+    "links": "On the slope",
+    "pages": { "school": "Ski school — lessons", "rental": "Ski and snowboard rental", "cameras": "Live webcams" },
     "openingHours": "Opening hours",
     "copyright": "© Karpatka — Ski Lifts Karpacz"
+  },
+  "landing": {
+    "related": "See also",
+    "links": {
+      "school": "Ski school — lessons",
+      "rental": "Ski and snowboard rental",
+      "cameras": "Live webcams from the slope",
+      "slope": "Slope, lifts and lift pass prices"
+    }
+  },
+  "schoolPage": {
+    "title": "Ski school in Karpacz — ski lessons and ski kindergarten",
+    "description": "Ski school in Karpacz, Poland: ski kindergarten for children from 3–4 years, ski and snowboard lessons for children and adults, a beginner conveyor lift and ski rental on site.",
+    "eyebrow": "Karpatka ski school · Karpacz",
+    "h1": "Ski lessons in Karpacz",
+    "subtitle": "Ski and snowboard school for children and adults — right below Śnieżka.",
+    "lead": "Karpatka instructors teach skiing and snowboarding from the very first step. Lessons take place on a gentle slope with a beginner conveyor lift, and you can rent equipment on site — arrive, sign up and start the same day.",
+    "call": "Book: {tel}",
+    "seePrices": "Lesson prices",
+    "sections": {
+      "kids": {
+        "title": "Ski lessons for children",
+        "text": "Children start on the gentle part of the slope with the conveyor lift — away from faster skiers on the T-bar lifts. The instructor works at the child's pace: first getting used to the skis, riding the conveyor and snowplough braking, then the first turns and runs on their own. 55-minute lessons suit the youngest well, and the sledding hill and bar are right next door."
+      },
+      "preschool": {
+        "title": "Ski kindergarten in Karpacz",
+        "text": "The Karpatka ski kindergarten takes children from the age of 3–4, depending on each child's readiness. Lessons are in groups and run as play, so children learn to ski almost without noticing it is a lesson. They start on the conveyor lift and, once ready, move on to the T-bar lift."
+      },
+      "slope": {
+        "title": "A slope made for beginners",
+        "text": "The Karpatka slope has a gentle, even gradient that is ideal for learning. The conveyor lift lets you start safely without a ski lift, and once you feel confident, the T-bar is the next step — all on one slope, with no transfers and no stress."
+      },
+      "adults": {
+        "title": "Ski lessons for adults",
+        "text": "First time on skis or back on the slope after years? In a private lesson the instructor focuses on you alone: your stance, safe braking and turning — and once you feel confident, you move from the conveyor to the T-bar lift together. Skiers who already ski on their own can polish their technique and carving."
+      },
+      "snowboard": {
+        "title": "Snowboard lessons",
+        "text": "Karpatka school also teaches snowboarding. We start with balance and side-slipping on gentle terrain, then turns and riding the lift. You can rent a board and snowboard boots on site."
+      },
+      "lessons": {
+        "title": "What are the lessons like?",
+        "text": "A lesson lasts 55 minutes — private or in a group with family or friends, and each additional person is just +{extra}. For your first lesson you only need warm, waterproof clothing, gloves and goggles or sunglasses. Skis or a board, boots and poles can be rented by the slope; the full set costs {day} per day."
+      }
+    },
+    "pricesTitle": "Ski and snowboard lesson prices",
+    "pricesNote": "A lesson with an instructor lasts 55 minutes.",
+    "faqTitle": "Questions about lessons",
+    "faq": {
+      "preschool": {
+        "q": "Is there a ski kindergarten in Karpacz?",
+        "a": "Yes — the Karpatka slope runs a ski kindergarten for children from 3–4 years, depending on the child's readiness. Lessons are in groups and run as play: first on the conveyor lift, later on the T-bar lift."
+      },
+      "age": {
+        "q": "From what age can a child learn to ski?",
+        "a": "Usually from 3–4 years — it depends on the child's readiness. The youngest start in the ski kindergarten on the conveyor lift, and older children can also choose private lessons with an instructor."
+      },
+      "price": {
+        "q": "How much do ski lessons in Karpacz cost?",
+        "a": "A lesson with an instructor lasts 55 minutes and costs {solo} for 1 person, {duo} for 2 people, {trio} for 3 people and {quad} for 4 people. Each additional person in the group is +{extra}."
+      },
+      "kids": {
+        "q": "Do you offer ski lessons for children?",
+        "a": "Yes. Children learn with an instructor on the gentle part of the slope with the beginner conveyor lift — on their own or together with siblings or friends."
+      },
+      "gear": {
+        "q": "Do I need my own equipment for a lesson?",
+        "a": "No. You can rent skis or a snowboard, boots and poles on site — the full set costs {day} per day."
+      },
+      "snowboard": {
+        "q": "Does the school also teach snowboarding?",
+        "a": "Yes — the instructors teach both skiing and snowboarding, for children and adults."
+      },
+      "where": {
+        "q": "Where do the lessons take place?",
+        "a": "At the Karpatka slope, ul. Myśliwska 3 in Karpacz, right below Śnieżka. There is free parking by the slope."
+      },
+      "book": {
+        "q": "How do I book a lesson?",
+        "a": "Call {tel} — we will agree on the time and number of people. At weekends and during school holidays it is worth booking in advance."
+      }
+    },
+    "ld": {
+      "serviceType": "Ski school"
+    }
+  },
+  "rentalPage": {
+    "title": "Ski rental in Karpacz — skis and snowboards at the Karpatka slope",
+    "description": "Ski and snowboard rental in Karpacz, Poland, right at the Karpatka slope. Full set (skis or board, boots, poles) {day} per day, {night} for evening skiing. Ski school on site, free parking.",
+    "eyebrow": "Karpatka rental · Karpacz",
+    "h1": "Ski rental in Karpacz",
+    "subtitle": "Skis, snowboards, boots and poles — right at the slope, no need to bring your own.",
+    "lead": "No need to pack skis in the car. The rental shop is right at the Karpatka slope: we will fit you with skis or a board, boots and poles, and a few minutes later you can head to the lift or your first lesson.",
+    "call": "Call: {tel}",
+    "seePrices": "Rental prices",
+    "sections": {
+      "gear": {
+        "title": "What can you rent?",
+        "text": "Ski set: carving skis, boots and poles. Snowboard set: board and boots. Helmets are also available on site — we especially recommend them for children and beginners."
+      },
+      "fit": {
+        "title": "Equipment that fits you",
+        "text": "We match skis and boots to your height, weight and skiing level — differently for beginners and for confident skiers. That makes the first runs easier and safer."
+      },
+      "evening": {
+        "title": "Evening skiing",
+        "text": "You can also rent equipment for evening skiing. An evening set (17:00–21:00) costs {night}, and the evening lift pass is valid from 16:30 to 21:00."
+      },
+      "school": {
+        "title": "Rental and ski school in one place",
+        "text": "First time on skis? Combine equipment rental with a lesson at the Karpatka ski school — the instructor will check that everything fits and take you straight to the beginner conveyor lift."
+      }
+    },
+    "pricesTitle": "Ski and snowboard rental prices",
+    "faqTitle": "Questions about the rental",
+    "faq": {
+      "price": {
+        "q": "How much does ski rental in Karpacz cost?",
+        "a": "A ski set (skis, boots, poles) costs {day} per day and {night} for evening skiing (17:00–21:00)."
+      },
+      "included": {
+        "q": "What is included in the set?",
+        "a": "The set includes skis or a snowboard, boots and poles. You can also rent a helmet on site."
+      },
+      "snowboard": {
+        "q": "Can I rent a snowboard?",
+        "a": "Yes — a snowboard set costs the same as a ski set: {day} per day and {night} in the evening."
+      },
+      "where": {
+        "q": "Where is the ski rental?",
+        "a": "At the Karpatka slope, ul. Myśliwska 3 in Karpacz, right below Śnieżka. You can leave your car in the free car park by the slope."
+      },
+      "hours": {
+        "q": "What are the rental opening hours?",
+        "a": "The rental is open during the slope opening hours, which depend on snow conditions. You will find the current hours in the page footer and the slope conditions on the live webcams."
+      }
+    },
+    "ld": {
+      "serviceType": "Ski rental"
+    }
   }
 }

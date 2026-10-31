@@ -1,23 +1,12 @@
 <script setup lang="ts">
-import type { GalleryPhoto } from '~/components/PhotoGallery.vue'
-
 const { t } = useI18n()
+const localePath = useLocalePath()
 const { price, pricePerHour } = usePrice()
 
 const highlights = ['kids', 'gear', 'group']
-const features = ['instructors', 'basics', 'rental', 'onSite']
+const features = ['instructors', 'preschool', 'basics', 'rental', 'onSite']
 
-// The instructor photo stays first; the rest come from the school photo set.
-const portraitPhotos = new Set([5, 6, 7])
-const gallery = computed<GalleryPhoto[]>(() => [
-  { src: '/instruktor.jpg', thumb: '/szkola/instruktor-thumb.webp', alt: t('school.imageAlt') },
-  ...[1, 2, 3, 4, 5, 6, 7].map(n => ({
-    src: `/szkola/szkola-${n}.webp`,
-    thumb: `/szkola/szkola-${n}-thumb.webp`,
-    alt: t(`school.galleryAlt.p${n}`),
-    contain: portraitPhotos.has(n),
-  })),
-])
+const gallery = useSchoolGallery()
 
 useHead(() => ({
   script: [
@@ -114,6 +103,10 @@ useHead(() => ({
           <a :href="contactTelHref" class="bg-red hover:bg-red-deep text-white font-semibold px-7 py-3.5 rounded-full transition-colors">{{ t('school.signUp') }}</a>
           <a :href="contactTelHref" class="border border-white/25 hover:border-white text-white px-7 py-3.5 rounded-full transition-colors tabular-nums text-sm flex items-center">{{ contactTelShort }}</a>
         </div>
+        <p class="mt-7 flex flex-wrap gap-x-6 gap-y-2 tabular-nums text-sm">
+          <NuxtLink :to="localePath('/szkola-narciarska')" class="text-ice border-b border-ice/40 hover:border-ice pb-0.5">{{ t('school.moreLessons') }}</NuxtLink>
+          <NuxtLink :to="localePath('/wypozyczalnia-nart')" class="text-ice border-b border-ice/40 hover:border-ice pb-0.5">{{ t('school.moreRental') }}</NuxtLink>
+        </p>
       </div>
     </div>
   </section>

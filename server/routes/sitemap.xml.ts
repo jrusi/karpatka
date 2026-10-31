@@ -1,7 +1,7 @@
 import { defaultLocale, locales } from '../../i18n/locales'
 
 // Every page of the site (paths without the language prefix). Add new pages here.
-const pages = ['/', '/kamery']
+const pages = ['/', '/szkola-narciarska', '/wypozyczalnia-nart', '/kamery']
 
 function localizedUrl(siteUrl: string, code: string, page: string) {
   const prefix = code === defaultLocale ? '' : `/${code}`

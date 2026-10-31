@@ -1,25 +1,8 @@
 <script setup lang="ts">
-import type { GalleryPhoto } from '~/components/PhotoGallery.vue'
-
 const { t } = useI18n()
 const localePath = useLocalePath()
 
-// Photo 6 is a wide two-camera webcam strip, so it is shown whole rather than cropped.
-const photo = (n: number): GalleryPhoto => ({
-  src: `/stok/stok-${n}.webp`,
-  thumb: `/stok/stok-${n}-thumb.webp`,
-  alt: t(`offer.galleryAlt.p${n}`),
-  contain: n === 6,
-})
-const gallery = computed<GalleryPhoto[]>(() => [
-  ...[8, 4, 5, 1, 2, 3, 7, 6].map(photo),
-  {
-    src: '/stok/karpatka-film-poster.webp',
-    thumb: '/stok/karpatka-film-thumb.webp',
-    alt: t('offer.galleryAlt.video'),
-    video: '/stok/karpatka-film.mp4',
-  },
-])
+const gallery = useSlopeGallery()
 
 const { public: { siteUrl } } = useRuntimeConfig()
 
@@ -48,7 +31,7 @@ const items = computed(() => [
   { num: '01', key: 'lifts' },
   { num: '02', key: 'beltLift' },
   { num: '03', key: 'sledding' },
-  { num: '04', key: 'school', link: { href: '#szkola', label: t('offer.school.link') } },
+  { num: '04', key: 'school', route: localePath('/szkola-narciarska'), routeLabel: t('offer.school.link') },
   { num: '05', key: 'parking' },
   { num: '06', key: 'cameras', route: localePath('/kamery') },
 ].map(item => ({ ...item, title: t(`offer.${item.key}.title`), desc: t(`offer.${item.key}.desc`) })))
@@ -69,6 +52,7 @@ const items = computed(() => [
           :desc="item.desc"
           :link="item.link"
           :route="item.route"
+          :route-label="item.routeLabel"
         />
       </div>
 

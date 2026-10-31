@@ -1,5 +1,12 @@
 <script setup lang="ts">
 const { t } = useI18n()
+const localePath = useLocalePath()
+
+const footerLinks = [
+  { key: 'school', path: '/szkola-narciarska' },
+  { key: 'rental', path: '/wypozyczalnia-nart' },
+  { key: 'cameras', path: '/kamery' },
+]
 const { status, weekLines } = await useOpeningHours()
 
 const isClosedTemporarily = computed(() => status.value === 'closed_temporarily')
@@ -13,6 +20,9 @@ const isClosedTemporarily = computed(() => status.value === 'closed_temporarily'
           <img src="/logo.png" :alt="t('common.logoAlt')" class="h-12 w-auto">
         </span>
         <p class="text-sm leading-relaxed max-w-xs">{{ t('footer.about') }}</p>
+        <nav :aria-label="t('footer.links')" class="mt-6 flex flex-col gap-2 tabular-nums text-sm">
+          <NuxtLink v-for="link in footerLinks" :key="link.key" :to="localePath(link.path)" class="self-start hover:text-white underline underline-offset-4 decoration-white/20">{{ t(`footer.pages.${link.key}`) }}</NuxtLink>
+        </nav>
       </div>
       <div class="tabular-nums text-sm space-y-2">
         <p class="text-white/40 uppercase text-xs tracking-wider mb-3">{{ t('footer.contact') }}</p>
