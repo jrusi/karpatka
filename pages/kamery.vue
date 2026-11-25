@@ -11,11 +11,13 @@ useSeoMeta({
   twitterDescription: () => t('cameras.pageDescription'),
 })
 
-const cameras = [
+// Set `hidden: true` to take a camera off the page without deleting its config.
+const allCameras = [
   { id: 'cam1', streamUrl: 'https://stream1.wyciag-karpacz.pl/video.m3u8' },
-  { id: 'cam2', streamUrl: 'https://stream1.wyciag-karpacz.pl/2/video.m3u8' },
+  { id: 'cam2', streamUrl: 'https://stream1.wyciag-karpacz.pl/2/video.m3u8', hidden: true },
   { id: 'cam3', streamUrl: 'https://stream2.wyciag-karpacz.pl/3/video.m3u8' },
 ]
+const cameras = allCameras.filter(camera => !camera.hidden)
 
 const seoTopics = [
   { key: 'slope', hash: '#oferta' },
@@ -32,7 +34,7 @@ const seoTopics = [
       <p class="font-display text-xl md:text-2xl text-deep-blue/75 mb-4 max-w-2xl">{{ t('cameras.pageHeading') }}</p>
       <p class="text-ink-soft max-w-lg mb-14 leading-relaxed">{{ t('cameras.pageLead') }}</p>
 
-      <div class="grid md:grid-cols-3 gap-6">
+      <div class="grid gap-6" :class="cameras.length === 2 ? 'md:grid-cols-2' : 'md:grid-cols-3'">
         <LiveCameraCard
           v-for="(camera, i) in cameras"
           :key="camera.id"
